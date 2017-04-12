@@ -1,0 +1,16 @@
+.main-nav {
+  display: inline-block;
+}
+
+.main-nav__link {
+  font-family: Lato;
+  font-size: 18px;
+  color: #6C6C6C;
+  text-decoration: none;
+  padding: 0 0 3px;
+  margin: 0 15px;
+
+  &:hover {
+    border-bottom: 4px solid $primary-color;
+  }
+}

@@ -1,0 +1,10 @@
+menu:
+  Guide: /guide
+  Docs: /docs
+  Examples: /examples
+  Community: /community
+
+node_sass:
+  outputStyle: nested
+  precision: 5
+  sourceComments: false

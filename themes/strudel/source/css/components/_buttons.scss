@@ -1,0 +1,22 @@
+.button {
+  display: inline-block;
+  background: $secondary-color;
+  border-radius: 30px;
+  padding: 15px 60px;
+  font-family: Lato;
+  font-weight: bold;
+  font-size: 20px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.button--secondary {
+  background: transparent;
+  border: 2px solid $secondary-color;
+  color: $secondary-color;
+}
+
+.button--fixed {
+  min-width: 220px;
+  box-sizing: border-box;
+}

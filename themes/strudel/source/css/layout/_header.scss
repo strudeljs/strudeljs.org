@@ -1,0 +1,23 @@
+.main-header {
+  position: absolute;
+  background: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+
+  img {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+  }
+}
+
+.recent-version {
+  display: inline-block;
+  font-family: Lato;
+  font-size: 18px;
+  text-decoration: none;
+  color: #E6B718;
+  padding-left: 30px;
+}

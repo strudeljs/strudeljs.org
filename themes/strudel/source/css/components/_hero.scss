@@ -1,0 +1,15 @@
+.hero {
+  height: 450px;
+  background: $primary-color;
+
+  h1 {
+    margin-bottom: 60px;
+  }
+}
+
+.hero__content {
+  max-width: 630px;
+  margin: 0 auto;
+  padding: 120px 0;
+  text-align: center;
+}
