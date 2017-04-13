@@ -5,26 +5,27 @@
         <section class="hero">
             <div class="hero__content">
                 <h1>Javascript component framework with a twist</h1>
-                <a href="#" class="button button--fixed" role="button">Get started</a></li>
-                <a href="#" class="button button--secondary button--fixed" role="button">Github</a>
+                <a href="/guide" class="button button--fixed" role="button">Get started</a></li>
+                <a href="http://github.com/strudeljs" target="_blank" class="button button--secondary button--fixed" role="button">Github</a>
             </div>
         </section>
         <div class="container">
             <section class="promos flex-grid">
-                <div class="col">
-                    Asdf
+                <div class="col promo">
+                    <h2>Declarative</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent cursus nunc sit amet ex porta condimentum. </p>
                 </div>
-                <div class="col">
-                    Ddd
+                <div class="col promo">
+                    <h2>Lightweight</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent cursus nunc sit amet ex porta condimentum. </p>
                 </div>
-                <div class="col">
-                    Ggg
+                <div class="col promo">
+                    <h2>Tooling</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent cursus nunc sit amet ex porta condimentum. </p>
                 </div>
             </section>
         </div>
-        <% site.pages.find({ type: 'guide'}).each(function (page) { %>
-        <span>← <a href="<%- url_for(page.path) %>"><%- page.title %></a></span>
-        <% }) %>
     </div>
+    <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
 </body>
 </html>

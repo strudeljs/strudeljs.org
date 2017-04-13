@@ -13,11 +13,16 @@
   }
 }
 
+.navigation {
+  float: right;
+  margin-top: 40px;
+}
+
 .recent-version {
   display: inline-block;
   font-family: Lato;
   font-size: 18px;
   text-decoration: none;
   color: #E6B718;
-  padding-left: 30px;
+  padding-left: 15px;
 }

@@ -1,9 +1,14 @@
 .hero {
   height: 450px;
-  background: $primary-color;
+  background: url("/images/background.svg") $primary-color no-repeat 50% 50%;
 
   h1 {
     margin-bottom: 60px;
+    line-height: 1.2;
+  }
+
+  .button + .button {
+    margin-left: 20px;
   }
 }
 

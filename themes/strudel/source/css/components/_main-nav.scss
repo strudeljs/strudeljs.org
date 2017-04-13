@@ -10,6 +10,7 @@
   padding: 0 0 3px;
   margin: 0 15px;
 
+  &.current,
   &:hover {
     border-bottom: 4px solid $primary-color;
   }

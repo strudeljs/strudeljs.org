@@ -1,1 +1,5 @@
+<% site.pages.find({ type: 'guide'}).each(function (page) { %>
+<span>← <a href="<%- url_for(page.path) %>"><%- page.title %></a></span>
+<% }) %>
+
 <%- page.content %>

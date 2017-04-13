@@ -2,4 +2,4 @@
 type: docs
 ---
 
-# Docs
+# Community

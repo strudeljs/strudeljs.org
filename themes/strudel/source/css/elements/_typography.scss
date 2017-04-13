@@ -1,6 +1,18 @@
-h1 {
+body {
+  font-family: Lato;
+  color: #737373;
+}
+
+h1, h2 {
   font-family: Comfortaa;
   font-weight: bold;
-  font-size: 40px;
   color: $secondary-color;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
 }
