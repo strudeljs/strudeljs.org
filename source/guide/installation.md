@@ -4,7 +4,7 @@ type: guide
 order: 1
 ---
 
-Hello world
+TBD
 
 ```
 npm install strudel --save

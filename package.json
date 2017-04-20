@@ -18,5 +18,8 @@
     "hexo-renderer-scss": "^1.0.2",
     "hexo-renderer-stylus": "^0.3.1",
     "hexo-server": "^0.2.0"
+  },
+  "devDependencies": {
+    "hexo-s3-deploy": "^1.2.1"
   }
 }
