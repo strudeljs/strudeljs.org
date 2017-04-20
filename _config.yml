@@ -68,4 +68,5 @@ theme: strudel
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repository: git@github.com:strudeljs/strudeljs.org.git
