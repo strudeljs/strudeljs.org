@@ -8,10 +8,10 @@
     <link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="/images/favicon/favicon-16x16.png" sizes="16x16">
     <meta name="theme-color" content="#FFDA5C">
-    <link href="//fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Comfortaa|Roboto Mono" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
+<body class="docs">
     <header class="main-header">
     <div class="container">
         <a class="main-logo" href="/"><img src="/images/strudel.svg"></a>
@@ -20,7 +20,7 @@
                 
                 <a class="main-nav__link" href="/guide" >Guide</a>
                 
-                <a class="main-nav__link" href="/docs" >Docs</a>
+                <a class="main-nav__link current" href="/docs" >Reference</a>
                 
                 <a class="main-nav__link" href="/examples" >Examples</a>
                 
@@ -31,12 +31,56 @@
         </div>
     </div>
 </header>
-    <section class="main-content">
-<span>← <a href="/guide/index.html">Introduction</a></span>
+    <section class="main-content"><div class="sidebar">
+    <ul class="sidebar-nav">
+    
+        
+        
+        <li>
+            <a href="/docs/index.html" class="sidebar-nav__link current"></a>
+        </li>
+    
+        
+        
+        <li>
+            <a href="/community/index.html" class="sidebar-nav__link current"></a>
+        </li>
+    
+</ul>
+</div>
+<div class="content with-sidebar">
+    <h1 id="Decorators"><a href="#Decorators" class="headerlink" title="Decorators"></a>Decorators</h1><h2 id="Component"><a href="#Component" class="headerlink" title="Component"></a>Component</h2><ul>
+<li><p><strong>Arguments:</strong></p>
+<ul>
+<li><code>{String} [selector]</code></li>
+</ul>
+</li>
+<li><p><strong>Usage:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">@Component(<span class="string">'.foo'</span>)</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> </span>&#123; &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Evt"><a href="#Evt" class="headerlink" title="Evt"></a>Evt</h2><ul>
+<li><p><strong>Arguments:</strong></p>
+<ul>
+<li><code>{String} [event descriptor]</code></li>
+</ul>
+</li>
+<li><p><strong>Usage:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">@Evt(<span class="string">'click .bar'</span>)</div><div class="line">onClick() &#123; &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="El"><a href="#El" class="headerlink" title="El"></a>El</h2><ul>
+<li><p><strong>Arguments:</strong></p>
+<ul>
+<li><code>{String} [element selector]</code></li>
+</ul>
+</li>
+<li><p><strong>Usage:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">@El(<span class="string">'.bar'</span>)</div><div class="line">bar</div></pre></td></tr></table></figure></li>
+</ul>
 
-<span>← <a href="/guide/installation.html">Installation</a></span>
+</div>
 
-
-<h1 id="Documentation-will-be-here"><a href="#Documentation-will-be-here" class="headerlink" title="Documentation will be here"></a>Documentation will be here</h1></section>
+</section>
 </body>
 </html>

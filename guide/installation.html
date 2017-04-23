@@ -8,10 +8,10 @@
     <link rel="icon" type="image/png" href="/images/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="/images/favicon/favicon-16x16.png" sizes="16x16">
     <meta name="theme-color" content="#FFDA5C">
-    <link href="//fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Comfortaa|Roboto Mono" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
+<body class="guide">
     <header class="main-header">
     <div class="container">
         <a class="main-logo" href="/"><img src="/images/strudel.svg"></a>
@@ -20,7 +20,7 @@
                 
                 <a class="main-nav__link" href="/guide" >Guide</a>
                 
-                <a class="main-nav__link" href="/docs" >Docs</a>
+                <a class="main-nav__link current" href="/docs" >Reference</a>
                 
                 <a class="main-nav__link" href="/examples" >Examples</a>
                 
@@ -31,13 +31,105 @@
         </div>
     </div>
 </header>
-    <section class="main-content">
-<span>← <a href="/guide/index.html">Introduction</a></span>
+    <section class="main-content"><div class="sidebar">
+    <ul class="sidebar-nav">
+    
+        
+        
+            
+                <li><h3>Overview</h3></li>
+            
+            
+        
+        <li>
+            <a href="/guide/installation.html" class="sidebar-nav__link current">Installation</a>
+        </li>
+    
+        
+        
+            
+            
+        
+        <li>
+            <a href="/guide/index.html" class="sidebar-nav__link">Introduction</a>
+        </li>
+    
+        
+        
+            
+            
+        
+        <li>
+            <a href="/guide/components.html" class="sidebar-nav__link">Components</a>
+        </li>
+    
+        
+        
+            
+            
+        
+        <li>
+            <a href="/guide/dom.html" class="sidebar-nav__link">Manipulating DOM</a>
+        </li>
+    
+        
+        
+            
+            
+        
+        <li>
+            <a href="/guide/eventhandling.html" class="sidebar-nav__link">Event handling</a>
+        </li>
+    
+        
+        
+            
+            
+                <li><h3>Advanced</h3></li>
+            
+        
+        <li>
+            <a href="/guide/initialization.html" class="sidebar-nav__link">Lazy Initialization</a>
+        </li>
+    
+        
+        
+            
+            
+        
+        <li>
+            <a href="/guide/lifecycle.html" class="sidebar-nav__link">Life cycle</a>
+        </li>
+    
+        
+        
+            
+            
+        
+        <li>
+            <a href="/guide/interoperability.html" class="sidebar-nav__link">Interoperability</a>
+        </li>
+    
+        
+        
+            
+            
+        
+        <li>
+            <a href="/guide/styleguide.html" class="sidebar-nav__link">Styleguide</a>
+        </li>
+    
+</ul>
+</div>
+<div class="content with-sidebar">
+    <h1 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h1><h2 id="Compatibility"><a href="#Compatibility" class="headerlink" title="Compatibility"></a>Compatibility</h2><p>Strudel depends heavily on decorators which are not part of ECMAScript 2015 spec. Currently to be able to use it transpiler like Babel is required. For usage Strudel <strong>requires</strong> <code>transform-decorators-legacy</code> Babel plugin. For optional components syntax also <code>transform-class-properties</code> is recommended. </p>
+<h2 id="Browser-support"><a href="#Browser-support" class="headerlink" title="Browser support"></a>Browser support</h2><p>Without polyfills Strudel supports IE11, as it using DOM 4 spec. If lower browser support is required please use great tools like polyfills.io</p>
+<h2 id="CLI"><a href="#CLI" class="headerlink" title="CLI"></a>CLI</h2><p>CLI is recommended way of setting up new Strudel project</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ npm install --global strudel-cli</div><div class="line">$ strudel init webpack my-project</div><div class="line">$ <span class="built_in">cd</span> my-project</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
+<h2 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h2><p>If you feel like configuring build on your own you can use npm to install Strudel.<br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ npm install strudel --save</div></pre></td></tr></table></figure></p>
 
-<span>← <a href="/guide/installation.html">Installation</a></span>
+</div>
 
-
-<p>TBD</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install strudel --save</div></pre></td></tr></table></figure></section>
+</section>
 </body>
 </html>
