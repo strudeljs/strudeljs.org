@@ -1,0 +1,16 @@
+.sidebar-nav {
+  h3 {
+    margin-top: 1.5em;
+  }
+}
+
+.sidebar-nav__link {
+  text-decoration: none;
+  color: $text-color;
+  line-height: 1.8;
+  font-size: 14px;
+
+  &.current {
+    color: $primary-color;
+  }
+}

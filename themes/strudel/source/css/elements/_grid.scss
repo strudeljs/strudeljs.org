@@ -1,5 +1,9 @@
 .flex-grid {
   display: flex;
+
+  @include media('<tablet') {
+    display: block;
+  }
 }
 
 .col {

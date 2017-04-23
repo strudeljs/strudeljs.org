@@ -10,6 +10,15 @@
   .button + .button {
     margin-left: 20px;
   }
+
+  @include media("<=tablet") {
+    height: auto;
+
+    h1 {
+      font-size: 25px;
+      line-height: 1.5;
+    }
+  }
 }
 
 .hero__content {
@@ -17,4 +26,8 @@
   margin: 0 auto;
   padding: 120px 0;
   text-align: center;
+
+  @include media("<=tablet") {
+    padding: 80px 40px;
+  }
 }

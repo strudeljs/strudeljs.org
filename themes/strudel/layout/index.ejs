@@ -1,31 +1,24 @@
-<%- partial('_partial/head') %>
-<body>
-    <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
-    <div class="main-content">
-        <section class="hero">
-            <div class="hero__content">
-                <h1>Javascript component framework with a twist</h1>
-                <a href="/guide" class="button button--fixed" role="button">Get started</a></li>
-                <a href="http://github.com/strudeljs" target="_blank" class="button button--secondary button--fixed" role="button">Github</a>
-            </div>
-        </section>
-        <div class="container">
-            <section class="promos flex-grid">
-                <div class="col promo">
-                    <h2>Declarative</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent cursus nunc sit amet ex porta condimentum. </p>
-                </div>
-                <div class="col promo">
-                    <h2>Lightweight</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent cursus nunc sit amet ex porta condimentum. </p>
-                </div>
-                <div class="col promo">
-                    <h2>Tooling</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent cursus nunc sit amet ex porta condimentum. </p>
-                </div>
-            </section>
-        </div>
+<section class="hero">
+    <div class="hero__content">
+        <h1>Javascript component framework with a twist</h1>
+        <a href="/guide" class="button button--fixed" role="button">Get started</a></li>
+        <a href="http://github.com/strudeljs" target="_blank" class="button button--secondary button--fixed" role="button">Github</a>
     </div>
-    <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
-</body>
-</html>
+</section>
+<div class="container">
+    <section class="promos flex-grid">
+        <div class="col promo">
+            <h2>Simple</h2>
+            <p>Build rich, interactive  websites with ease. You are worried that your only front-end experience is basic jQuery? Worry not, it's enough to get you started with Strudel. </p>
+        </div>
+        <div class="col promo">
+            <h2>Declarative</h2>
+            <p>Tired of all the boilerplate your front-end inventory requires? Thanks to Strudel decorators reduce it to minimum and have fun coding with ES2015 and beyond. </p>
+        </div>
+        <div class="col promo">
+            <h2>Lightweight</h2>
+            <p>Don't worry about your website payload. Strudel makes sure users's browsers are not overwhelmed with amount of Javascript to parse as it's only ~5kb gzipped.</p>
+        </div>
+    </section>
+</div>
+<%- partial('_partial/footer', null, {cache: !config.relative_link}) %>

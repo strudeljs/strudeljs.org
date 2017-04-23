@@ -1,6 +1,8 @@
 @import 'util/variables';
+@import 'util/mixins';
 
 @import 'generic/reset';
+@import 'generic/highlight';
 
 @import 'elements/typography';
 @import 'elements/container';
@@ -8,9 +10,11 @@
 
 @import 'layout/header';
 @import 'layout/content';
+@import 'layout/sidebar';
 @import 'layout/footer';
 
 @import 'components/hero';
 @import 'components/main-nav';
+@import 'components/sidebar-nav';
 @import 'components/buttons';
 @import 'components/promo';

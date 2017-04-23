@@ -1,0 +1,162 @@
+.highlight {
+  position: relative;
+  padding: .4em .8em .4em;
+  line-height: 1.5;
+  background: #f3f3f3;
+  font-family: Roboto Mono;
+  font-size: 12px;
+
+  table, tr,td {
+    width: 100%;
+    border-collapse: collapse;
+    padding: 0;
+    margin: 0;
+  }
+
+  .gutter {
+    width: 1.5em;
+  }
+
+  .code {
+    pre {
+      padding: 1.2em 1.4em;
+      line-height: 1.5em;
+    }
+
+    .line {
+      min-height: 1.5em;
+    }
+
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      text-align: right;
+      font-size: 0.75em;
+      padding: 5px 10px 0;
+      color: #bfbfbf;
+      line-height: 15px;
+      height: 15px;
+      font-weight: 600;
+      font-family: Lato;
+    }
+  }
+
+  &.bash .code:after {
+    content: 'Bash';
+  }
+
+  &.html .code:after {
+    content: 'HTML';
+  }
+
+  &.css .code:after {
+    content: 'CSS';
+  }
+
+  &.js .code:after {
+    content: 'JS';
+  }
+}
+
+.gutter pre {
+  color: #999;
+}
+
+pre {
+  color: #525252;
+}
+
+.function .keyword,
+.constant {
+  color: #7d5e2d;
+}
+
+.keyword,
+.attribute {
+  color: #5774bb;
+}
+
+.number,
+.literal {
+  color: #5774bb;
+}
+
+.tag,
+.tag .title,
+.change,
+.winutils,
+.flow,
+.lisp .title,
+.clojure .built_in,
+.nginx .title,
+.tex .special {
+  color: #7d5e2d;
+}
+
+.class .title {
+  color: #ffce29;
+}
+
+.symbol,
+.symbol .string,
+.value,
+.regexp {
+  color: #ffce29;
+}
+
+.title {
+  color: #534227;
+}
+
+.tag .value,
+.string,
+.subst,
+.haskell .type,
+.preprocessor,
+.ruby .class .parent,
+.built_in,
+.sql .aggregate,
+.django .template_tag,
+.django .variable,
+.smalltalk .class,
+.javadoc,
+.django .filter .argument,
+.smalltalk .localvars,
+.smalltalk .array,
+.attr_selector,
+.pseudo,
+.addition,
+.stream,
+.envvar,
+.apache .tag,
+.apache .cbracket,
+.tex .command,
+.prompt {
+  color: #ffce29;
+}
+
+.comment,
+.java .annotation,
+.python .decorator,
+.template_comment,
+.pi,
+.doctype,
+.deletion,
+.shebang,
+.apache .sqbracket,
+.tex .formula {
+  color: #b3b3b3;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .cdata {
+  opacity: 0.5;
+}

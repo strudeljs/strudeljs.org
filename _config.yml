@@ -6,7 +6,7 @@
 title: Strudel
 subtitle:
 description:
-author: John Doe
+author: Mateusz Łuczak
 language:
 timezone:
 
@@ -39,9 +39,9 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: true
+  line_number: false
   auto_detect: false
-  tab_replace:
+  tab_replace: true
 
 # Category & Tag
 default_category: uncategorized

@@ -1,5 +1,9 @@
 .main-nav {
   display: inline-block;
+
+  @include media('<desktop') {
+    display: none;
+  }
 }
 
 .main-nav__link {

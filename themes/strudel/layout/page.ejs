@@ -1,5 +1,7 @@
-<% site.pages.find({ type: 'guide'}).each(function (page) { %>
-<span>← <a href="<%- url_for(page.path) %>"><%- page.title %></a></span>
-<% }) %>
+<div class="sidebar">
+    <%- partial('_partial/sidebar', {type: page.type, index: page.index}) %>
+</div>
+<div class="content with-sidebar">
+    <%- page.content %>
+</div>
 
-<%- page.content %>

@@ -4,18 +4,28 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 100px;
+  height: 90px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.08);
 
   img {
     position: absolute;
     top: 50%;
     margin-top: -20px;
   }
+
+  body.guide & {
+    position: fixed;
+  }
+
+  @include media('<desktop') {
+    position: fixed;
+    height: 50px;
+  }
 }
 
 .navigation {
   float: right;
-  margin-top: 40px;
+  margin-top: 35px;
 }
 
 .recent-version {
@@ -25,4 +35,8 @@
   text-decoration: none;
   color: #E6B718;
   padding-left: 15px;
+
+  @include media('<desktop') {
+    display: none;
+  }
 }

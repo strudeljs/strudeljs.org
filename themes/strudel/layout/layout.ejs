@@ -1,5 +1,5 @@
 <%- partial('_partial/head') %>
-<body>
+<body class="<%- page.type %>">
     <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
     <section class="main-content"><%- body %></section>
 </body>
