@@ -1,8 +1,8 @@
 menu:
-  Guide: /guide
-  Reference: /docs
-  Examples: /examples
-  Community: /community
+  Guide: /guide/
+  Reference: /docs/
+  Examples: /examples/
+  Community: /community/
 
 node_sass:
   outputStyle: nested
