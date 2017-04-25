@@ -1,5 +1,10 @@
 .main-content {
-  margin-top: 90px;
+  margin: 90px auto 0;
+
+  .guide &,
+  .docs & {
+    max-width: 1200px;
+  }
 
   @include media('<desktop') {
     margin-top: 50px;
@@ -7,11 +12,12 @@
 }
 
 .content {
-  padding: 60px 0 40px;
+  padding: 5px 0 40px;
   max-width: 650px;
 
   h1 {
     font-size: 30px;
+    margin-top: 2em;
   }
 
   h2 {
@@ -26,6 +32,19 @@
 
   strong {
     font-weight: bold;
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 20px;
+
+    li {
+      margin: .5em 0;
+    }
+
+    ul {
+      list-style: circle;
+    }
   }
 
   code {
