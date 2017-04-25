@@ -233,16 +233,20 @@ h3 {
       display: none; } }
 
 .main-content {
-  margin-top: 90px; }
+  margin: 90px auto 0; }
+  .guide .main-content,
+  .docs .main-content {
+    max-width: 1200px; }
   @media (max-width: 1023px) {
     .main-content {
       margin-top: 50px; } }
 
 .content {
-  padding: 60px 0 40px;
+  padding: 5px 0 40px;
   max-width: 650px; }
   .content h1 {
-    font-size: 30px; }
+    font-size: 30px;
+    margin-top: 2em; }
   .content h2 {
     font-size: 20px;
     margin-top: 2.4em; }
@@ -251,6 +255,13 @@ h3 {
     font-size: 15px; }
   .content strong {
     font-weight: bold; }
+  .content ul {
+    list-style: disc;
+    padding-left: 20px; }
+    .content ul li {
+      margin: .5em 0; }
+    .content ul ul {
+      list-style: circle; }
   .content code {
     font-family: "Roboto Mono";
     color: #ffce29;
