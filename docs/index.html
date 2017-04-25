@@ -18,13 +18,13 @@
         <div class="navigation">
             <nav class="main-nav" role="navigation">
                 
-                <a class="main-nav__link" href="/guide" >Guide</a>
+                <a class="main-nav__link" href="/guide/" >Guide</a>
                 
-                <a class="main-nav__link current" href="/docs" >Reference</a>
+                <a class="main-nav__link current" href="/docs/" >Reference</a>
                 
-                <a class="main-nav__link" href="/examples" >Examples</a>
+                <a class="main-nav__link" href="/examples/" >Examples</a>
                 
-                <a class="main-nav__link" href="/community" >Community</a>
+                <a class="main-nav__link" href="/community/" >Community</a>
                 
             </nav>
             <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.1.0</a>
@@ -56,6 +56,7 @@
 </ul>
 </li>
 <li><p><strong>Usage:</strong></p>
+<p>Register new component within <code>Registry</code></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">@Component(<span class="string">'.foo'</span>)</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> </span>&#123; &#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -66,6 +67,7 @@
 </ul>
 </li>
 <li><p><strong>Usage:</strong></p>
+<p>Add DOM event handler for specific descriptor and make decorated function a callback</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">@Evt(<span class="string">'click .bar'</span>)</div><div class="line">onClick() &#123; &#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -76,9 +78,11 @@
 </ul>
 </li>
 <li><p><strong>Usage:</strong></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">@El(<span class="string">'.bar'</span>)</div><div class="line">bar</div></pre></td></tr></table></figure></li>
+<p>Find element by selector on component initialisation and substitute for variable</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">@El(<span class="string">'.bar'</span>)</div><div class="line">bar</div></pre></td></tr></table></figure>
+</li>
 </ul>
-
+<h1 id="Instance-Properties"><a href="#Instance-Properties" class="headerlink" title="Instance Properties"></a>Instance Properties</h1><h2 id="data"><a href="#data" class="headerlink" title="data"></a>data</h2><h2 id="element"><a href="#element" class="headerlink" title="element"></a>element</h2><h2 id="parent"><a href="#parent" class="headerlink" title="parent"></a>parent</h2><h1 id="Instance-Methods-Events"><a href="#Instance-Methods-Events" class="headerlink" title="Instance Methods / Events"></a>Instance Methods / Events</h1><h2 id="emit"><a href="#emit" class="headerlink" title="emit"></a>emit</h2><h2 id="broadcast"><a href="#broadcast" class="headerlink" title="broadcast"></a>broadcast</h2><h2 id="on"><a href="#on" class="headerlink" title="on"></a>on</h2><h1 id="Instance-Methods-Lifecycle"><a href="#Instance-Methods-Lifecycle" class="headerlink" title="Instance Methods / Lifecycle"></a>Instance Methods / Lifecycle</h1><h2 id="beforeInit"><a href="#beforeInit" class="headerlink" title="beforeInit"></a>beforeInit</h2><h2 id="init"><a href="#init" class="headerlink" title="init"></a>init</h2><h2 id="beforeDestroy"><a href="#beforeDestroy" class="headerlink" title="beforeDestroy"></a>beforeDestroy</h2><h2 id="destroy"><a href="#destroy" class="headerlink" title="destroy"></a>destroy</h2><h1 id="Element-API"><a href="#Element-API" class="headerlink" title="Element API"></a>Element API</h1><h2 id="find"><a href="#find" class="headerlink" title="find"></a>find</h2><h2 id="addClass"><a href="#addClass" class="headerlink" title="addClass"></a>addClass</h2><h2 id="removeClass"><a href="#removeClass" class="headerlink" title="removeClass"></a>removeClass</h2><h2 id="on-1"><a href="#on-1" class="headerlink" title="on"></a>on</h2><h2 id="off"><a href="#off" class="headerlink" title="off"></a>off</h2><h2 id="trigger"><a href="#trigger" class="headerlink" title="trigger"></a>trigger</h2><h2 id="html"><a href="#html" class="headerlink" title="html"></a>html</h2><h2 id="text"><a href="#text" class="headerlink" title="text"></a>text</h2>
 </div>
 
 </section>
