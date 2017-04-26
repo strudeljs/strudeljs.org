@@ -205,7 +205,8 @@ h3 {
   left: 0;
   right: 0;
   height: 90px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08); }
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+  z-index: 2; }
   .main-header img {
     position: absolute;
     top: 50%;
@@ -376,3 +377,14 @@ h3 {
   @media (max-width: 767px) {
     .promo {
       padding: 30px; } }
+
+.quick-links {
+  margin-top: 30px;
+  border-top: 1px solid rgba(115, 115, 115, 0.2);
+  padding-top: 30px; }
+
+.quick-links__link {
+  text-decoration: none;
+  color: #FFDA5C;
+  font-weight: bold;
+  font-size: 15px; }
