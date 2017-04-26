@@ -1,0 +1,12 @@
+.quick-links {
+  margin-top: 30px;
+  border-top: 1px solid rgba($text-color, .2);
+  padding-top: 30px;
+}
+
+.quick-links__link {
+  text-decoration: none;
+  color: $primary-color;
+  font-weight: bold;
+  font-size: 15px;
+}

@@ -3,5 +3,15 @@
 </div>
 <div class="content with-sidebar">
     <%- page.content %>
+    <% if (page.type === 'guide') { %>
+    <div class="quick-links">
+        <% site.pages.find({ type: page.type, order: page.order - 1 }).each(function (page) { %>
+        <span>← <a class="quick-links__link" href="<%- url_for(page.path) %>"><%- page.title %></a></span>
+        <% }) %>
+        <% site.pages.find({ type: page.type, order: page.order + 1 }).each(function (page) { %>
+        <span style="float:right"><a class="quick-links__link" href="<%- url_for(page.path) %>"><%- page.title %></a> →</span>
+        <% }) %>
+    </div>
+    <% } %>
 </div>
 

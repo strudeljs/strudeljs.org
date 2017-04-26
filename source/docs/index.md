@@ -71,7 +71,18 @@ type: docs
 # Element API
 
 ## find
-
+- **Arguments:**
+  - `{String} selector`
+  - `{Element} context (optional)`
+- **Details**
+  
+  Finds element specified by selector in the element context
+  
+- **Usage**
+  ```js
+  Element.find('.className');
+  // => Element
+  ```
 ## addClass
 
 ## removeClass
