@@ -13,25 +13,50 @@
 </head>
 <body class="">
     <header class="main-header">
-    <div class="container">
-        <a class="main-logo" href="/"><img src="/images/strudel.svg"></a>
-        <div class="navigation">
-            <nav class="main-nav" role="navigation">
-                
-                <a class="main-nav__link" href="/guide/" >Guide</a>
-                
-                <a class="main-nav__link" href="/docs/" >Reference</a>
-                
-                <a class="main-nav__link" href="/examples/" >Examples</a>
-                
-                <a class="main-nav__link" href="/community/" >Community</a>
-                
-            </nav>
-            <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.1.0</a>
-        </div>
+    <button class="nav-toggle"><span></span></button>
+    <a class="main-logo" href="/"><img src="/images/strudel.svg"></a>
+    <div class="navigation">
+        <nav class="main-nav" role="navigation">
+            
+            <a class="main-nav__link" href="/guide/" >Guide</a>
+            
+            <a class="main-nav__link" href="/api/" >API</a>
+            
+            <a class="main-nav__link" href="/examples/" >Examples</a>
+            
+            <a class="main-nav__link" href="/community/" >Community</a>
+            
+        </nav>
+        <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.5.0</a>
     </div>
 </header>
-    <section class="main-content"><section class="hero">
+    <section class="main-content"><div class="mobile-nav">
+    <nav role="mobile-nav__navigation">
+    
+    <div class="mobile-nav__item">
+        <a class="mobile-nav__link" href="/guide/" >Guide</a>
+    </div>
+    
+    <div class="mobile-nav__item">
+        <a class="mobile-nav__link" href="/api/" >API</a>
+    </div>
+    
+    <div class="mobile-nav__item">
+        <a class="mobile-nav__link" href="/examples/" >Examples</a>
+    </div>
+    
+    <div class="mobile-nav__item">
+        <a class="mobile-nav__link" href="/community/" >Community</a>
+    </div>
+    
+</nav>
+<ul class="mobile-nav__sidebar">
+    
+    
+</ul>
+
+</div>
+<section class="hero">
     <div class="hero__content">
         <h1>Javascript component framework with a twist</h1>
         <a href="/guide" class="button button--fixed" role="button">Get started</a></li>
@@ -50,13 +75,14 @@
         </div>
         <div class="col promo">
             <h2>Lightweight</h2>
-            <p>Don't worry about your website payload. Strudel makes sure users's browsers are not overwhelmed with amount of Javascript to parse as it's only ~5kb gzipped.</p>
+            <p>Don't worry about your website payload. Strudel makes sure users's browsers are not overwhelmed with amount of Javascript to parse as it's only ~3kb gzipped.</p>
         </div>
     </section>
 </div>
 <footer class="main-footer">
     Released under the MIT License <br>
-    Copyright © 2017 Mateusz Łuczak
+    Copyright © 2017 <a href="https://github.com/mateuszluczak">Mateusz Łuczak</a>
 </footer></section>
+    <script src="/js/main.js"></script>
 </body>
 </html>

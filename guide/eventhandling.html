@@ -13,26 +13,164 @@
 </head>
 <body class="guide">
     <header class="main-header">
-    <div class="container">
-        <a class="main-logo" href="/"><img src="/images/strudel.svg"></a>
-        <div class="navigation">
-            <nav class="main-nav" role="navigation">
-                
-                <a class="main-nav__link current" href="/guide/" >Guide</a>
-                
-                <a class="main-nav__link" href="/docs/" >Reference</a>
-                
-                <a class="main-nav__link" href="/examples/" >Examples</a>
-                
-                <a class="main-nav__link" href="/community/" >Community</a>
-                
-            </nav>
-            <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.1.0</a>
-        </div>
+    <button class="nav-toggle"><span></span></button>
+    <a class="main-logo" href="/"><img src="/images/strudel.svg"></a>
+    <div class="navigation">
+        <nav class="main-nav" role="navigation">
+            
+            <a class="main-nav__link current" href="/guide/" >Guide</a>
+            
+            <a class="main-nav__link" href="/api/" >API</a>
+            
+            <a class="main-nav__link" href="/examples/" >Examples</a>
+            
+            <a class="main-nav__link" href="/community/" >Community</a>
+            
+        </nav>
+        <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.5.0</a>
     </div>
 </header>
-    <section class="main-content"><div class="sidebar">
+    <section class="main-content"><div class="mobile-nav">
+    <nav role="mobile-nav__navigation">
+    
+    <div class="mobile-nav__item">
+        <a class="mobile-nav__link current" href="/guide/" >Guide</a>
+    </div>
+    
+    <div class="mobile-nav__item">
+        <a class="mobile-nav__link" href="/api/" >API</a>
+    </div>
+    
+    <div class="mobile-nav__item">
+        <a class="mobile-nav__link" href="/examples/" >Examples</a>
+    </div>
+    
+    <div class="mobile-nav__item">
+        <a class="mobile-nav__link" href="/community/" >Community</a>
+    </div>
+    
+</nav>
+<ul class="mobile-nav__sidebar">
+    
+    
+    
+    
+    
+    <li><h3>Overview</h3></li>
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/installation.html" class="mobile-nav__sidebar-link">Installation</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/index.html" class="mobile-nav__sidebar-link">Introduction</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/components.html" class="mobile-nav__sidebar-link">Components</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/dom.html" class="mobile-nav__sidebar-link">Manipulating DOM</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/eventhandling.html" class="mobile-nav__sidebar-link current">Event handling</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    <li><h3>Advanced</h3></li>
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/initialization.html" class="mobile-nav__sidebar-link">Lazy Initialization</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/lifecycle.html" class="mobile-nav__sidebar-link">Life cycle</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/interoperability.html" class="mobile-nav__sidebar-link">Interoperability</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/styleguide.html" class="mobile-nav__sidebar-link">Styleguide</a>
+        </div>
+    </li>
+    
+</ul>
+
+</div>
+<div class="sidebar">
     <ul class="sidebar-nav">
+    
     
         
         
@@ -40,6 +178,7 @@
                 <li><h3>Overview</h3></li>
             
             
+        
         
         <li>
             <a href="/guide/installation.html" class="sidebar-nav__link">Installation</a>
@@ -50,6 +189,7 @@
             
             
         
+        
         <li>
             <a href="/guide/index.html" class="sidebar-nav__link">Introduction</a>
         </li>
@@ -58,6 +198,7 @@
         
             
             
+        
         
         <li>
             <a href="/guide/components.html" class="sidebar-nav__link">Components</a>
@@ -68,6 +209,7 @@
             
             
         
+        
         <li>
             <a href="/guide/dom.html" class="sidebar-nav__link">Manipulating DOM</a>
         </li>
@@ -76,6 +218,7 @@
         
             
             
+        
         
         <li>
             <a href="/guide/eventhandling.html" class="sidebar-nav__link current">Event handling</a>
@@ -88,6 +231,7 @@
                 <li><h3>Advanced</h3></li>
             
         
+        
         <li>
             <a href="/guide/initialization.html" class="sidebar-nav__link">Lazy Initialization</a>
         </li>
@@ -96,6 +240,7 @@
         
             
             
+        
         
         <li>
             <a href="/guide/lifecycle.html" class="sidebar-nav__link">Life cycle</a>
@@ -106,6 +251,7 @@
             
             
         
+        
         <li>
             <a href="/guide/interoperability.html" class="sidebar-nav__link">Interoperability</a>
         </li>
@@ -114,6 +260,7 @@
         
             
             
+        
         
         <li>
             <a href="/guide/styleguide.html" class="sidebar-nav__link">Styleguide</a>
@@ -136,5 +283,6 @@
 </div>
 
 </section>
+    <script src="/js/main.js"></script>
 </body>
 </html>

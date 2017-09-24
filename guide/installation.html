@@ -13,26 +13,164 @@
 </head>
 <body class="guide">
     <header class="main-header">
-    <div class="container">
-        <a class="main-logo" href="/"><img src="/images/strudel.svg"></a>
-        <div class="navigation">
-            <nav class="main-nav" role="navigation">
-                
-                <a class="main-nav__link current" href="/guide/" >Guide</a>
-                
-                <a class="main-nav__link" href="/docs/" >Reference</a>
-                
-                <a class="main-nav__link" href="/examples/" >Examples</a>
-                
-                <a class="main-nav__link" href="/community/" >Community</a>
-                
-            </nav>
-            <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.1.0</a>
-        </div>
+    <button class="nav-toggle"><span></span></button>
+    <a class="main-logo" href="/"><img src="/images/strudel.svg"></a>
+    <div class="navigation">
+        <nav class="main-nav" role="navigation">
+            
+            <a class="main-nav__link current" href="/guide/" >Guide</a>
+            
+            <a class="main-nav__link" href="/api/" >API</a>
+            
+            <a class="main-nav__link" href="/examples/" >Examples</a>
+            
+            <a class="main-nav__link" href="/community/" >Community</a>
+            
+        </nav>
+        <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.5.0</a>
     </div>
 </header>
-    <section class="main-content"><div class="sidebar">
+    <section class="main-content"><div class="mobile-nav">
+    <nav role="mobile-nav__navigation">
+    
+    <div class="mobile-nav__item">
+        <a class="mobile-nav__link current" href="/guide/" >Guide</a>
+    </div>
+    
+    <div class="mobile-nav__item">
+        <a class="mobile-nav__link" href="/api/" >API</a>
+    </div>
+    
+    <div class="mobile-nav__item">
+        <a class="mobile-nav__link" href="/examples/" >Examples</a>
+    </div>
+    
+    <div class="mobile-nav__item">
+        <a class="mobile-nav__link" href="/community/" >Community</a>
+    </div>
+    
+</nav>
+<ul class="mobile-nav__sidebar">
+    
+    
+    
+    
+    
+    <li><h3>Overview</h3></li>
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/installation.html" class="mobile-nav__sidebar-link current">Installation</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/index.html" class="mobile-nav__sidebar-link">Introduction</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/components.html" class="mobile-nav__sidebar-link">Components</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/dom.html" class="mobile-nav__sidebar-link">Manipulating DOM</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/eventhandling.html" class="mobile-nav__sidebar-link">Event handling</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    <li><h3>Advanced</h3></li>
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/initialization.html" class="mobile-nav__sidebar-link">Lazy Initialization</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/lifecycle.html" class="mobile-nav__sidebar-link">Life cycle</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/interoperability.html" class="mobile-nav__sidebar-link">Interoperability</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/styleguide.html" class="mobile-nav__sidebar-link">Styleguide</a>
+        </div>
+    </li>
+    
+</ul>
+
+</div>
+<div class="sidebar">
     <ul class="sidebar-nav">
+    
     
         
         
@@ -40,6 +178,7 @@
                 <li><h3>Overview</h3></li>
             
             
+        
         
         <li>
             <a href="/guide/installation.html" class="sidebar-nav__link current">Installation</a>
@@ -50,6 +189,7 @@
             
             
         
+        
         <li>
             <a href="/guide/index.html" class="sidebar-nav__link">Introduction</a>
         </li>
@@ -58,6 +198,7 @@
         
             
             
+        
         
         <li>
             <a href="/guide/components.html" class="sidebar-nav__link">Components</a>
@@ -68,6 +209,7 @@
             
             
         
+        
         <li>
             <a href="/guide/dom.html" class="sidebar-nav__link">Manipulating DOM</a>
         </li>
@@ -76,6 +218,7 @@
         
             
             
+        
         
         <li>
             <a href="/guide/eventhandling.html" class="sidebar-nav__link">Event handling</a>
@@ -88,6 +231,7 @@
                 <li><h3>Advanced</h3></li>
             
         
+        
         <li>
             <a href="/guide/initialization.html" class="sidebar-nav__link">Lazy Initialization</a>
         </li>
@@ -96,6 +240,7 @@
         
             
             
+        
         
         <li>
             <a href="/guide/lifecycle.html" class="sidebar-nav__link">Life cycle</a>
@@ -106,6 +251,7 @@
             
             
         
+        
         <li>
             <a href="/guide/interoperability.html" class="sidebar-nav__link">Interoperability</a>
         </li>
@@ -115,6 +261,7 @@
             
             
         
+        
         <li>
             <a href="/guide/styleguide.html" class="sidebar-nav__link">Styleguide</a>
         </li>
@@ -122,11 +269,13 @@
 </ul>
 </div>
 <div class="content with-sidebar">
-    <h1 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h1><h2 id="Compatibility"><a href="#Compatibility" class="headerlink" title="Compatibility"></a>Compatibility</h2><p>Strudel depends heavily on decorators which are not part of ECMAScript 2015 spec. Currently to be able to use it transpiler like Babel is required. For usage Strudel <strong>requires</strong> <code>transform-decorators-legacy</code> Babel plugin. For optional components syntax also <code>transform-class-properties</code> is recommended. </p>
-<h2 id="Browser-support"><a href="#Browser-support" class="headerlink" title="Browser support"></a>Browser support</h2><p>Without polyfills Strudel supports IE11, as it using DOM 4 spec. If lower browser support is required please use great tools like polyfills.io</p>
+    <h1 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h1><h2 id="Compatibility"><a href="#Compatibility" class="headerlink" title="Compatibility"></a>Compatibility</h2><p><strong>Strudel</strong> declarative syntax depends heavily on decorators which are not part of ECMAScript spec, so they are not natively supported by browser vendors (decorators spec is a <a href="https://github.com/tc39/proposal-decorators" target="_blank" rel="external">TC39 proposal in stage 2</a>. Transpiler like Babel is required and <code>transform-decorators-legacy</code> plugin. For optional components syntax also <code>transform-class-properties</code> is recommended.</p>
+<p>Strudel could be used without the decorators, but such an approach is not recommended.</p>
+<h2 id="Browser-support"><a href="#Browser-support" class="headerlink" title="Browser support"></a>Browser support</h2><p>Without polyfills Strudel supports IE11, as it using DOM 4 spec. If lower browser support is required please use great tools like <a href="http://polyfills.io" target="_blank" rel="external">polyfills.io</a>.</p>
 <h2 id="CLI"><a href="#CLI" class="headerlink" title="CLI"></a>CLI</h2><p>CLI is recommended way of setting up new Strudel project</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ npm install --global strudel-cli</div><div class="line">$ strudel init webpack my-project</div><div class="line">$ <span class="built_in">cd</span> my-project</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
 <h2 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h2><p>If you feel like configuring build on your own you can use npm to install Strudel.<br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ npm install strudel --save</div></pre></td></tr></table></figure></p>
+<p>Then however you need to take care about Babel and Webpack configuration.</p>
 
     
     <div class="quick-links">
@@ -139,5 +288,6 @@
 </div>
 
 </section>
+    <script src="/js/main.js"></script>
 </body>
 </html>

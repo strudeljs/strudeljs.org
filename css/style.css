@@ -42,7 +42,8 @@ table {
   line-height: 1.5;
   background: #f3f3f3;
   font-family: Roboto Mono;
-  font-size: 12px; }
+  font-size: 12px;
+  overflow-x: auto; }
   .highlight table, .highlight tr, .highlight td {
     width: 100%;
     border-collapse: collapse;
@@ -185,6 +186,17 @@ h2 {
 h3 {
   margin-bottom: 1em; }
 
+a {
+  color: #534227;
+  text-decoration: none;
+  font-weight: bold; }
+
+em {
+  font-style: italic; }
+
+strong {
+  font-weight: bold; }
+
 .container {
   max-width: 1160px;
   margin: 0 auto; }
@@ -206,17 +218,28 @@ h3 {
   right: 0;
   height: 90px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
-  z-index: 2; }
+  z-index: 4;
+  padding: 0 60px;
+  box-sizing: border-box; }
   .main-header img {
     position: absolute;
     top: 50%;
     margin-top: -20px; }
   body.guide .main-header {
     position: fixed; }
-  @media (max-width: 1023px) {
+  @media (max-width: 767px) {
     .main-header {
       position: fixed;
-      height: 50px; } }
+      height: 50px;
+      padding: 10px 20px; }
+      .main-header img {
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 150px;
+        margin-top: -15px; } }
+  @media (min-width: 768px) {
+    .main-header .nav-toggle {
+      display: none; } }
 
 .navigation {
   float: right;
@@ -234,17 +257,22 @@ h3 {
       display: none; } }
 
 .main-content {
-  margin: 90px auto 0; }
+  margin: 90px auto 0;
+  position: relative; }
   .guide .main-content,
   .docs .main-content {
     max-width: 1200px; }
-  @media (max-width: 1023px) {
+  @media (max-width: 767px) {
     .main-content {
-      margin-top: 50px; } }
+      margin-top: 30px; } }
 
 .content {
-  padding: 5px 0 40px;
+  padding: 5px 20px 40px;
+  box-sizing: border-box;
   max-width: 650px; }
+  @media (max-width: 767px) {
+    .content {
+      max-width: 95%; } }
   .content h1 {
     font-size: 30px;
     margin-top: 2em; }
@@ -273,7 +301,16 @@ h3 {
   .content figure {
     margin: 1.2em 0; }
   .content.with-sidebar {
-    margin-left: 320px; }
+    margin-left: 25%; }
+  @media (max-width: 767px) {
+    .content h1 {
+      font-size: 26px; }
+    .content h2 {
+      font-size: 17px; }
+    .content p {
+      font-size: 13px; }
+    .content.with-sidebar {
+      margin: 0 auto; } }
 
 .sidebar {
   position: fixed;
@@ -286,6 +323,9 @@ h3 {
   margin-right: 20px;
   overflow-x: hidden;
   overflow-y: auto; }
+  @media (max-width: 767px) {
+    .sidebar {
+      display: none; } }
 
 .main-footer {
   background: #7F786C;
@@ -294,6 +334,41 @@ h3 {
   text-align: center;
   color: #FFFFFF;
   line-height: 1.5; }
+  .main-footer a {
+    color: #FFFFFF; }
+
+.mobile-nav {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  bottom: 0;
+  width: 220px;
+  background: #f3f3f3;
+  transform: translateX(-100%);
+  z-index: 3;
+  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.12);
+  padding: 0 20px;
+  box-sizing: border-box;
+  transition: transform 300ms ease-in-out;
+  padding-top: 30px; }
+  .mobile-nav.is-expanded {
+    transform: translateX(0); }
+  @media (min-width: 768px) {
+    .mobile-nav {
+      display: none; } }
+  .mobile-nav h3 {
+    margin-top: 30px; }
+  .mobile-nav .mobile-nav__link,
+  .mobile-nav .mobile-nav__sidebar-link {
+    display: inline-block;
+    color: #737373;
+    line-height: 1.8;
+    font-size: 14px;
+    font-weight: normal; }
+    .mobile-nav .mobile-nav__link.current.current, .mobile-nav .mobile-nav__link.current:hover,
+    .mobile-nav .mobile-nav__sidebar-link.current.current,
+    .mobile-nav .mobile-nav__sidebar-link.current:hover {
+      border-bottom: 2px solid #FFDA5C; }
 
 .hero {
   height: 450px;
@@ -306,6 +381,8 @@ h3 {
   @media (max-width: 768px) {
     .hero {
       height: auto; }
+      .hero .button + .button {
+        margin-left: 10px; }
       .hero h1 {
         font-size: 25px;
         line-height: 1.5; } }
@@ -317,11 +394,13 @@ h3 {
   text-align: center; }
   @media (max-width: 768px) {
     .hero__content {
-      padding: 80px 40px; } }
+      padding: 80px 40px 60px; }
+      .hero__content h1 {
+        margin-bottom: 40px; } }
 
 .main-nav {
   display: inline-block; }
-  @media (max-width: 1023px) {
+  @media (max-width: 767px) {
     .main-nav {
       display: none; } }
 
@@ -331,7 +410,8 @@ h3 {
   color: #6C6C6C;
   text-decoration: none;
   padding: 0 0 3px;
-  margin: 0 15px; }
+  margin: 0 15px;
+  font-weight: normal; }
   .main-nav__link.current, .main-nav__link:hover {
     border-bottom: 4px solid #FFDA5C; }
 
@@ -342,7 +422,8 @@ h3 {
   text-decoration: none;
   color: #737373;
   line-height: 1.8;
-  font-size: 14px; }
+  font-size: 14px;
+  font-weight: normal; }
   .sidebar-nav__link.current {
     color: #FFDA5C; }
 
@@ -355,7 +436,14 @@ h3 {
   font-weight: bold;
   font-size: 20px;
   color: #FFFFFF;
-  text-decoration: none; }
+  text-decoration: none;
+  box-sizing: border-box; }
+  @media (max-width: 767px) {
+    .button {
+      font-size: 14px; } }
+  @media (max-width: 459px) {
+    .button {
+      padding: 12px 30px; } }
 
 .button--secondary {
   background: transparent;
@@ -365,6 +453,9 @@ h3 {
 .button--fixed {
   min-width: 220px;
   box-sizing: border-box; }
+  @media (max-width: 767px) {
+    .button--fixed {
+      min-width: auto; } }
 
 .promo {
   text-align: center;
@@ -376,7 +467,12 @@ h3 {
     line-height: 1.5; }
   @media (max-width: 767px) {
     .promo {
-      padding: 30px; } }
+      padding: 30px; }
+      .promo h2 {
+        font-size: 20px;
+        padding: 10px 0; }
+      .promo p {
+        font-size: 13px; } }
 
 .quick-links {
   margin-top: 30px;
@@ -388,3 +484,32 @@ h3 {
   color: #FFDA5C;
   font-weight: bold;
   font-size: 15px; }
+
+.nav-toggle {
+  cursor: pointer;
+  background: none;
+  border: 0;
+  padding: 6px 20px 8px 0;
+  outline: none; }
+  .nav-toggle span, .nav-toggle span:before, .nav-toggle span:after {
+    transition: all 300ms ease-in-out;
+    content: '';
+    cursor: pointer;
+    border-radius: 1px;
+    height: 2px;
+    width: 20px;
+    background: #737373;
+    position: absolute;
+    display: block; }
+  .nav-toggle span:before {
+    top: -6px; }
+  .nav-toggle span:after {
+    bottom: -6px; }
+  .nav-toggle.is-active span {
+    background-color: transparent; }
+    .nav-toggle.is-active span:after, .nav-toggle.is-active span:before {
+      top: 0; }
+    .nav-toggle.is-active span:before {
+      transform: rotate(45deg); }
+    .nav-toggle.is-active span:after {
+      transform: rotate(-45deg); }

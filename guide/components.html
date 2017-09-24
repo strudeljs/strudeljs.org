@@ -13,26 +13,164 @@
 </head>
 <body class="guide">
     <header class="main-header">
-    <div class="container">
-        <a class="main-logo" href="/"><img src="/images/strudel.svg"></a>
-        <div class="navigation">
-            <nav class="main-nav" role="navigation">
-                
-                <a class="main-nav__link current" href="/guide/" >Guide</a>
-                
-                <a class="main-nav__link" href="/docs/" >Reference</a>
-                
-                <a class="main-nav__link" href="/examples/" >Examples</a>
-                
-                <a class="main-nav__link" href="/community/" >Community</a>
-                
-            </nav>
-            <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.1.0</a>
-        </div>
+    <button class="nav-toggle"><span></span></button>
+    <a class="main-logo" href="/"><img src="/images/strudel.svg"></a>
+    <div class="navigation">
+        <nav class="main-nav" role="navigation">
+            
+            <a class="main-nav__link current" href="/guide/" >Guide</a>
+            
+            <a class="main-nav__link" href="/api/" >API</a>
+            
+            <a class="main-nav__link" href="/examples/" >Examples</a>
+            
+            <a class="main-nav__link" href="/community/" >Community</a>
+            
+        </nav>
+        <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.5.0</a>
     </div>
 </header>
-    <section class="main-content"><div class="sidebar">
+    <section class="main-content"><div class="mobile-nav">
+    <nav role="mobile-nav__navigation">
+    
+    <div class="mobile-nav__item">
+        <a class="mobile-nav__link current" href="/guide/" >Guide</a>
+    </div>
+    
+    <div class="mobile-nav__item">
+        <a class="mobile-nav__link" href="/api/" >API</a>
+    </div>
+    
+    <div class="mobile-nav__item">
+        <a class="mobile-nav__link" href="/examples/" >Examples</a>
+    </div>
+    
+    <div class="mobile-nav__item">
+        <a class="mobile-nav__link" href="/community/" >Community</a>
+    </div>
+    
+</nav>
+<ul class="mobile-nav__sidebar">
+    
+    
+    
+    
+    
+    <li><h3>Overview</h3></li>
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/installation.html" class="mobile-nav__sidebar-link">Installation</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/index.html" class="mobile-nav__sidebar-link">Introduction</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/components.html" class="mobile-nav__sidebar-link current">Components</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/dom.html" class="mobile-nav__sidebar-link">Manipulating DOM</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/eventhandling.html" class="mobile-nav__sidebar-link">Event handling</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    <li><h3>Advanced</h3></li>
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/initialization.html" class="mobile-nav__sidebar-link">Lazy Initialization</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/lifecycle.html" class="mobile-nav__sidebar-link">Life cycle</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/interoperability.html" class="mobile-nav__sidebar-link">Interoperability</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/styleguide.html" class="mobile-nav__sidebar-link">Styleguide</a>
+        </div>
+    </li>
+    
+</ul>
+
+</div>
+<div class="sidebar">
     <ul class="sidebar-nav">
+    
     
         
         
@@ -40,6 +178,7 @@
                 <li><h3>Overview</h3></li>
             
             
+        
         
         <li>
             <a href="/guide/installation.html" class="sidebar-nav__link">Installation</a>
@@ -50,6 +189,7 @@
             
             
         
+        
         <li>
             <a href="/guide/index.html" class="sidebar-nav__link">Introduction</a>
         </li>
@@ -58,6 +198,7 @@
         
             
             
+        
         
         <li>
             <a href="/guide/components.html" class="sidebar-nav__link current">Components</a>
@@ -68,6 +209,7 @@
             
             
         
+        
         <li>
             <a href="/guide/dom.html" class="sidebar-nav__link">Manipulating DOM</a>
         </li>
@@ -76,6 +218,7 @@
         
             
             
+        
         
         <li>
             <a href="/guide/eventhandling.html" class="sidebar-nav__link">Event handling</a>
@@ -88,6 +231,7 @@
                 <li><h3>Advanced</h3></li>
             
         
+        
         <li>
             <a href="/guide/initialization.html" class="sidebar-nav__link">Lazy Initialization</a>
         </li>
@@ -96,6 +240,7 @@
         
             
             
+        
         
         <li>
             <a href="/guide/lifecycle.html" class="sidebar-nav__link">Life cycle</a>
@@ -106,6 +251,7 @@
             
             
         
+        
         <li>
             <a href="/guide/interoperability.html" class="sidebar-nav__link">Interoperability</a>
         </li>
@@ -115,6 +261,7 @@
             
             
         
+        
         <li>
             <a href="/guide/styleguide.html" class="sidebar-nav__link">Styleguide</a>
         </li>
@@ -122,7 +269,9 @@
 </ul>
 </div>
 <div class="content with-sidebar">
-    <h1 id="Components"><a href="#Components" class="headerlink" title="Components"></a>Components</h1>
+    <h1 id="Components"><a href="#Components" class="headerlink" title="Components"></a>Components</h1><h2 id="Making-components-interactive"><a href="#Making-components-interactive" class="headerlink" title="Making components interactive"></a>Making components interactive</h2><p>Of course things like tabs, accordions and carousels need to be interactive - respond to user clicks and change their state. Strudel achieves </p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"collapsible"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"collapsible__trigger"</span>&gt;</span>Click me<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"collapsible__content"</span>&gt;</span></div><div class="line">        Hello there!</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">@Component(<span class="string">'.collapsible'</span>)</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Collapsible</span> </span>&#123;</div><div class="line">  @El(<span class="string">'.collapsible__content'</span>)</div><div class="line">  content;</div><div class="line">	</div><div class="line">  @Evt(<span class="string">'click .collapsible__trigger'</span>)</div><div class="line">  toggle() &#123;</div><div class="line">    <span class="keyword">this</span>.content.toggleClass(<span class="string">'is-expanded'</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
     
     <div class="quick-links">
         
@@ -136,5 +285,6 @@
 </div>
 
 </section>
+    <script src="/js/main.js"></script>
 </body>
 </html>

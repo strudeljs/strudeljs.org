@@ -13,26 +13,164 @@
 </head>
 <body class="guide">
     <header class="main-header">
-    <div class="container">
-        <a class="main-logo" href="/"><img src="/images/strudel.svg"></a>
-        <div class="navigation">
-            <nav class="main-nav" role="navigation">
-                
-                <a class="main-nav__link current" href="/guide/" >Guide</a>
-                
-                <a class="main-nav__link" href="/docs/" >Reference</a>
-                
-                <a class="main-nav__link" href="/examples/" >Examples</a>
-                
-                <a class="main-nav__link" href="/community/" >Community</a>
-                
-            </nav>
-            <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.1.0</a>
-        </div>
+    <button class="nav-toggle"><span></span></button>
+    <a class="main-logo" href="/"><img src="/images/strudel.svg"></a>
+    <div class="navigation">
+        <nav class="main-nav" role="navigation">
+            
+            <a class="main-nav__link current" href="/guide/" >Guide</a>
+            
+            <a class="main-nav__link" href="/api/" >API</a>
+            
+            <a class="main-nav__link" href="/examples/" >Examples</a>
+            
+            <a class="main-nav__link" href="/community/" >Community</a>
+            
+        </nav>
+        <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.5.0</a>
     </div>
 </header>
-    <section class="main-content"><div class="sidebar">
+    <section class="main-content"><div class="mobile-nav">
+    <nav role="mobile-nav__navigation">
+    
+    <div class="mobile-nav__item">
+        <a class="mobile-nav__link current" href="/guide/" >Guide</a>
+    </div>
+    
+    <div class="mobile-nav__item">
+        <a class="mobile-nav__link" href="/api/" >API</a>
+    </div>
+    
+    <div class="mobile-nav__item">
+        <a class="mobile-nav__link" href="/examples/" >Examples</a>
+    </div>
+    
+    <div class="mobile-nav__item">
+        <a class="mobile-nav__link" href="/community/" >Community</a>
+    </div>
+    
+</nav>
+<ul class="mobile-nav__sidebar">
+    
+    
+    
+    
+    
+    <li><h3>Overview</h3></li>
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/installation.html" class="mobile-nav__sidebar-link">Installation</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/index.html" class="mobile-nav__sidebar-link current">Introduction</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/components.html" class="mobile-nav__sidebar-link">Components</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/dom.html" class="mobile-nav__sidebar-link">Manipulating DOM</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/eventhandling.html" class="mobile-nav__sidebar-link">Event handling</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    <li><h3>Advanced</h3></li>
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/initialization.html" class="mobile-nav__sidebar-link">Lazy Initialization</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/lifecycle.html" class="mobile-nav__sidebar-link">Life cycle</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/interoperability.html" class="mobile-nav__sidebar-link">Interoperability</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/styleguide.html" class="mobile-nav__sidebar-link">Styleguide</a>
+        </div>
+    </li>
+    
+</ul>
+
+</div>
+<div class="sidebar">
     <ul class="sidebar-nav">
+    
     
         
         
@@ -40,6 +178,7 @@
                 <li><h3>Overview</h3></li>
             
             
+        
         
         <li>
             <a href="/guide/installation.html" class="sidebar-nav__link">Installation</a>
@@ -50,6 +189,7 @@
             
             
         
+        
         <li>
             <a href="/guide/index.html" class="sidebar-nav__link current">Introduction</a>
         </li>
@@ -58,6 +198,7 @@
         
             
             
+        
         
         <li>
             <a href="/guide/components.html" class="sidebar-nav__link">Components</a>
@@ -68,6 +209,7 @@
             
             
         
+        
         <li>
             <a href="/guide/dom.html" class="sidebar-nav__link">Manipulating DOM</a>
         </li>
@@ -76,6 +218,7 @@
         
             
             
+        
         
         <li>
             <a href="/guide/eventhandling.html" class="sidebar-nav__link">Event handling</a>
@@ -88,6 +231,7 @@
                 <li><h3>Advanced</h3></li>
             
         
+        
         <li>
             <a href="/guide/initialization.html" class="sidebar-nav__link">Lazy Initialization</a>
         </li>
@@ -96,6 +240,7 @@
         
             
             
+        
         
         <li>
             <a href="/guide/lifecycle.html" class="sidebar-nav__link">Life cycle</a>
@@ -106,6 +251,7 @@
             
             
         
+        
         <li>
             <a href="/guide/interoperability.html" class="sidebar-nav__link">Interoperability</a>
         </li>
@@ -115,6 +261,7 @@
             
             
         
+        
         <li>
             <a href="/guide/styleguide.html" class="sidebar-nav__link">Styleguide</a>
         </li>
@@ -122,16 +269,14 @@
 </ul>
 </div>
 <div class="content with-sidebar">
-    <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><h2 id="What-is-Strudel-js"><a href="#What-is-Strudel-js" class="headerlink" title="What is Strudel.js?"></a>What is Strudel.js?</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis id erat nec viverra. Ut odio neque, gravida et risus sit amet, tempus interdum justo. Pellentesque at sapien ligula. Phasellus ut nibh porttitor, aliquam leo sit amet, ultricies enim. Suspendisse dignissim placerat felis, et efficitur tortor pellentesque at. Curabitur tempor ipsum metus, nec porta turpis tincidunt sit amet. Vivamus sagittis et augue ac accumsan. Maecenas sem metus, cursus eget maximus ac, fermentum quis leo. Phasellus ac quam ac lacus ullamcorper porttitor id a nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla vel pretium est.</p>
-<h2 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis id erat nec viverra. Ut odio neque, gravida et risus sit amet, tempus interdum justo. Pellentesque at sapien ligula. Phasellus ut nibh porttitor, aliquam leo sit amet, ultricies enim. Suspendisse dignissim placerat felis, et efficitur tortor pellentesque at. Curabitur tempor ipsum metus, nec porta turpis tincidunt sit amet. Vivamus sagittis et augue ac accumsan. Maecenas sem metus, cursus eget maximus ac, fermentum quis leo. Phasellus ac quam ac lacus ullamcorper porttitor id a nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla vel pretium est.</p>
+    <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><h2 id="What-is-Strudel-js"><a href="#What-is-Strudel-js" class="headerlink" title="What is Strudel.js?"></a>What is Strudel.js?</h2><p>Strudel (/ˈstruːd(ə)l/) is a <strong>lightweight component framework</strong>. Declarative API is introduced thanks to Angular-style decorators. Main target for Strudel are interactive websites, not especially web applications, as there are plenty frameworks that solves apps problems nicely (<em>React</em>, <em>Angular</em>, <em>Vue</em>). On the other hand Strudel biggest goal is to provide great way of writing interactive bits on pages like tabs, accordions and carousels in server-side rendered websites. It’s time to get rid of <em>jQuery</em> and start writing modern and lightweight code.</p>
+<h2 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started"></a>Getting started</h2><p>Strudel is <strong>component</strong> framework so code is organised into components and components are center piece of front-end development.. To create a component you need to simply create a <code>class</code> and bind it to existing DOM using <code>@Component</code> decorator as in example below.</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"greeter"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">@Component(<span class="string">'.greeter'</span>)</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Greeter</span> </span>&#123;</div><div class="line">  init() &#123;</div><div class="line">    <span class="keyword">this</span>.element.html(<span class="string">'Hello world!'</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="Making-stuff-dynamic"><a href="#Making-stuff-dynamic" class="headerlink" title="Making stuff dynamic"></a>Making stuff dynamic</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis id erat nec viverra. Ut odio neque, gravida et risus sit amet, tempus interdum justo. Pellentesque at sapien ligula. Phasellus ut nibh porttitor, aliquam leo sit amet, ultricies enim. Suspendisse dignissim placerat felis, et efficitur tortor pellentesque at. Curabitur tempor ipsum metus, nec porta turpis tincidunt sit amet. Vivamus sagittis et augue ac accumsan. Maecenas sem metus, cursus eget maximus ac, fermentum quis leo. Phasellus ac quam ac lacus ullamcorper porttitor id a nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla vel pretium est.</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"collapsible"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"collapsible__trigger"</span>&gt;</span>Click me<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"collapsible__content"</span>&gt;</span></div><div class="line">        Hello there!</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">@Component(<span class="string">'.collapsible'</span>)</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Collapsible</span> </span>&#123;</div><div class="line">  @El(<span class="string">'.collapsible__content'</span>)</div><div class="line">  content;</div><div class="line">	</div><div class="line">  @Evt(<span class="string">'click .collapsible__trigger'</span>)</div><div class="line">  toggle() &#123;</div><div class="line">    <span class="keyword">this</span>.content.toggleClass(<span class="string">'is-expanded'</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="Yet-another-framework"><a href="#Yet-another-framework" class="headerlink" title="Yet another framework?"></a>Yet another framework?</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis id erat nec viverra. Ut odio neque, gravida et risus sit amet, tempus interdum justo. Pellentesque at sapien ligula. Phasellus ut nibh porttitor, aliquam leo sit amet, ultricies enim. Suspendisse dignissim placerat felis, et efficitur tortor pellentesque at. Curabitur tempor ipsum metus, nec porta turpis tincidunt sit amet. Vivamus sagittis et augue ac accumsan. Maecenas sem metus, cursus eget maximus ac, fermentum quis leo. Phasellus ac quam ac lacus ullamcorper porttitor id a nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla vel pretium est.</p>
-<h2 id="Why-not-Typescript-then"><a href="#Why-not-Typescript-then" class="headerlink" title="Why not Typescript then?"></a>Why not Typescript then?</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis id erat nec viverra. Ut odio neque, gravida et risus sit amet, tempus interdum justo. Pellentesque at sapien ligula. Phasellus ut nibh porttitor, aliquam leo sit amet, ultricies enim. Suspendisse dignissim placerat felis, et efficitur tortor pellentesque at. Curabitur tempor ipsum metus, nec porta turpis tincidunt sit amet. Vivamus sagittis et augue ac accumsan. Maecenas sem metus, cursus eget maximus ac, fermentum quis leo. Phasellus ac quam ac lacus ullamcorper porttitor id a nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla vel pretium est.</p>
-<h2 id="Next-steps"><a href="#Next-steps" class="headerlink" title="Next steps"></a>Next steps</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mollis id erat nec viverra. Ut odio neque, gravida et risus sit amet, tempus interdum justo. Pellentesque at sapien ligula. Phasellus ut nibh porttitor, aliquam leo sit amet, ultricies enim. Suspendisse dignissim placerat felis, et efficitur tortor pellentesque at. Curabitur tempor ipsum metus, nec porta turpis tincidunt sit amet. Vivamus sagittis et augue ac accumsan. Maecenas sem metus, cursus eget maximus ac, fermentum quis leo. </p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">@Component(<span class="string">'.greeter'</span>)</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Greeter</span> </span>&#123;</div><div class="line">  init() &#123;</div><div class="line">    <span class="keyword">this</span>.$element.html(<span class="string">'Hello world!'</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Such a component will be instantiated for every occurrence of element with <code>.greeter</code> class that will be present on the page. More about components in <a href="http://strudeljs.org/guide/components.html">Components</a> section.</p>
+<h2 id="Yet-another-framework"><a href="#Yet-another-framework" class="headerlink" title="Yet another framework?"></a>Yet another framework?</h2><p>As there was mentioned in the <strong>Getting started</strong> Strudel goal is not to compete with <em>React</em> or <em>Angular</em>. If you are looking for Virtual DOM powered, Reactive framework for building complex apps Strudel is not for you. However if you need a library for taking care of DOM and Event handling in ECMAScript 2015 flavoured sauce that will help you organise your front-end code then Strudel is for you. </p>
+<h2 id="Why-not-Typescript"><a href="#Why-not-Typescript" class="headerlink" title="Why not Typescript?"></a>Why not Typescript?</h2><p>Typescript is a great subset of the Javascript language which support decorators out of the box. Adding types however feels a little bit too much for Strudel, as biggest target audience should are developers switching directly from jQuery, so adding Typescript on top of Webpack and Babel would be too much.</p>
+<h2 id="Next-steps"><a href="#Next-steps" class="headerlink" title="Next steps"></a>Next steps</h2><p>Strudel is still currently under heavy development so if you have a great idea for the missing API I would like to contribute into the development of the framework, feel free to navigate to <a href="http://strudeljs.org/community/">Community</a> subpage. Before version 1.0 expect much more new features. </p>
 
     
     <div class="quick-links">
@@ -146,5 +291,6 @@
 </div>
 
 </section>
+    <script src="/js/main.js"></script>
 </body>
 </html>
