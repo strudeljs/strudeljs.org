@@ -50,7 +50,8 @@
     </div>
     
 </nav>
-<ul class="mobile-nav__sidebar">
+<ul class="mobile-nav__sidebar anchors guide">
+    
     
     
     
@@ -119,6 +120,18 @@
     
     
     
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/lifecycle.html" class="mobile-nav__sidebar-link">Lifecycle</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
     <li><h3>Advanced</h3></li>
     
     
@@ -137,19 +150,7 @@
     
     <li>
         <div class="mobile-nav__item">
-            <a href="/guide/lifecycle.html" class="mobile-nav__sidebar-link">Life cycle</a>
-        </div>
-    </li>
-    
-    
-    
-    
-    
-    
-    
-    <li>
-        <div class="mobile-nav__item">
-            <a href="/guide/interoperability.html" class="mobile-nav__sidebar-link">Interoperability</a>
+            <a href="/guide/extending.html" class="mobile-nav__sidebar-link">Extending</a>
         </div>
     </li>
     
@@ -169,7 +170,8 @@
 
 </div>
 <div class="sidebar">
-    <ul class="sidebar-nav">
+    <ul class="sidebar-nav anchors guide">
+    
     
     
         
@@ -233,6 +235,16 @@
         
         
         <li>
+            <a href="/guide/lifecycle.html" class="sidebar-nav__link">Lifecycle</a>
+        </li>
+    
+        
+        
+            
+            
+        
+        
+        <li>
             <a href="/guide/initialization.html" class="sidebar-nav__link">Lazy Initialization</a>
         </li>
     
@@ -243,17 +255,7 @@
         
         
         <li>
-            <a href="/guide/lifecycle.html" class="sidebar-nav__link">Life cycle</a>
-        </li>
-    
-        
-        
-            
-            
-        
-        
-        <li>
-            <a href="/guide/interoperability.html" class="sidebar-nav__link">Interoperability</a>
+            <a href="/guide/extending.html" class="sidebar-nav__link">Extending</a>
         </li>
     
         
@@ -274,7 +276,10 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"greeter"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">@Component(<span class="string">'.greeter'</span>)</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Greeter</span> </span>&#123;</div><div class="line">  init() &#123;</div><div class="line">    <span class="keyword">this</span>.$element.html(<span class="string">'Hello world!'</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>Such a component will be instantiated for every occurrence of element with <code>.greeter</code> class that will be present on the page. More about components in <a href="http://strudeljs.org/guide/components.html">Components</a> section.</p>
-<h2 id="Yet-another-framework"><a href="#Yet-another-framework" class="headerlink" title="Yet another framework?"></a>Yet another framework?</h2><p>As there was mentioned in the <strong>Getting started</strong> Strudel goal is not to compete with <em>React</em> or <em>Angular</em>. If you are looking for Virtual DOM powered, Reactive framework for building complex apps Strudel is not for you. However if you need a library for taking care of DOM and Event handling in ECMAScript 2015 flavoured sauce that will help you organise your front-end code then Strudel is for you. </p>
+<h2 id="Yet-another-framework"><a href="#Yet-another-framework" class="headerlink" title="Yet another framework?"></a>Yet another framework?</h2><p>As there was mentioned in the <strong>Getting started</strong> Strudel goal is not to compete with <em>React</em> or <em>Angular</em>. If you are looking for Virtual DOM powered, Reactive framework for building complex apps Strudel is not for you. </p>
+<blockquote class="alert">Strudel is not a competition for Angular, React or Vue</blockquote>
+
+<p>However if you need a library for taking care of DOM and Event handling in ECMAScript 2015 flavoured sauce that will help you organise your front-end code then Strudel is for you. </p>
 <h2 id="Why-not-Typescript"><a href="#Why-not-Typescript" class="headerlink" title="Why not Typescript?"></a>Why not Typescript?</h2><p>Typescript is a great subset of the Javascript language which support decorators out of the box. Adding types however feels a little bit too much for Strudel, as biggest target audience should are developers switching directly from jQuery, so adding Typescript on top of Webpack and Babel would be too much.</p>
 <h2 id="Next-steps"><a href="#Next-steps" class="headerlink" title="Next steps"></a>Next steps</h2><p>Strudel is still currently under heavy development so if you have a great idea for the missing API I would like to contribute into the development of the framework, feel free to navigate to <a href="http://strudeljs.org/community/">Community</a> subpage. Before version 1.0 expect much more new features. </p>
 

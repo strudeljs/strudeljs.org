@@ -50,7 +50,8 @@
     </div>
     
 </nav>
-<ul class="mobile-nav__sidebar">
+<ul class="mobile-nav__sidebar anchors guide">
+    
     
     
     
@@ -119,6 +120,18 @@
     
     
     
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/lifecycle.html" class="mobile-nav__sidebar-link">Lifecycle</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
     <li><h3>Advanced</h3></li>
     
     
@@ -137,19 +150,7 @@
     
     <li>
         <div class="mobile-nav__item">
-            <a href="/guide/lifecycle.html" class="mobile-nav__sidebar-link">Life cycle</a>
-        </div>
-    </li>
-    
-    
-    
-    
-    
-    
-    
-    <li>
-        <div class="mobile-nav__item">
-            <a href="/guide/interoperability.html" class="mobile-nav__sidebar-link">Interoperability</a>
+            <a href="/guide/extending.html" class="mobile-nav__sidebar-link">Extending</a>
         </div>
     </li>
     
@@ -169,7 +170,8 @@
 
 </div>
 <div class="sidebar">
-    <ul class="sidebar-nav">
+    <ul class="sidebar-nav anchors guide">
+    
     
     
         
@@ -233,6 +235,16 @@
         
         
         <li>
+            <a href="/guide/lifecycle.html" class="sidebar-nav__link">Lifecycle</a>
+        </li>
+    
+        
+        
+            
+            
+        
+        
+        <li>
             <a href="/guide/initialization.html" class="sidebar-nav__link">Lazy Initialization</a>
         </li>
     
@@ -243,17 +255,7 @@
         
         
         <li>
-            <a href="/guide/lifecycle.html" class="sidebar-nav__link">Life cycle</a>
-        </li>
-    
-        
-        
-            
-            
-        
-        
-        <li>
-            <a href="/guide/interoperability.html" class="sidebar-nav__link">Interoperability</a>
+            <a href="/guide/extending.html" class="sidebar-nav__link">Extending</a>
         </li>
     
         
@@ -270,7 +272,8 @@
 </div>
 <div class="content with-sidebar">
     <h1 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h1><h2 id="Compatibility"><a href="#Compatibility" class="headerlink" title="Compatibility"></a>Compatibility</h2><p><strong>Strudel</strong> declarative syntax depends heavily on decorators which are not part of ECMAScript spec, so they are not natively supported by browser vendors (decorators spec is a <a href="https://github.com/tc39/proposal-decorators" target="_blank" rel="external">TC39 proposal in stage 2</a>. Transpiler like Babel is required and <code>transform-decorators-legacy</code> plugin. For optional components syntax also <code>transform-class-properties</code> is recommended.</p>
-<p>Strudel could be used without the decorators, but such an approach is not recommended.</p>
+<blockquote class="alert">Strudel could be used without the decorators, but such an approach is not recommended as it loses one of core principles.</blockquote>
+
 <h2 id="Browser-support"><a href="#Browser-support" class="headerlink" title="Browser support"></a>Browser support</h2><p>Without polyfills Strudel supports IE11, as it using DOM 4 spec. If lower browser support is required please use great tools like <a href="http://polyfills.io" target="_blank" rel="external">polyfills.io</a>.</p>
 <h2 id="CLI"><a href="#CLI" class="headerlink" title="CLI"></a>CLI</h2><p>CLI is recommended way of setting up new Strudel project</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ npm install --global strudel-cli</div><div class="line">$ strudel init webpack my-project</div><div class="line">$ <span class="built_in">cd</span> my-project</div><div class="line">$ npm install</div></pre></td></tr></table></figure>

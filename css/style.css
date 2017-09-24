@@ -108,13 +108,13 @@ pre {
   color: #7d5e2d; }
 
 .class .title {
-  color: #ffce29; }
+  color: #fbb200; }
 
 .symbol,
 .symbol .string,
 .value,
 .regexp {
-  color: #ffce29; }
+  color: #fbb200; }
 
 .title {
   color: #534227; }
@@ -143,7 +143,7 @@ pre {
 .apache .cbracket,
 .tex .command,
 .prompt {
-  color: #ffce29; }
+  color: #fbb200; }
 
 .comment,
 .java .annotation,
@@ -198,9 +198,38 @@ strong {
   font-weight: bold; }
 
 blockquote {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   border-left: 5px solid #FFDA5C;
-  padding: 5px 10px; }
+  padding: 5px 10px;
+  line-height: 1.5; }
+  blockquote.alert {
+    padding: 15px 15px 15px 30px;
+    border-left: 5px solid #ec6666;
+    background: #f3f3f3;
+    position: relative;
+    font-size: .9em; }
+    p + blockquote.alert {
+      margin-top: 20px; }
+    blockquote.alert code {
+      color: #fbb200;
+      background: #ebebeb; }
+    blockquote.alert:before {
+      content: '!';
+      position: absolute;
+      top: 10px;
+      left: -13px;
+      display: block;
+      width: 22px;
+      height: 22px;
+      background: #ec6666;
+      font-size: 12px;
+      padding: 0 5px;
+      box-sizing: border-box;
+      text-align: center;
+      font-weight: bold;
+      color: #fff;
+      line-height: 22px;
+      border-radius: 50%; }
 
 .container {
   max-width: 1160px;
@@ -230,7 +259,10 @@ blockquote {
     position: absolute;
     top: 50%;
     margin-top: -20px; }
-  body.guide .main-header {
+  body.guide .main-header,
+  body.examples .main-header,
+  body.community .main-header,
+  body.api .main-header {
     position: fixed; }
   @media (max-width: 767px) {
     .main-header {
@@ -298,7 +330,7 @@ blockquote {
       list-style: circle; }
   .content code {
     font-family: "Roboto Mono";
-    color: #ffce29;
+    color: #fbb200;
     background: #f3f3f3;
     font-size: .8em;
     display: inline-block;
@@ -316,6 +348,9 @@ blockquote {
       font-size: 13px; }
     .content.with-sidebar {
       margin: 0 auto; } }
+
+body.api .content h3 {
+  margin: 1.5em 0 1em; }
 
 .sidebar {
   position: fixed;
@@ -352,10 +387,10 @@ blockquote {
   transform: translateX(-100%);
   z-index: 3;
   box-shadow: 1px 0 2px rgba(0, 0, 0, 0.12);
-  padding: 0 20px;
+  padding: 30px 20px 0;
   box-sizing: border-box;
   transition: transform 300ms ease-in-out;
-  padding-top: 30px; }
+  overflow-y: auto; }
   .mobile-nav.is-expanded {
     transform: translateX(0); }
   @media (min-width: 768px) {
@@ -363,6 +398,11 @@ blockquote {
       display: none; } }
   .mobile-nav h3 {
     margin-top: 30px; }
+  .mobile-nav h4 {
+    margin-top: 20px; }
+  .mobile-nav h4 {
+    font-size: 14px;
+    margin-bottom: 5px; }
   .mobile-nav .mobile-nav__link,
   .mobile-nav .mobile-nav__sidebar-link {
     display: inline-block;
@@ -374,6 +414,10 @@ blockquote {
     .mobile-nav .mobile-nav__sidebar-link.current.current,
     .mobile-nav .mobile-nav__sidebar-link.current:hover {
       border-bottom: 2px solid #FFDA5C; }
+
+.mobile-nav__sidebar.api .sidebar-nav__link {
+  padding-left: 10px;
+  font-size: 12px; }
 
 .hero {
   height: 450px;
@@ -423,12 +467,18 @@ blockquote {
 .sidebar-nav h3 {
   margin-top: 1.5em; }
 
+.sidebar-nav h4 {
+  margin: 1.5em 0 .5em; }
+
 .sidebar-nav__link {
   text-decoration: none;
   color: #737373;
   line-height: 1.8;
   font-size: 14px;
   font-weight: normal; }
+  .sidebar-nav.api .sidebar-nav__link {
+    font-size: 13px;
+    padding-left: 10px; }
   .sidebar-nav__link.current {
     color: #FFDA5C; }
 
