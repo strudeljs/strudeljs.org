@@ -41,7 +41,7 @@ table {
   padding: .4em .8em .4em;
   line-height: 1.5;
   background: #f3f3f3;
-  font-family: Roboto Mono;
+  font-family: 'Roboto Mono', monospace;
   font-size: 12px;
   overflow-x: auto; }
   .highlight table, .highlight tr, .highlight td {
@@ -167,11 +167,11 @@ pre {
   opacity: 0.5; }
 
 body {
-  font-family: Lato;
+  font-family: 'Lato', sans-serif;
   color: #737373; }
 
 h1, h2, h3 {
-  font-family: Comfortaa;
+  font-family: 'Comfortaa', cursive;
   font-weight: bold;
   color: #534227; }
 
