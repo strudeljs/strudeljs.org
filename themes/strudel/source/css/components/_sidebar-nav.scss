@@ -2,6 +2,10 @@
   h3 {
     margin-top: 1.5em;
   }
+
+  h4 {
+    margin: 1.5em 0 .5em;
+  }
 }
 
 .sidebar-nav__link {
@@ -10,6 +14,11 @@
   line-height: 1.8;
   font-size: 14px;
   font-weight: normal;
+
+  .sidebar-nav.api & {
+    font-size: 13px;
+    padding-left: 10px;
+  }
 
   &.current {
     color: $primary-color;

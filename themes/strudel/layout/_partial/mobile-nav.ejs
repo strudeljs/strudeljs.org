@@ -5,7 +5,10 @@
     </div>
     <% } %>
 </nav>
-<ul class="mobile-nav__sidebar">
+<ul class="mobile-nav__sidebar anchors <%- page.type %>">
+    <% if (type === 'api') { %>
+    <%- partial('_partial/api-sidebar') %>
+    <% } %>
     <% if (type === 'community') { %>
     <li><h3>Community</h3></li>
     <li>

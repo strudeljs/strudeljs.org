@@ -16,7 +16,10 @@
     margin-top: -20px;
   }
 
-  body.guide & {
+  body.guide &,
+  body.examples &,
+  body.community &,
+  body.api & {
     position: fixed;
   }
 

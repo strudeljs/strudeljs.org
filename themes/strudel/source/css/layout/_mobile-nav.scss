@@ -8,10 +8,10 @@
   transform: translateX(-100%);
   z-index: 3;
   box-shadow: 1px 0 2px rgba(0,0,0,.12);
-  padding: 0 20px;
+  padding: 30px 20px 0;
   box-sizing: border-box;
   transition: transform 300ms ease-in-out;
-  padding-top: 30px;
+  overflow-y: auto;
 
   &.is-expanded {
     transform: translateX(0);
@@ -23,6 +23,15 @@
 
   h3 {
     margin-top: 30px;
+  }
+
+  h4 {
+    margin-top: 20px;
+  }
+
+  h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
   }
 
   .mobile-nav__link,
@@ -40,4 +49,9 @@
       }
     }
   }
+}
+
+.mobile-nav__sidebar.api .sidebar-nav__link {
+  padding-left: 10px;
+  font-size: 12px;
 }

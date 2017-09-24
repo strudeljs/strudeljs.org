@@ -1,4 +1,7 @@
-<ul class="sidebar-nav">
+<ul class="sidebar-nav anchors <%- page.type %>">
+    <% if (type === 'api') { %>
+        <%- partial('_partial/api-sidebar') %>
+    <% } %>
     <% if (type === 'community') { %>
         <li><h3>Community</h3></li>
         <li>
@@ -14,7 +17,7 @@
             <% if (fileName === 'installation') { %>
                 <li><h3>Overview</h3></li>
             <% } %>
-            <% if (fileName === 'initialization') { %>
+            <% if (fileName === 'lifecycle') { %>
                 <li><h3>Advanced</h3></li>
             <% } %>
         <% } %>

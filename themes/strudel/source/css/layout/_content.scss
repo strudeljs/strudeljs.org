@@ -55,7 +55,7 @@
 
   code {
     font-family: "Roboto Mono";
-    color: #ffce29;
+    color: $code-color;
     background: #f3f3f3;
     font-size: .8em;
     display: inline-block;
@@ -85,6 +85,14 @@
 
     &.with-sidebar {
       margin: 0 auto;
+    }
+  }
+}
+
+body.api {
+  .content {
+    h3 {
+      margin: 1.5em 0 1em;
     }
   }
 }

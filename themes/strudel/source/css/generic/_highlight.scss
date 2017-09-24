@@ -98,14 +98,14 @@ pre {
 }
 
 .class .title {
-  color: #ffce29;
+  color: $code-color;
 }
 
 .symbol,
 .symbol .string,
 .value,
 .regexp {
-  color: #ffce29;
+  color: $code-color;
 }
 
 .title {
@@ -136,7 +136,7 @@ pre {
 .apache .cbracket,
 .tex .command,
 .prompt {
-  color: #ffce29;
+  color: $code-color;
 }
 
 .comment,

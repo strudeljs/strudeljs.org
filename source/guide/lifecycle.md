@@ -1,7 +1,7 @@
 ---
-title: Life cycle
+title: Lifecycle
 type: guide
-order: 7
+order: 6
 ---
 
-# Component life cycle
+# Component lifecycle
