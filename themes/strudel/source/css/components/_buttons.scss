@@ -8,6 +8,15 @@
   font-size: 20px;
   color: #FFFFFF;
   text-decoration: none;
+  box-sizing: border-box;
+
+  @include media('<tablet') {
+    font-size: 14px;
+  }
+
+  @include media('<phone') {
+    padding: 12px 30px;
+  }
 }
 
 .button--secondary {
@@ -19,4 +28,8 @@
 .button--fixed {
   min-width: 220px;
   box-sizing: border-box;
+
+  @include media('<tablet') {
+    min-width: auto;
+  }
 }

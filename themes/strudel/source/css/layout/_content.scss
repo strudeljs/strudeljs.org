@@ -1,19 +1,25 @@
 .main-content {
   margin: 90px auto 0;
+  position: relative;
 
   .guide &,
   .docs & {
     max-width: 1200px;
   }
 
-  @include media('<desktop') {
-    margin-top: 50px;
+  @include media('<tablet') {
+    margin-top: 30px;
   }
 }
 
 .content {
-  padding: 5px 0 40px;
+  padding: 5px 20px 40px;
+  box-sizing: border-box;
   max-width: 650px;
+
+  @include media('<tablet') {
+    max-width: 95%;
+  }
 
   h1 {
     font-size: 30px;
@@ -61,6 +67,24 @@
   }
 
   &.with-sidebar {
-    margin-left: 320px;
+    margin-left: 25%;
+  }
+
+  @include media('<tablet') {
+    h1 {
+      font-size: 26px;
+    }
+
+    h2 {
+      font-size: 17px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+
+    &.with-sidebar {
+      margin: 0 auto;
+    }
   }
 }

@@ -8,10 +8,12 @@ order: 1
 
 ## Compatibility
 
-Strudel depends heavily on decorators which are not part of ECMAScript 2015 spec. Currently to be able to use it transpiler like Babel is required. For usage Strudel **requires** ``transform-decorators-legacy`` Babel plugin. For optional components syntax also ``transform-class-properties`` is recommended. 
+**Strudel** declarative syntax depends heavily on decorators which are not part of ECMAScript spec, so they are not natively supported by browser vendors (decorators spec is a [TC39 proposal in stage 2](https://github.com/tc39/proposal-decorators). Transpiler like Babel is required and ``transform-decorators-legacy`` plugin. For optional components syntax also ``transform-class-properties`` is recommended.
+
+Strudel could be used without the decorators, but such an approach is not recommended.
 
 ## Browser support
-Without polyfills Strudel supports IE11, as it using DOM 4 spec. If lower browser support is required please use great tools like polyfills.io
+Without polyfills Strudel supports IE11, as it using DOM 4 spec. If lower browser support is required please use great tools like [polyfills.io](http://polyfills.io).
 
 ## CLI
 CLI is recommended way of setting up new Strudel project
@@ -28,3 +30,4 @@ If you feel like configuring build on your own you can use npm to install Strude
 ```bash
 $ npm install strudel --save
 ```
+Then however you need to take care about Babel and Webpack configuration.

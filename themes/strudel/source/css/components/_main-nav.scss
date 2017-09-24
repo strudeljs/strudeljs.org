@@ -1,7 +1,7 @@
 .main-nav {
   display: inline-block;
 
-  @include media('<desktop') {
+  @include media('<tablet') {
     display: none;
   }
 }
@@ -13,6 +13,7 @@
   text-decoration: none;
   padding: 0 0 3px;
   margin: 0 15px;
+  font-weight: normal;
 
   &.current,
   &:hover {

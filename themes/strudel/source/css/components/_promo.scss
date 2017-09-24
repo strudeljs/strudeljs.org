@@ -13,5 +13,14 @@
 
   @include media('<tablet') {
     padding: 30px;
+
+    h2 {
+      font-size: 20px;
+      padding: 10px 0;
+    }
+
+    p {
+      font-size: 13px;
+    }
   }
 }

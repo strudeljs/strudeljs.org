@@ -1,0 +1,50 @@
+.nav-toggle {
+  cursor: pointer;
+  background: none;
+  border: 0;
+  padding: 6px 20px 8px 0;
+  outline: none;
+
+  span {
+    &,
+    &:before,
+    &:after {
+      transition: all 300ms ease-in-out;
+      content: '';
+      cursor: pointer;
+      border-radius: 1px;
+      height: 2px;
+      width: 20px;
+      background: $text-color;
+      position: absolute;
+      display: block;
+    }
+
+    &:before {
+      top: -6px;
+    }
+
+    &:after {
+      bottom: -6px;
+    }
+  }
+
+  &.is-active {
+    span {
+      background-color: transparent;
+
+      &:after,
+      &:before {
+        top: 0;
+      }
+
+      &:before {
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

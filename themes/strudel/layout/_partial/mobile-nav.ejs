@@ -1,0 +1,39 @@
+<nav role="mobile-nav__navigation">
+    <% for (var i in theme.menu){ %>
+    <div class="mobile-nav__item">
+        <a class="mobile-nav__link<%- path.match(theme.menu[i].substring(1)) ? ' current' : '' %>" href="<%- url_for(theme.menu[i]) %>" ><%= i %></a>
+    </div>
+    <% } %>
+</nav>
+<ul class="mobile-nav__sidebar">
+    <% if (type === 'community') { %>
+    <li><h3>Community</h3></li>
+    <li>
+        <a href="https://twitter.com/strudeljs" class="sidebar-nav__link" target="_blank">Twitter</a>
+    </li>
+    <li>
+        <a href="https://gitter.im/strudel-js/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link" class="sidebar-nav__link" target="_blank">Gitter</a>
+    </li>
+    <% } %>
+    <% site.pages.find({type: type}).sort('order').each(function (p) { %>
+    <% var fileName = p.path.replace(/^.+?\/([\w-]+)\.html/, '$1') %>
+    <% if (type === 'guide') { %>
+    <% if (fileName === 'installation') { %>
+    <li><h3>Overview</h3></li>
+    <% } %>
+    <% if (fileName === 'initialization') { %>
+    <li><h3>Advanced</h3></li>
+    <% } %>
+    <% } %>
+    <% if (type === 'examples') { %>
+    <% if (fileName === 'index') { %>
+    <li><h3>Examples</h3></li>
+    <% } %>
+    <% } %>
+    <li>
+        <div class="mobile-nav__item">
+            <a href="<%- url_for(p.path) %>" class="mobile-nav__sidebar-link<%- page.title === p.title ? ' current' : '' %>"><%- p.title %></a>
+        </div>
+    </li>
+    <% }) %>
+</ul>

@@ -1,0 +1,43 @@
+.mobile-nav {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  bottom: 0;
+  width: 220px;
+  background: #f3f3f3;
+  transform: translateX(-100%);
+  z-index: 3;
+  box-shadow: 1px 0 2px rgba(0,0,0,.12);
+  padding: 0 20px;
+  box-sizing: border-box;
+  transition: transform 300ms ease-in-out;
+  padding-top: 30px;
+
+  &.is-expanded {
+    transform: translateX(0);
+  }
+
+  @include media('>=tablet') {
+    display: none;
+  }
+
+  h3 {
+    margin-top: 30px;
+  }
+
+  .mobile-nav__link,
+  .mobile-nav__sidebar-link {
+    display: inline-block;
+    color: $text-color;
+    line-height: 1.8;
+    font-size: 14px;
+    font-weight: normal;
+
+    &.current {
+      &.current,
+      &:hover {
+        border-bottom: 2px solid $primary-color;
+      }
+    }
+  }
+}

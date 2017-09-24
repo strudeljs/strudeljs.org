@@ -6,7 +6,9 @@
   right: 0;
   height: 90px;
   box-shadow: 0 1px 1px rgba(0,0,0,.08);
-  z-index: 2;
+  z-index: 4;
+  padding: 0 60px;
+  box-sizing: border-box;
 
   img {
     position: absolute;
@@ -18,9 +20,23 @@
     position: fixed;
   }
 
-  @include media('<desktop') {
+  @include media('<tablet') {
     position: fixed;
     height: 50px;
+    padding: 10px 20px;
+
+    img {
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 150px;
+      margin-top: -15px;
+    }
+  }
+
+  @include media('>=tablet') {
+    .nav-toggle {
+      display: none;
+    }
   }
 }
 

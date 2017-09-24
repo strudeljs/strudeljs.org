@@ -1,13 +1,12 @@
 <header class="main-header">
-    <div class="container">
-        <a class="main-logo" href="/"><img src="/images/strudel.svg"></a>
-        <div class="navigation">
-            <nav class="main-nav" role="navigation">
-                <% for (var i in theme.menu){ %>
-                <a class="main-nav__link<%- path.match(theme.menu[i].substring(1)) ? ' current' : '' %>" href="<%- url_for(theme.menu[i]) %>" ><%= i %></a>
-                <% } %>
-            </nav>
-            <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.1.0</a>
-        </div>
+    <button class="nav-toggle"><span></span></button>
+    <a class="main-logo" href="/"><img src="/images/strudel.svg"></a>
+    <div class="navigation">
+        <nav class="main-nav" role="navigation">
+            <% for (var i in theme.menu){ %>
+            <a class="main-nav__link<%- path.match(theme.menu[i].substring(1)) ? ' current' : '' %>" href="<%- url_for(theme.menu[i]) %>" ><%= i %></a>
+            <% } %>
+        </nav>
+        <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.5.0</a>
     </div>
 </header>
