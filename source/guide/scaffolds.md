@@ -1,9 +1,9 @@
 ---
-title: Styleguide
+title: Scaffolds
 type: guide
-order: 10
+order: 13
 ---
 
-# Styleguide
+# Scaffolds
 
 Article in progress

@@ -1,9 +1,9 @@
 ---
-title: Styleguide
+title: Usage
 type: guide
-order: 10
+order: 11
 ---
 
-# Styleguide
+# Usage of CLI
 
 Article in progress

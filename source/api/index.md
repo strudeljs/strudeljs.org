@@ -184,11 +184,11 @@ type: api
 - **Arguments:**
   - `{String} selector`
   
-- **Details**
+- **Details:**
   
   Finds element specified by selector in the element context
   
-- **Usage**
+- **Usage:**
   ```js
   Element('body').find('.className');
   ```
@@ -197,48 +197,51 @@ type: api
 - **Arguments:**
   - `{String} selector`
   
-- **Details**
+- **Details:**
   
   Get the direct children of all of the nodes with an optional filter
   
-- **Usage**
+- **Usage:**
   ```js
   Element('body').children();
   Element('body').children('<div>');
   ```
   
 ### parent
+
 - **Arguments:**
   - `{String} selector`
   
-- **Details**
+- **Details:**
   
-  Travel the matched elements one node up
-  
-- **Usage**
+  Travel the matched elements one node up.
+   
+- **Usage:**
   ```js
   Element('a').parent();
-  ```  
+  ```
   
 ### eq
+
 - **Arguments:**
   - `{number} index`
   
-- **Details**
+- **Details:**
   
   Reduce the set of matched elements to the one at the specified index.
   
-- **Usage**
+- **Usage:**
   ```js
   Element('.list-items').eq(3);
   ```
+  
 ### first
 
-- **Details**
+- **Details:**
   
   Reduce the set of matched elements to the first in the set. **Returns native HTML Element.**
   
-- **Usage**
+- **Usage:**
   ```js
   Element('body').find('.className').first();
   ```
@@ -248,11 +251,11 @@ type: api
 - **Arguments:**
   - `{Function} callback`
 
-- **Details**
+- **Details:**
   
   Extracts structured data from the DOM. Can have callback passed to return different format of data.
   
-- **Usage**
+- **Usage:**
   ```js
   Element('ul li').array();
   // ['Item 1', 'Item 2', 'Item 3']
@@ -265,11 +268,11 @@ type: api
 - **Arguments:**
   - `{string|Element|Function} filter`
 
-- **Details**
+- **Details:**
   
   Remove all the nodes that doesn't match the criteria.
   
-- **Usage**
+- **Usage:**
   ```js
   Element('ul').filter('li')
   Element('nav').filter(Element('a'))
@@ -281,11 +284,11 @@ type: api
 - **Arguments:**
   - `{Function} callback`
 
-- **Details**
+- **Details:**
   
   Change the content of the current instance by looping each element
   
-- **Usage**
+- **Usage:**
   ```js
   Element('ul li').map((node, i) => '<a>' + Element(node).text() + '</a>');
   ```
@@ -295,11 +298,11 @@ type: api
 - **Arguments:**
   - `{Function} callback`
 
-- **Details**
+- **Details:**
   
   Loop through all of the nodes and execute a callback for each
   
-- **Usage**
+- **Usage:**
   ```js
   Element('ul li').each((node, i) => Element(node).attr('href', '#'));
   ```
@@ -309,11 +312,11 @@ type: api
 - **Arguments:**
   - `{string|Element|Function} filter`
 
-- **Details**
+- **Details:**
   
   Check whether any of the nodes matches the selector
   
-- **Usage**
+- **Usage:**
   ```js
   Element('nav').is('.is-active');
   ```
@@ -325,11 +328,11 @@ type: api
 - **Arguments:**
   - `{string|Element} html`
 
-- **Details**
+- **Details:**
   
   Insert content, specified by the parameter, to the end of each element in the set of matched elements. Additional data can be provided, which will be used for populating the html
   
-- **Usage**
+- **Usage:**
   ```js
   Element("ul").append("<li>Item 1</li>");
   ```
@@ -339,22 +342,22 @@ type: api
 - **Arguments:**
     - `{string|Element} html`
 
-- **Details**
+- **Details:**
 
 Insert content, specified by the parameter, to the beginning of each element in the set of matched elements. Additional data can be provided, which will be used for populating the html
 
-- **Usage**
+- **Usage:**
 ```js
 Element("ul").prepend("<li>Item 1</li>");
 ```
 
 ### remove
 
-- **Details**
+- **Details:**
   
   Remove the set of matched elements from the DOM.
   
-- **Usage**
+- **Usage:**
   ```js
   Element("ul").remove();
   ```
@@ -364,11 +367,11 @@ Element("ul").prepend("<li>Item 1</li>");
 - **Arguments:**
   - `{string} text (optional)`
 
-- **Details**
+- **Details:**
   
    Gets the text contents of the first element in a set. When parameter is provided set the text contents of each element in the set.
   
-- **Usage**
+- **Usage:**
   ```js
   Element("span").text();
   Element("span").text("Hello world!");
@@ -379,11 +382,11 @@ Element("ul").prepend("<li>Item 1</li>");
 - **Arguments:**
   - `{string} htmlString (optional)`
 
-- **Details**
+- **Details:**
   
   Gets the HTML contents of the first element in a set. When parameter is provided set the HTML contents of each element in the set.
   
-- **Usage**
+- **Usage:**
   ```js
   Element("div").html();
   Element("div").html("<span>Hello world!</span>");
@@ -395,11 +398,11 @@ Element("ul").prepend("<li>Item 1</li>");
   - `{string|object} attrName`
   - `{string} value`
 
-- **Details**
+- **Details:**
   
   Gets the value of an attribute for the each element in the set of matched elements or set one or more attributes for every matched element.
   
-- **Usage**
+- **Usage:**
   ```js
   Element("a").attr("href");
   Element("a").attr("href", "#");
@@ -412,11 +415,11 @@ Element("ul").prepend("<li>Item 1</li>");
   - `{string|object} attrName`
   - `{string} value`
 
-- **Details**
+- **Details:**
   
   Gets the value of an data attribute for the each element in the set of matched elements or set one or more attributes for every matched element.
   
-- **Usage**
+- **Usage:**
   ```js
   Element("div").data().msg;
   Element("div").data("msg");
@@ -429,11 +432,11 @@ Element("ul").prepend("<li>Item 1</li>");
 
   - `{...String} class(es)
   `
-- **Details**
+- **Details:**
   
   Adds the specified class(es) to each element in the set of matched elements.
   
-- **Usage**
+- **Usage:**
   ```js
   Element('.button').removeClass('.is-active');
   ```
@@ -441,22 +444,22 @@ Element("ul").prepend("<li>Item 1</li>");
 - **Arguments:**
 
   - `{...String} class(es)`
-- **Details**
+- **Details:**
   
   Remove the specified class(es) to each element in the set of matched elements.
   
-- **Usage**
+- **Usage:**
   ```js
   Element('.modal').removeClass('.is-visible');
   ```
 ### toggleClass
 - **Arguments:**
   - `{...String} class(es)`
-- **Details**
+- **Details:**
   
   Toggles the specified class(es) to each element in the set of matched elements.
   
-- **Usage**
+- **Usage:**
   ```js
   Element('.main-nav').toggleClass('.is-expanded');
   ```
@@ -467,11 +470,11 @@ Element("ul").prepend("<li>Item 1</li>");
 - **Arguments:**
   - `{String} events`
   
-- **Details**
+- **Details:**
   
   Execute all handlers attached to the event type.
   
-- **Usage**
+- **Usage:**
   ```js
   Element('button').trigger('click');
   ```
@@ -484,11 +487,11 @@ Element("ul").prepend("<li>Item 1</li>");
   - `{string|Function} selector or listener`
   - `{Function} listener (only when selector provided)` 
   
-- **Details**
+- **Details:**
   
   Attach event handlers to element or element descendants
   
-- **Usage**
+- **Usage:**
   ```js
   Element('button').on('click', callback);
   Element('div').on('click', 'button', callback);
@@ -500,11 +503,11 @@ Element("ul").prepend("<li>Item 1</li>");
   - `{String} event`
   - `{Function} listener` 
   
-- **Details**
+- **Details:**
   
   Remove an event handler
   
-- **Usage**
+- **Usage:**
   ```js
   Element('button').off('click', callback);
   ```

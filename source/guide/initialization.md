@@ -5,3 +5,5 @@ order: 7
 ---
 
 # Lazy Initialization
+
+Article in progress

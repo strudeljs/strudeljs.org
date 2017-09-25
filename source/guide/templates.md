@@ -1,9 +1,9 @@
 ---
-title: Styleguide
+title: Templates
 type: guide
-order: 10
+order: 12
 ---
 
-# Styleguide
+# Templates
 
 Article in progress

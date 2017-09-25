@@ -16,11 +16,15 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	});
 
+	window.addEventListener('hashchange', () => {
+		var target = document.querySelector(window.location.hash);
+		document.body.scrollTop = target.offsetTop - 20;
+	});
+
 	[].forEach.call($sidebars, function($sidebar) {
 		$sidebar.addEventListener('click', function (e) {
 			if (e.target.classList.contains('sidebar-nav__link')) {
-				var target = document.querySelector(e.target.getAttribute('href'));
-				document.body.scrollTop = target.offsetTop - 20;
+				window.location.hash = e.target.getAttribute('href');
 				e.preventDefault();
 			}
 		});
