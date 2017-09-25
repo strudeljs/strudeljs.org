@@ -38,9 +38,9 @@ If you want to run some code when component is created you can use `init` hook i
 ```js
 @Component('.example')
 class Example {	
-	init() {
-		this.$element.text('Hello');
-	}
+    init() {
+        this.$element.text('Hello');
+    }
 }
 ```
 
