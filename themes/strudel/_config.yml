@@ -8,3 +8,7 @@ node_sass:
   outputStyle: nested
   precision: 5
   sourceComments: false
+
+site_description: "Strudel.js - Lightweight Component Framework"
+google_analytics: UA-17077875-3
+root_domain: strudeljs.org
