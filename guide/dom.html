@@ -30,7 +30,7 @@
         <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.5.0</a>
     </div>
 </header>
-    <section class="main-content"><div class="mobile-nav">
+    <section class="main-content"><div class="mobile-nav" onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';">
     <nav role="mobile-nav__navigation">
     
     <div class="mobile-nav__item">
@@ -57,7 +57,8 @@
     
     
     
-    <li><h3>Overview</h3></li>
+        <li><h3>Overview</h3></li>
+    
     
     
     
@@ -67,6 +68,7 @@
             <a href="/guide/installation.html" class="mobile-nav__sidebar-link">Installation</a>
         </div>
     </li>
+    
     
     
     
@@ -86,11 +88,13 @@
     
     
     
+    
     <li>
         <div class="mobile-nav__item">
             <a href="/guide/components.html" class="mobile-nav__sidebar-link">Components</a>
         </div>
     </li>
+    
     
     
     
@@ -110,11 +114,13 @@
     
     
     
+    
     <li>
         <div class="mobile-nav__item">
-            <a href="/guide/eventhandling.html" class="mobile-nav__sidebar-link">Event handling</a>
+            <a href="/guide/eventhandling.html" class="mobile-nav__sidebar-link">Event Handling</a>
         </div>
     </li>
+    
     
     
     
@@ -132,7 +138,8 @@
     
     
     
-    <li><h3>Advanced</h3></li>
+        <li><h3>Advanced</h3></li>
+    
     
     
     
@@ -141,6 +148,7 @@
             <a href="/guide/initialization.html" class="mobile-nav__sidebar-link">Lazy Initialization</a>
         </div>
     </li>
+    
     
     
     
@@ -160,9 +168,51 @@
     
     
     
+    
     <li>
         <div class="mobile-nav__item">
             <a href="/guide/styleguide.html" class="mobile-nav__sidebar-link">Styleguide</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+        <li><h3>CLI</h3></li>
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/usage.html" class="mobile-nav__sidebar-link">Usage</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/templates.html" class="mobile-nav__sidebar-link">Templates</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/scaffolds.html" class="mobile-nav__sidebar-link">Scaffolds</a>
         </div>
     </li>
     
@@ -170,7 +220,7 @@
 
 </div>
 <div class="sidebar">
-    <ul class="sidebar-nav anchors guide">
+    <ul class="sidebar-nav anchors guide" onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';">
     
     
     
@@ -178,6 +228,7 @@
         
             
                 <li><h3>Overview</h3></li>
+            
             
             
         
@@ -190,6 +241,7 @@
         
             
             
+            
         
         
         <li>
@@ -198,6 +250,7 @@
     
         
         
+            
             
             
         
@@ -210,6 +263,7 @@
         
             
             
+            
         
         
         <li>
@@ -220,10 +274,11 @@
         
             
             
+            
         
         
         <li>
-            <a href="/guide/eventhandling.html" class="sidebar-nav__link">Event handling</a>
+            <a href="/guide/eventhandling.html" class="sidebar-nav__link">Event Handling</a>
         </li>
     
         
@@ -231,6 +286,7 @@
             
             
                 <li><h3>Advanced</h3></li>
+            
             
         
         
@@ -240,6 +296,7 @@
     
         
         
+            
             
             
         
@@ -252,6 +309,7 @@
         
             
             
+            
         
         
         <li>
@@ -262,23 +320,68 @@
         
             
             
+            
         
         
         <li>
             <a href="/guide/styleguide.html" class="sidebar-nav__link">Styleguide</a>
         </li>
     
+        
+        
+            
+            
+            
+                <li><h3>CLI</h3></li>
+            
+        
+        
+        <li>
+            <a href="/guide/usage.html" class="sidebar-nav__link">Usage</a>
+        </li>
+    
+        
+        
+            
+            
+            
+        
+        
+        <li>
+            <a href="/guide/templates.html" class="sidebar-nav__link">Templates</a>
+        </li>
+    
+        
+        
+            
+            
+            
+        
+        
+        <li>
+            <a href="/guide/scaffolds.html" class="sidebar-nav__link">Scaffolds</a>
+        </li>
+    
 </ul>
 </div>
 <div class="content with-sidebar">
-    <h1 id="Manipulating-DOM"><a href="#Manipulating-DOM" class="headerlink" title="Manipulating DOM"></a>Manipulating DOM</h1>
+    <h1 id="Manipulating-DOM"><a href="#Manipulating-DOM" class="headerlink" title="Manipulating DOM"></a>Manipulating DOM</h1><h2 id="Fundamentals"><a href="#Fundamentals" class="headerlink" title="Fundamentals"></a>Fundamentals</h2><p>Strudel uses DOM manipulation in similar manner as jQuery library. All DOM manipulation is done from Javascript in unobtrusive manner. This means all the traversing, manipulation and event handling is done in Javascript code, not in HTML.</p>
+<blockquote class="alert">Strudel uses DOM API v4, so no support for IE8 and IE9</blockquote>
+
+<p>If you are familiar with jQuery you should be familiar with the DOM API that Strudel provides, however Strudel API is much lighter.</p>
+<h2 id="Traversing"><a href="#Traversing" class="headerlink" title="Traversing"></a>Traversing</h2><p>Most of DOM traversing could be achieved with usage of <code>@El</code> decorator, however DOM API exposes also suitable methods for finding elements, extracting children, parents, silbings and others. See full reference in <a href="https://strudeljs.org/api/#find">DOM API reference</a></p>
+<blockquote class="alert">Always prefer <code>@El</code> decorator over <code>.find</code> if possible</blockquote>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span> </span>&#123;</div><div class="line">    init() &#123;</div><div class="line">        <span class="keyword">const</span> children = <span class="keyword">this</span>.$element.children();</div><div class="line">        <span class="keyword">const</span> parent = <span class="keyword">this</span>.$element.parent();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Manipulating"><a href="#Manipulating" class="headerlink" title="Manipulating"></a>Manipulating</h2><p>Similar to traversing manipulation is done from Javascript. DOM API handles DOM modifications as efficient as possible, so you could use corresponding methods to modify DOM as referenced in <a href="https://strudeljs.org/api/#html">DOM API reference</a>.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span> </span>&#123;</div><div class="line">    @Evt(<span class="string">'click'</span>)</div><div class="line">    click() &#123;</div><div class="line">        <span class="keyword">this</span>.$element.toggleClass(<span class="string">'is-clicked'</span>);</div><div class="line">        <span class="keyword">this</span>.$element.html(<span class="string">`</span></div><div class="line">            <span class="subst">$&#123;<span class="keyword">this</span>.$element.data(<span class="string">'message'</span>)&#125;</span></div><div class="line">        `);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
     
     <div class="quick-links">
         
         <span>← <a class="quick-links__link" href="/guide/components.html">Components</a></span>
         
         
-        <span style="float:right"><a class="quick-links__link" href="/guide/eventhandling.html">Event handling</a> →</span>
+        <span style="float:right"><a class="quick-links__link" href="/guide/eventhandling.html">Event Handling</a> →</span>
         
     </div>
     

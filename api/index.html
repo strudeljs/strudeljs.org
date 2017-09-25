@@ -30,7 +30,7 @@
         <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.5.0</a>
     </div>
 </header>
-    <section class="main-content"><div class="mobile-nav">
+    <section class="main-content"><div class="mobile-nav" onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';">
     <nav role="mobile-nav__navigation">
     
     <div class="mobile-nav__item">
@@ -179,10 +179,10 @@
     <a href="#trigger" class="sidebar-nav__link">trigger</a>
 </li>
 <li>
-    <a href="#on" class="sidebar-nav__link">on</a>
+    <a href="#on-1" class="sidebar-nav__link">on</a>
 </li>
 <li>
-    <a href="$off" class="sidebar-nav__link">of</a>
+    <a href="#off-1" class="sidebar-nav__link">off</a>
 </li>
     
     
@@ -200,7 +200,7 @@
 
 </div>
 <div class="sidebar">
-    <ul class="sidebar-nav anchors api">
+    <ul class="sidebar-nav anchors api" onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';">
     
         <li>
     <h3>Strudel API</h3>
@@ -329,10 +329,10 @@
     <a href="#trigger" class="sidebar-nav__link">trigger</a>
 </li>
 <li>
-    <a href="#on" class="sidebar-nav__link">on</a>
+    <a href="#on-1" class="sidebar-nav__link">on</a>
 </li>
 <li>
-    <a href="$off" class="sidebar-nav__link">of</a>
+    <a href="#off-1" class="sidebar-nav__link">off</a>
 </li>
     
     
@@ -492,10 +492,10 @@
 <li><code>{String} selector</code></li>
 </ul>
 </li>
-<li><p><strong>Details</strong></p>
+<li><p><strong>Details:</strong></p>
 <p>Finds element specified by selector in the element context</p>
 </li>
-<li><p><strong>Usage</strong></p>
+<li><p><strong>Usage:</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">'body'</span>).find(<span class="string">'.className'</span>);</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -505,10 +505,10 @@
 <li><code>{String} selector</code></li>
 </ul>
 </li>
-<li><p><strong>Details</strong></p>
+<li><p><strong>Details:</strong></p>
 <p>Get the direct children of all of the nodes with an optional filter</p>
 </li>
-<li><p><strong>Usage</strong></p>
+<li><p><strong>Usage:</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">'body'</span>).children();</div><div class="line">Element(<span class="string">'body'</span>).children(<span class="string">'&lt;div&gt;'</span>);</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -518,18 +518,31 @@
 <li><code>{String} selector</code></li>
 </ul>
 </li>
-<li><p><strong>Details</strong></p>
-<p>Travel the matched elements one node up</p>
+<li><p><strong>Details:</strong></p>
+<p>Travel the matched elements one node up.</p>
 </li>
-<li><p><strong>Usage</strong></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">  Element(<span class="string">'a'</span>).parent();</div><div class="line">  <span class="string">``</span><span class="string">`  </span></div><div class="line">  </div><div class="line">### eq</div><div class="line">- **Arguments:**</div><div class="line">  - `&#123;number&#125; index<span class="string">`</span></div><div class="line">  </div><div class="line">- **Details**</div><div class="line">  </div><div class="line">  Reduce the set of matched elements to the one at the specified index.</div><div class="line">  </div><div class="line">- **Usage**</div><div class="line">  `<span class="string">``</span>js</div><div class="line">  Element(<span class="string">'.list-items'</span>).eq(<span class="number">3</span>);</div></pre></td></tr></table></figure>
+<li><p><strong>Usage:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">'a'</span>).parent();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="eq"><a href="#eq" class="headerlink" title="eq"></a>eq</h3><ul>
+<li><p><strong>Arguments:</strong></p>
+<ul>
+<li><code>{number} index</code></li>
+</ul>
+</li>
+<li><p><strong>Details:</strong></p>
+<p>Reduce the set of matched elements to the one at the specified index.</p>
+</li>
+<li><p><strong>Usage:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">'.list-items'</span>).eq(<span class="number">3</span>);</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="first"><a href="#first" class="headerlink" title="first"></a>first</h3><ul>
-<li><p><strong>Details</strong></p>
+<li><p><strong>Details:</strong></p>
 <p>Reduce the set of matched elements to the first in the set. <strong>Returns native HTML Element.</strong></p>
 </li>
-<li><p><strong>Usage</strong></p>
+<li><p><strong>Usage:</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">'body'</span>).find(<span class="string">'.className'</span>).first();</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -539,10 +552,10 @@
 <li><code>{Function} callback</code></li>
 </ul>
 </li>
-<li><p><strong>Details</strong></p>
+<li><p><strong>Details:</strong></p>
 <p>Extracts structured data from the DOM. Can have callback passed to return different format of data.</p>
 </li>
-<li><p><strong>Usage</strong></p>
+<li><p><strong>Usage:</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">'ul li'</span>).array();</div><div class="line"><span class="comment">// ['Item 1', 'Item 2', 'Item 3']</span></div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -552,10 +565,10 @@
 <li><code>{string|Element|Function} filter</code></li>
 </ul>
 </li>
-<li><p><strong>Details</strong></p>
+<li><p><strong>Details:</strong></p>
 <p>Remove all the nodes that doesn’t match the criteria.</p>
 </li>
-<li><p><strong>Usage</strong></p>
+<li><p><strong>Usage:</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">'ul'</span>).filter(<span class="string">'li'</span>)</div><div class="line">Element(<span class="string">'nav'</span>).filter(Element(<span class="string">'a'</span>))</div><div class="line">Element(<span class="string">'nav'</span>).filter(<span class="function">(<span class="params">node</span>) =&gt;</span> Element(node).is(<span class="string">'a'</span>))</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -565,10 +578,10 @@
 <li><code>{Function} callback</code></li>
 </ul>
 </li>
-<li><p><strong>Details</strong></p>
+<li><p><strong>Details:</strong></p>
 <p>Change the content of the current instance by looping each element</p>
 </li>
-<li><p><strong>Usage</strong></p>
+<li><p><strong>Usage:</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">'ul li'</span>).map(<span class="function">(<span class="params">node, i</span>) =&gt;</span> <span class="string">'&lt;a&gt;'</span> + Element(node).text() + <span class="string">'&lt;/a&gt;'</span>);</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -578,10 +591,10 @@
 <li><code>{Function} callback</code></li>
 </ul>
 </li>
-<li><p><strong>Details</strong></p>
+<li><p><strong>Details:</strong></p>
 <p>Loop through all of the nodes and execute a callback for each</p>
 </li>
-<li><p><strong>Usage</strong></p>
+<li><p><strong>Usage:</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">'ul li'</span>).each(<span class="function">(<span class="params">node, i</span>) =&gt;</span> Element(node).attr(<span class="string">'href'</span>, <span class="string">'#'</span>));</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -591,10 +604,10 @@
 <li><code>{string|Element|Function} filter</code></li>
 </ul>
 </li>
-<li><p><strong>Details</strong></p>
+<li><p><strong>Details:</strong></p>
 <p>Check whether any of the nodes matches the selector</p>
 </li>
-<li><p><strong>Usage</strong></p>
+<li><p><strong>Usage:</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">'nav'</span>).is(<span class="string">'.is-active'</span>);</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -604,10 +617,10 @@
 <li><code>{string|Element} html</code></li>
 </ul>
 </li>
-<li><p><strong>Details</strong></p>
+<li><p><strong>Details:</strong></p>
 <p>Insert content, specified by the parameter, to the end of each element in the set of matched elements. Additional data can be provided, which will be used for populating the html</p>
 </li>
-<li><p><strong>Usage</strong></p>
+<li><p><strong>Usage:</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">"ul"</span>).append(<span class="string">"&lt;li&gt;Item 1&lt;/li&gt;"</span>);</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -617,19 +630,19 @@
 <li><code>{string|Element} html</code></li>
 </ul>
 </li>
-<li><p><strong>Details</strong></p>
+<li><p><strong>Details:</strong></p>
 </li>
 </ul>
 <p>Insert content, specified by the parameter, to the beginning of each element in the set of matched elements. Additional data can be provided, which will be used for populating the html</p>
 <ul>
-<li><strong>Usage</strong><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">"ul"</span>).prepend(<span class="string">"&lt;li&gt;Item 1&lt;/li&gt;"</span>);</div></pre></td></tr></table></figure>
+<li><strong>Usage:</strong><figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">"ul"</span>).prepend(<span class="string">"&lt;li&gt;Item 1&lt;/li&gt;"</span>);</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="remove"><a href="#remove" class="headerlink" title="remove"></a>remove</h3><ul>
-<li><p><strong>Details</strong></p>
+<li><p><strong>Details:</strong></p>
 <p>Remove the set of matched elements from the DOM.</p>
 </li>
-<li><p><strong>Usage</strong></p>
+<li><p><strong>Usage:</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">"ul"</span>).remove();</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -639,10 +652,10 @@
 <li><code>{string} text (optional)</code></li>
 </ul>
 </li>
-<li><p><strong>Details</strong></p>
+<li><p><strong>Details:</strong></p>
 <p> Gets the text contents of the first element in a set. When parameter is provided set the text contents of each element in the set.</p>
 </li>
-<li><p><strong>Usage</strong></p>
+<li><p><strong>Usage:</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">"span"</span>).text();</div><div class="line">Element(<span class="string">"span"</span>).text(<span class="string">"Hello world!"</span>);</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -652,10 +665,10 @@
 <li><code>{string} htmlString (optional)</code></li>
 </ul>
 </li>
-<li><p><strong>Details</strong></p>
+<li><p><strong>Details:</strong></p>
 <p>Gets the HTML contents of the first element in a set. When parameter is provided set the HTML contents of each element in the set.</p>
 </li>
-<li><p><strong>Usage</strong></p>
+<li><p><strong>Usage:</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">"div"</span>).html();</div><div class="line">Element(<span class="string">"div"</span>).html(<span class="string">"&lt;span&gt;Hello world!&lt;/span&gt;"</span>);</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -666,10 +679,10 @@
 <li><code>{string} value</code></li>
 </ul>
 </li>
-<li><p><strong>Details</strong></p>
+<li><p><strong>Details:</strong></p>
 <p>Gets the value of an attribute for the each element in the set of matched elements or set one or more attributes for every matched element.</p>
 </li>
-<li><p><strong>Usage</strong></p>
+<li><p><strong>Usage:</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">"a"</span>).attr(<span class="string">"href"</span>);</div><div class="line">Element(<span class="string">"a"</span>).attr(<span class="string">"href"</span>, <span class="string">"#"</span>);</div><div class="line">Element(<span class="string">"a"</span>).attr(&#123;<span class="string">"href"</span>: <span class="string">"#"</span>, <span class="string">"target"</span>: <span class="string">"_blank"</span>&#125;);</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -680,10 +693,10 @@
 <li><code>{string} value</code></li>
 </ul>
 </li>
-<li><p><strong>Details</strong></p>
+<li><p><strong>Details:</strong></p>
 <p>Gets the value of an data attribute for the each element in the set of matched elements or set one or more attributes for every matched element.</p>
 </li>
-<li><p><strong>Usage</strong></p>
+<li><p><strong>Usage:</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">"div"</span>).data().msg;</div><div class="line">Element(<span class="string">"div"</span>).data(<span class="string">"msg"</span>);</div><div class="line">Element(<span class="string">"div"</span>).data(<span class="string">"msg"</span>, <span class="string">"Hello world!"</span>);</div><div class="line">Element(<span class="string">"div"</span>).data(&#123;<span class="string">"msg"</span>: <span class="string">"Hello world!"</span>, <span class="string">"value"</span>: <span class="string">"200"</span>&#125;);</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -693,10 +706,10 @@
 <li><code>{...String} class(es)</code></li>
 </ul>
 </li>
-<li><p><strong>Details</strong></p>
+<li><p><strong>Details:</strong></p>
 <p>Adds the specified class(es) to each element in the set of matched elements.</p>
 </li>
-<li><p><strong>Usage</strong></p>
+<li><p><strong>Usage:</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">'.button'</span>).removeClass(<span class="string">'.is-active'</span>);</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -706,10 +719,10 @@
 <li><code>{...String} class(es)</code></li>
 </ul>
 </li>
-<li><p><strong>Details</strong></p>
+<li><p><strong>Details:</strong></p>
 <p>Remove the specified class(es) to each element in the set of matched elements.</p>
 </li>
-<li><p><strong>Usage</strong></p>
+<li><p><strong>Usage:</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">'.modal'</span>).removeClass(<span class="string">'.is-visible'</span>);</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -718,10 +731,10 @@
 <li><code>{...String} class(es)</code></li>
 </ul>
 </li>
-<li><p><strong>Details</strong></p>
+<li><p><strong>Details:</strong></p>
 <p>Toggles the specified class(es) to each element in the set of matched elements.</p>
 </li>
-<li><p><strong>Usage</strong></p>
+<li><p><strong>Usage:</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">'.main-nav'</span>).toggleClass(<span class="string">'.is-expanded'</span>);</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -731,10 +744,10 @@
 <li><code>{String} events</code></li>
 </ul>
 </li>
-<li><p><strong>Details</strong></p>
+<li><p><strong>Details:</strong></p>
 <p>Execute all handlers attached to the event type.</p>
 </li>
-<li><p><strong>Usage</strong></p>
+<li><p><strong>Usage:</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">'button'</span>).trigger(<span class="string">'click'</span>);</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -746,10 +759,10 @@
 <li><code>{Function} listener (only when selector provided)</code> </li>
 </ul>
 </li>
-<li><p><strong>Details</strong></p>
+<li><p><strong>Details:</strong></p>
 <p>Attach event handlers to element or element descendants</p>
 </li>
-<li><p><strong>Usage</strong></p>
+<li><p><strong>Usage:</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">'button'</span>).on(<span class="string">'click'</span>, callback);</div><div class="line">Element(<span class="string">'div'</span>).on(<span class="string">'click'</span>, <span class="string">'button'</span>, callback);</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -760,10 +773,10 @@
 <li><code>{Function} listener</code> </li>
 </ul>
 </li>
-<li><p><strong>Details</strong></p>
+<li><p><strong>Details:</strong></p>
 <p>Remove an event handler</p>
 </li>
-<li><p><strong>Usage</strong></p>
+<li><p><strong>Usage:</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">'button'</span>).off(<span class="string">'click'</span>, callback);</div></pre></td></tr></table></figure></li>
 </ul>
 

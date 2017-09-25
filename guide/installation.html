@@ -30,7 +30,7 @@
         <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.5.0</a>
     </div>
 </header>
-    <section class="main-content"><div class="mobile-nav">
+    <section class="main-content"><div class="mobile-nav" onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';">
     <nav role="mobile-nav__navigation">
     
     <div class="mobile-nav__item">
@@ -57,7 +57,8 @@
     
     
     
-    <li><h3>Overview</h3></li>
+        <li><h3>Overview</h3></li>
+    
     
     
     
@@ -67,6 +68,7 @@
             <a href="/guide/installation.html" class="mobile-nav__sidebar-link current">Installation</a>
         </div>
     </li>
+    
     
     
     
@@ -86,11 +88,13 @@
     
     
     
+    
     <li>
         <div class="mobile-nav__item">
             <a href="/guide/components.html" class="mobile-nav__sidebar-link">Components</a>
         </div>
     </li>
+    
     
     
     
@@ -110,11 +114,13 @@
     
     
     
+    
     <li>
         <div class="mobile-nav__item">
-            <a href="/guide/eventhandling.html" class="mobile-nav__sidebar-link">Event handling</a>
+            <a href="/guide/eventhandling.html" class="mobile-nav__sidebar-link">Event Handling</a>
         </div>
     </li>
+    
     
     
     
@@ -132,7 +138,8 @@
     
     
     
-    <li><h3>Advanced</h3></li>
+        <li><h3>Advanced</h3></li>
+    
     
     
     
@@ -141,6 +148,7 @@
             <a href="/guide/initialization.html" class="mobile-nav__sidebar-link">Lazy Initialization</a>
         </div>
     </li>
+    
     
     
     
@@ -160,9 +168,51 @@
     
     
     
+    
     <li>
         <div class="mobile-nav__item">
             <a href="/guide/styleguide.html" class="mobile-nav__sidebar-link">Styleguide</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+        <li><h3>CLI</h3></li>
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/usage.html" class="mobile-nav__sidebar-link">Usage</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/templates.html" class="mobile-nav__sidebar-link">Templates</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/scaffolds.html" class="mobile-nav__sidebar-link">Scaffolds</a>
         </div>
     </li>
     
@@ -170,7 +220,7 @@
 
 </div>
 <div class="sidebar">
-    <ul class="sidebar-nav anchors guide">
+    <ul class="sidebar-nav anchors guide" onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';">
     
     
     
@@ -178,6 +228,7 @@
         
             
                 <li><h3>Overview</h3></li>
+            
             
             
         
@@ -190,6 +241,7 @@
         
             
             
+            
         
         
         <li>
@@ -198,6 +250,7 @@
     
         
         
+            
             
             
         
@@ -210,6 +263,7 @@
         
             
             
+            
         
         
         <li>
@@ -220,10 +274,11 @@
         
             
             
+            
         
         
         <li>
-            <a href="/guide/eventhandling.html" class="sidebar-nav__link">Event handling</a>
+            <a href="/guide/eventhandling.html" class="sidebar-nav__link">Event Handling</a>
         </li>
     
         
@@ -231,6 +286,7 @@
             
             
                 <li><h3>Advanced</h3></li>
+            
             
         
         
@@ -240,6 +296,7 @@
     
         
         
+            
             
             
         
@@ -252,6 +309,7 @@
         
             
             
+            
         
         
         <li>
@@ -262,16 +320,52 @@
         
             
             
+            
         
         
         <li>
             <a href="/guide/styleguide.html" class="sidebar-nav__link">Styleguide</a>
         </li>
     
+        
+        
+            
+            
+            
+                <li><h3>CLI</h3></li>
+            
+        
+        
+        <li>
+            <a href="/guide/usage.html" class="sidebar-nav__link">Usage</a>
+        </li>
+    
+        
+        
+            
+            
+            
+        
+        
+        <li>
+            <a href="/guide/templates.html" class="sidebar-nav__link">Templates</a>
+        </li>
+    
+        
+        
+            
+            
+            
+        
+        
+        <li>
+            <a href="/guide/scaffolds.html" class="sidebar-nav__link">Scaffolds</a>
+        </li>
+    
 </ul>
 </div>
 <div class="content with-sidebar">
-    <h1 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h1><h2 id="Compatibility"><a href="#Compatibility" class="headerlink" title="Compatibility"></a>Compatibility</h2><p><strong>Strudel</strong> declarative syntax depends heavily on decorators which are not part of ECMAScript spec, so they are not natively supported by browser vendors (decorators spec is a <a href="https://github.com/tc39/proposal-decorators" target="_blank" rel="external">TC39 proposal in stage 2</a>. Transpiler like Babel is required and <code>transform-decorators-legacy</code> plugin. For optional components syntax also <code>transform-class-properties</code> is recommended.</p>
+    <h1 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h1><h2 id="Compatibility"><a href="#Compatibility" class="headerlink" title="Compatibility"></a>Compatibility</h2><p><strong>Strudel</strong> declarative syntax depends heavily on decorators which are not part of ECMAScript spec, so they are not natively supported by browser vendors (decorators spec is a <a href="https://github.com/tc39/proposal-decorators" target="_blank" rel="external">TC39 proposal in stage 2</a>). Transpiler like Babel is required and <code>transform-decorators-legacy</code> plugin. For optional components syntax also <code>transform-class-properties</code> is recommended.</p>
 <blockquote class="alert">Strudel could be used without the decorators, but such an approach is not recommended as it loses one of core principles.</blockquote>
 
 <h2 id="Browser-support"><a href="#Browser-support" class="headerlink" title="Browser support"></a>Browser support</h2><p>Without polyfills Strudel supports IE11, as it using DOM 4 spec. If lower browser support is required please use great tools like <a href="http://polyfills.io" target="_blank" rel="external">polyfills.io</a>.</p>

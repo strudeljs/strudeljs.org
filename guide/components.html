@@ -30,7 +30,7 @@
         <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.5.0</a>
     </div>
 </header>
-    <section class="main-content"><div class="mobile-nav">
+    <section class="main-content"><div class="mobile-nav" onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';">
     <nav role="mobile-nav__navigation">
     
     <div class="mobile-nav__item">
@@ -57,7 +57,8 @@
     
     
     
-    <li><h3>Overview</h3></li>
+        <li><h3>Overview</h3></li>
+    
     
     
     
@@ -67,6 +68,7 @@
             <a href="/guide/installation.html" class="mobile-nav__sidebar-link">Installation</a>
         </div>
     </li>
+    
     
     
     
@@ -86,11 +88,13 @@
     
     
     
+    
     <li>
         <div class="mobile-nav__item">
             <a href="/guide/components.html" class="mobile-nav__sidebar-link current">Components</a>
         </div>
     </li>
+    
     
     
     
@@ -110,11 +114,13 @@
     
     
     
+    
     <li>
         <div class="mobile-nav__item">
-            <a href="/guide/eventhandling.html" class="mobile-nav__sidebar-link">Event handling</a>
+            <a href="/guide/eventhandling.html" class="mobile-nav__sidebar-link">Event Handling</a>
         </div>
     </li>
+    
     
     
     
@@ -132,7 +138,8 @@
     
     
     
-    <li><h3>Advanced</h3></li>
+        <li><h3>Advanced</h3></li>
+    
     
     
     
@@ -141,6 +148,7 @@
             <a href="/guide/initialization.html" class="mobile-nav__sidebar-link">Lazy Initialization</a>
         </div>
     </li>
+    
     
     
     
@@ -160,9 +168,51 @@
     
     
     
+    
     <li>
         <div class="mobile-nav__item">
             <a href="/guide/styleguide.html" class="mobile-nav__sidebar-link">Styleguide</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+        <li><h3>CLI</h3></li>
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/usage.html" class="mobile-nav__sidebar-link">Usage</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/templates.html" class="mobile-nav__sidebar-link">Templates</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/scaffolds.html" class="mobile-nav__sidebar-link">Scaffolds</a>
         </div>
     </li>
     
@@ -170,7 +220,7 @@
 
 </div>
 <div class="sidebar">
-    <ul class="sidebar-nav anchors guide">
+    <ul class="sidebar-nav anchors guide" onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';">
     
     
     
@@ -178,6 +228,7 @@
         
             
                 <li><h3>Overview</h3></li>
+            
             
             
         
@@ -190,6 +241,7 @@
         
             
             
+            
         
         
         <li>
@@ -198,6 +250,7 @@
     
         
         
+            
             
             
         
@@ -210,6 +263,7 @@
         
             
             
+            
         
         
         <li>
@@ -220,10 +274,11 @@
         
             
             
+            
         
         
         <li>
-            <a href="/guide/eventhandling.html" class="sidebar-nav__link">Event handling</a>
+            <a href="/guide/eventhandling.html" class="sidebar-nav__link">Event Handling</a>
         </li>
     
         
@@ -231,6 +286,7 @@
             
             
                 <li><h3>Advanced</h3></li>
+            
             
         
         
@@ -240,6 +296,7 @@
     
         
         
+            
             
             
         
@@ -252,6 +309,7 @@
         
             
             
+            
         
         
         <li>
@@ -262,18 +320,74 @@
         
             
             
+            
         
         
         <li>
             <a href="/guide/styleguide.html" class="sidebar-nav__link">Styleguide</a>
         </li>
     
+        
+        
+            
+            
+            
+                <li><h3>CLI</h3></li>
+            
+        
+        
+        <li>
+            <a href="/guide/usage.html" class="sidebar-nav__link">Usage</a>
+        </li>
+    
+        
+        
+            
+            
+            
+        
+        
+        <li>
+            <a href="/guide/templates.html" class="sidebar-nav__link">Templates</a>
+        </li>
+    
+        
+        
+            
+            
+            
+        
+        
+        <li>
+            <a href="/guide/scaffolds.html" class="sidebar-nav__link">Scaffolds</a>
+        </li>
+    
 </ul>
 </div>
 <div class="content with-sidebar">
-    <h1 id="Components"><a href="#Components" class="headerlink" title="Components"></a>Components</h1><h2 id="Making-components-interactive"><a href="#Making-components-interactive" class="headerlink" title="Making components interactive"></a>Making components interactive</h2><p>Of course things like tabs, accordions and carousels need to be interactive - respond to user clicks and change their state. Strudel achieves </p>
+    <h1 id="Components"><a href="#Components" class="headerlink" title="Components"></a>Components</h1><h2 id="What-are-components"><a href="#What-are-components" class="headerlink" title="What are components?"></a>What are components?</h2><p>Components are centerpiece of modern web development. Dividing websites into components makes not only cleaner code architecture, but also makes easier to talk with designers. Components are reusable, encapsulated pieces of website functionality - think about carousels, navigations, tabs, accordions, forms. In Strudel everything is a component.</p>
+<h2 id="Defining-components"><a href="#Defining-components" class="headerlink" title="Defining components"></a>Defining components</h2><p>To declare new component there needs are two things required:</p>
+<ul>
+<li>element in DOM so functionality can be attached</li>
+<li>Javascript class that will contain the functionality</li>
+</ul>
+<p>The class is attached to the DOM by using <code>@Component</code> decorator, which ties classes to elements found by selector. Full specification can be found in the <a href="http://strudeljs.org/api/#Component">API</a>.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"example"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">@Component(<span class="string">'.example'</span>)</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span> </span>&#123;	&#125;</div></pre></td></tr></table></figure>
+<h2 id="Initializing-components"><a href="#Initializing-components" class="headerlink" title="Initializing components"></a>Initializing components</h2><p>Components are instantiated when page is fully loaded - on <code>DOMContentLoaded</code> browser event. If you want to run a code when component is instantiated there are certain hooks that can be used.</p>
+<blockquote class="alert">You should never define <code>constructor</code> for a new Component, there are lifecycle hooks that will help achieving what is required - see <a href="http://hooks" target="_blank" rel="external">Lifecycle hooks</a></blockquote>
+
+<p>If you want to run some code when component is created you can use <code>init</code> hook in your code.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">@Component(<span class="string">'.example'</span>)</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span> </span>&#123;	</div><div class="line">	init() &#123;</div><div class="line">		<span class="keyword">this</span>.$element.text(<span class="string">'Hello'</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Making-components-interactive"><a href="#Making-components-interactive" class="headerlink" title="Making components interactive"></a>Making components interactive</h2><p>As components are classes you can devine methods and properties inside that will provide custom functionality for them. However what we really care for when building websites is <em>interactivity</em>. Strudel makes responding to DOM events and binding elements to code easier with additional decorators - <code>@El</code> and <code>@Evt</code>.</p>
+<ul>
+<li><code>@El</code> decorator binds property from class to DOM element matching selector - <a href="https://strudeljs.org/api/#El">see full API</a></li>
+<li><code>@Evt</code> decorator binds method from class to a DOM event that will occur on element or a children element - <a href="https://strudeljs.org/api/#Evt">see full API</a></li>
+</ul>
+<p>Of course this functionality can be also achieved by <a href="https://strudeljs.org/guide/dom.html">DOM manipulation API</a>. However using decorators makes code more structured. Example below shows a simple collapsible component that reveals the content when clicked. See how decorators are used.</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"collapsible"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"collapsible__trigger"</span>&gt;</span>Click me<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"collapsible__content"</span>&gt;</span></div><div class="line">        Hello there!</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">@Component(<span class="string">'.collapsible'</span>)</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Collapsible</span> </span>&#123;</div><div class="line">  @El(<span class="string">'.collapsible__content'</span>)</div><div class="line">  content;</div><div class="line">	</div><div class="line">  @Evt(<span class="string">'click .collapsible__trigger'</span>)</div><div class="line">  toggle() &#123;</div><div class="line">    <span class="keyword">this</span>.content.toggleClass(<span class="string">'is-expanded'</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<iframe width="100%" height="500" src="https://www.webpackbin.com/bins/-KuntuH3D9Sh0VqETelg" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
     
     <div class="quick-links">
         
