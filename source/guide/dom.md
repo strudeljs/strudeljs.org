@@ -16,7 +16,7 @@ If you are familiar with jQuery you should be familiar with the DOM API that Str
 
 ## Traversing
 
-Most of DOM traversing could be achieved with usage of `@El` decorator, however DOM API exposes also suitable methods for finding elements, extracting children, parents, silbings and others. See full reference in [DOM API reference](https://strudeljs.org/api/#find)
+Most of DOM traversing could be achieved with usage of `@El` decorator, however DOM API exposes also suitable methods for finding elements, extracting children, parents, silbings and others. See full reference in [DOM API reference](http://strudeljs.org/api/#find)
 
 <blockquote class="alert">Always prefer `@El` decorator over `.find` if possible</blockquote>
 
@@ -32,7 +32,7 @@ class Example {
 
 ## Manipulating
 
-Similar to traversing manipulation is done from Javascript. DOM API handles DOM modifications as efficient as possible, so you could use corresponding methods to modify DOM as referenced in [DOM API reference](https://strudeljs.org/api/#html).
+Similar to traversing manipulation is done from Javascript. DOM API handles DOM modifications as efficient as possible, so you could use corresponding methods to modify DOM as referenced in [DOM API reference](http://strudeljs.org/api/#html).
 
 ```js
 class Example {
