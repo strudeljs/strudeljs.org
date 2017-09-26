@@ -48,7 +48,7 @@
             <a class="main-nav__link" href="/community/" >Community</a>
             
         </nav>
-        <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.5.0</a>
+        <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.5.4</a>
     </div>
 </header>
     <section class="main-content"><div class="mobile-nav" onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';">
@@ -146,19 +146,6 @@
     
     
     
-    
-    
-    
-    <li>
-        <div class="mobile-nav__item">
-            <a href="/guide/lifecycle.html" class="mobile-nav__sidebar-link current">Lifecycle</a>
-        </div>
-    </li>
-    
-    
-    
-    
-    
         <li><h3>Advanced</h3></li>
     
     
@@ -166,7 +153,20 @@
     
     <li>
         <div class="mobile-nav__item">
-            <a href="/guide/initialization.html" class="mobile-nav__sidebar-link">Lazy Initialization</a>
+            <a href="/guide/initialization.html" class="mobile-nav__sidebar-link">Initialization</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/lifecycle.html" class="mobile-nav__sidebar-link current">Lifecycle</a>
         </div>
     </li>
     
@@ -312,7 +312,7 @@
         
         
         <li>
-            <a href="/guide/lifecycle.html" class="sidebar-nav__link current">Lifecycle</a>
+            <a href="/guide/initialization.html" class="sidebar-nav__link">Initialization</a>
         </li>
     
         
@@ -323,7 +323,7 @@
         
         
         <li>
-            <a href="/guide/initialization.html" class="sidebar-nav__link">Lazy Initialization</a>
+            <a href="/guide/lifecycle.html" class="sidebar-nav__link current">Lifecycle</a>
         </li>
     
         
@@ -386,15 +386,20 @@
 </ul>
 </div>
 <div class="content with-sidebar">
-    <h1 id="Component-lifecycle"><a href="#Component-lifecycle" class="headerlink" title="Component lifecycle"></a>Component lifecycle</h1><p>Article in progress</p>
+    <h1 id="Component-lifecycle"><a href="#Component-lifecycle" class="headerlink" title="Component lifecycle"></a>Component lifecycle</h1><h2 id="Instance-lifecycle-hooks"><a href="#Instance-lifecycle-hooks" class="headerlink" title="Instance lifecycle hooks"></a>Instance lifecycle hooks</h2><p>Each component instantiated goes through a series of steps, for example it needs to bind events and elements from decorators to the DOM. Through the process every component runs functions called <strong>lifecycle hooks</strong>, giving users opportunity to provide code in each step of lifecycle.</p>
+<p>For example <code>init</code> runs when component is initialized.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">@Component(<span class="string">'video'</span>)</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Video</span> </span>&#123;</div><div class="line">  init() &#123;</div><div class="line">  	<span class="keyword">this</span>.player = videojs(<span class="keyword">this</span>.$data.player);</div><div class="line">  	</div><div class="line">  	<span class="keyword">this</span>.player.ready(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">this</span>.player.play();</div><div class="line">    &#125;);</div><div class="line">  &#125;	</div><div class="line">  </div><div class="line">  destroy() &#123;</div><div class="line">    <span class="keyword">this</span>.player.dispose();</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>There are more hooks in different phases of component life as <code>destroy</code>.</p>
+<h2 id="Lifecycle-Diagram"><a href="#Lifecycle-Diagram" class="headerlink" title="Lifecycle Diagram"></a>Lifecycle Diagram</h2><p>Diagram below presents full component lifecycle and what hooks are available in which phase of the life of component.</p>
+<p><img style="display: block; margin: 0 auto; width: 550px;" src="/images/lifecycle.png"></p>
 
     
     <div class="quick-links">
         
-        <span>← <a class="quick-links__link" href="/guide/eventhandling.html">Event Handling</a></span>
+        <span>← <a class="quick-links__link" href="/guide/initialization.html">Initialization</a></span>
         
         
-        <span style="float:right"><a class="quick-links__link" href="/guide/initialization.html">Lazy Initialization</a> →</span>
+        <span style="float:right"><a class="quick-links__link" href="/guide/extending.html">Extending</a> →</span>
         
     </div>
     

@@ -48,7 +48,7 @@
             <a class="main-nav__link" href="/community/" >Community</a>
             
         </nav>
-        <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.5.0</a>
+        <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.5.4</a>
     </div>
 </header>
     <section class="main-content"><div class="mobile-nav" onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';">
@@ -101,6 +101,9 @@
     <h4>Instance methods/events</h4>
 </li>
 <li>
+    <a href="#teardown" class="sidebar-nav__link">$teardown</a>
+</li>
+<li>
     <a href="#emit" class="sidebar-nav__link">$emit</a>
 </li>
 <li>
@@ -119,7 +122,10 @@
     <a href="#init" class="sidebar-nav__link">init</a>
 </li>
 <li>
-    <a href="#finalize" class="sidebar-nav__link">finalize</a>
+    <a href="#beforeDestroy" class="sidebar-nav__link">beforeDestroy</a>
+</li>
+<li>
+    <a href="#destroy" class="sidebar-nav__link">destroy</a>
 </li>
 <li>
     <h3>DOM API</h3>
@@ -251,6 +257,9 @@
     <h4>Instance methods/events</h4>
 </li>
 <li>
+    <a href="#teardown" class="sidebar-nav__link">$teardown</a>
+</li>
+<li>
     <a href="#emit" class="sidebar-nav__link">$emit</a>
 </li>
 <li>
@@ -269,7 +278,10 @@
     <a href="#init" class="sidebar-nav__link">init</a>
 </li>
 <li>
-    <a href="#finalize" class="sidebar-nav__link">finalize</a>
+    <a href="#beforeDestroy" class="sidebar-nav__link">beforeDestroy</a>
+</li>
+<li>
+    <a href="#destroy" class="sidebar-nav__link">destroy</a>
 </li>
 <li>
     <h3>DOM API</h3>
@@ -427,7 +439,15 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">init() &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.$data.attribute);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="Instance-Methods-Events"><a href="#Instance-Methods-Events" class="headerlink" title="Instance Methods / Events"></a>Instance Methods / Events</h2><h3 id="emit"><a href="#emit" class="headerlink" title="$emit"></a>$emit</h3><ul>
+<h2 id="Instance-Methods-Events"><a href="#Instance-Methods-Events" class="headerlink" title="Instance Methods / Events"></a>Instance Methods / Events</h2><h3 id="teardown"><a href="#teardown" class="headerlink" title="$teardown"></a>$teardown</h3><ul>
+<li><p><strong>Details:</strong>  </p>
+<p>Triggers destroy of the component - unbinds event listeners and binding to DOM</p>
+</li>
+<li><p><strong>Usage:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">this</span>.$teardown()</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="emit"><a href="#emit" class="headerlink" title="$emit"></a>$emit</h3><ul>
 <li><p><strong>Arguments:</strong></p>
 <ul>
 <li><code>{String} [event descriptor]</code></li>
@@ -484,11 +504,18 @@
 <p>Called synchronously after <code>DOMContentLoaded</code> event.</p>
 </li>
 </ul>
-<h3 id="finalize"><a href="#finalize" class="headerlink" title="finalize"></a>finalize</h3><ul>
+<h3 id="beforeDestroy"><a href="#beforeDestroy" class="headerlink" title="beforeDestroy"></a>beforeDestroy</h3><ul>
 <li><p><strong>Type:</strong> <code>{Function}</code></p>
 </li>
 <li><p><strong>Details:</strong></p>
-<p>Called synchronously after <code>destroy()</code> function is invoked on component instance. </p>
+<p>Called synchronously after <code>$teardown()</code> function is invoked on component instance before event listeners and DOM detach</p>
+</li>
+</ul>
+<h3 id="destroy"><a href="#destroy" class="headerlink" title="destroy"></a>destroy</h3><ul>
+<li><p><strong>Type:</strong> <code>{Function}</code></p>
+</li>
+<li><p><strong>Details:</strong></p>
+<p>Called synchronously after <code>$teardown()</code> function is invoked on component instance when everything is destroyed.</p>
 </li>
 </ul>
 <h1 id="DOM-API"><a href="#DOM-API" class="headerlink" title="DOM API"></a>DOM API</h1><blockquote class="alert">Note: Element is internal class for handling DOM manipulation that simulates jQuery but is 800% lighter, below is a reference of available methods. Other methods need to be accessed through DOM API. <code>this.$element</code> and all elements found using <code>@El</code> decorator are Element instances.</blockquote>
@@ -790,15 +817,14 @@
 <h3 id="off-1"><a href="#off-1" class="headerlink" title="off"></a>off</h3><ul>
 <li><p><strong>Arguments:</strong></p>
 <ul>
-<li><code>{String} event</code></li>
-<li><code>{Function} listener</code> </li>
+<li><code>{...String} events</code></li>
 </ul>
 </li>
 <li><p><strong>Details:</strong></p>
-<p>Remove an event handler</p>
+<p>Remove an event handler(s)</p>
 </li>
 <li><p><strong>Usage:</strong></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">'button'</span>).off(<span class="string">'click'</span>, callback);</div></pre></td></tr></table></figure></li>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">'button'</span>).off(<span class="string">'click'</span>);</div></pre></td></tr></table></figure></li>
 </ul>
 
     

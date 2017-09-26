@@ -310,6 +310,8 @@ blockquote {
   @media (max-width: 767px) {
     .content {
       max-width: 95%; } }
+  .content img {
+    max-width: 100%; }
   .content h1 {
     font-size: 30px;
     margin-top: 2em; }
@@ -319,6 +321,8 @@ blockquote {
   .content p {
     line-height: 1.8;
     font-size: 15px; }
+    .content p + p {
+      margin-top: 15px; }
   .content strong {
     font-weight: bold; }
   .content ul {

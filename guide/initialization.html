@@ -3,16 +3,16 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Lazy Initialization | Strudel</title>
+    <title>Initialization | Strudel</title>
 
     <meta name="description" content="Strudel.js - Lightweight Component Framework">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Lazy Initialization — Strudel.js">
+    <meta property="og:title" content="Initialization — Strudel.js">
     <meta property="og:description" content="Strudel.js - Lightweight Component Framework">
     <meta property="og:image" content="https://strudeljs.org//images/logo.png">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Lazy Initialization — Strudel.js">
+    <meta name="twitter:title" content="Initialization — Strudel.js">
     <meta name="twitter:description" content="Strudel.js - Lightweight Component Framework">
     <meta name="twitter:image" content="https://strudeljs.org/images/logo.png">
 
@@ -48,7 +48,7 @@
             <a class="main-nav__link" href="/community/" >Community</a>
             
         </nav>
-        <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.5.0</a>
+        <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.5.4</a>
     </div>
 </header>
     <section class="main-content"><div class="mobile-nav" onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';">
@@ -146,19 +146,6 @@
     
     
     
-    
-    
-    
-    <li>
-        <div class="mobile-nav__item">
-            <a href="/guide/lifecycle.html" class="mobile-nav__sidebar-link">Lifecycle</a>
-        </div>
-    </li>
-    
-    
-    
-    
-    
         <li><h3>Advanced</h3></li>
     
     
@@ -166,7 +153,20 @@
     
     <li>
         <div class="mobile-nav__item">
-            <a href="/guide/initialization.html" class="mobile-nav__sidebar-link current">Lazy Initialization</a>
+            <a href="/guide/initialization.html" class="mobile-nav__sidebar-link current">Initialization</a>
+        </div>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    <li>
+        <div class="mobile-nav__item">
+            <a href="/guide/lifecycle.html" class="mobile-nav__sidebar-link">Lifecycle</a>
         </div>
     </li>
     
@@ -312,7 +312,7 @@
         
         
         <li>
-            <a href="/guide/lifecycle.html" class="sidebar-nav__link">Lifecycle</a>
+            <a href="/guide/initialization.html" class="sidebar-nav__link current">Initialization</a>
         </li>
     
         
@@ -323,7 +323,7 @@
         
         
         <li>
-            <a href="/guide/initialization.html" class="sidebar-nav__link current">Lazy Initialization</a>
+            <a href="/guide/lifecycle.html" class="sidebar-nav__link">Lifecycle</a>
         </li>
     
         
@@ -386,13 +386,20 @@
 </ul>
 </div>
 <div class="content with-sidebar">
-    <h1 id="Lazy-Initialization"><a href="#Lazy-Initialization" class="headerlink" title="Lazy Initialization"></a>Lazy Initialization</h1><p>Article in progress</p>
+    <h1 id="Component-Initialization"><a href="#Component-Initialization" class="headerlink" title="Component Initialization"></a>Component Initialization</h1><h2 id="Linking-to-DOM"><a href="#Linking-to-DOM" class="headerlink" title="Linking to DOM"></a>Linking to DOM</h2><p>Although components can be defined in any moment of the website runtime - you can attach them in <code>&lt;head&gt;</code>, middle of the <code>&lt;body&gt;</code> or before the <code>&lt;body&gt;</code> end. What’s important is when these components are <strong>initialized</strong> and <strong>linked to DOM</strong>. In Strudel linking and initialization happend when document has stopped loading - when browser triggers <code>DOMContentLoaded</code> event. It’s best to have all the markup inplace before that event occurs.</p>
+<h2 id="Lazy-initialization"><a href="#Lazy-initialization" class="headerlink" title="Lazy initialization"></a>Lazy initialization</h2><p>There is a way of initializing components that were added to the DOM after that moment in time. Strudel parses the DOM in search of components. To trigger that search after the DOM ready event <code>CustomEvent</code> named <code>contentloaded</code> needs to be triggered.</p>
+<p>Framework will receive event, start search for components in scope of element triggering the event and finally initialize components. </p>
+<blockquote class="alert"><code>Element.trigger</code> can be used for easier triggering of the <code>contentloaded</code> event </blockquote>
 
+
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">const</span> ERROR = <span class="string">`&lt;div data-msg="Unexpected error" class="error"&gt;&lt;/div&gt;`</span>;</div><div class="line"></div><div class="line">@Component(<span class="string">'loader'</span>)</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Loader</span>() </span>&#123;</div><div class="line">  init() &#123;</div><div class="line">     <span class="keyword">this</span>.$element.append(ERROR);</div><div class="line">     <span class="keyword">this</span>.$element.trigger(<span class="string">'contentloaded'</span>);</div><div class="line">  &#125;	</div><div class="line">&#125;</div><div class="line"></div><div class="line">@Component(<span class="string">'error'</span>)</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Error</span> </span>&#123;</div><div class="line">  init() &#123;</div><div class="line">    <span class="keyword">this</span>.$element.html(<span class="keyword">this</span>.$data.msg);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
     
     <div class="quick-links">
         
-        <span>← <a class="quick-links__link" href="/guide/lifecycle.html">Lifecycle</a></span>
+        <span>← <a class="quick-links__link" href="/guide/eventhandling.html">Event Handling</a></span>
         
+        
+        <span style="float:right"><a class="quick-links__link" href="/guide/lifecycle.html">Lifecycle</a> →</span>
         
     </div>
     
