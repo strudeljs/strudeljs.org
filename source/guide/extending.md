@@ -1,7 +1,7 @@
 ---
 title: Extending
 type: guide
-order: 9
+order: 8
 ---
 
 # Extending

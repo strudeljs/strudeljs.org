@@ -84,6 +84,17 @@ type: api
  
 ## Instance Methods / Events
 
+### $teardown
+  
+- **Details:**  
+
+  Triggers destroy of the component - unbinds event listeners and binding to DOM
+  
+- **Usage:**
+  ```js
+  this.$teardown()
+  ```
+  
 ### $emit
 
 - **Arguments:**
@@ -150,13 +161,21 @@ type: api
   
   Called synchronously after `DOMContentLoaded` event.
 
-### finalize
+### beforeDestroy
 
 - **Type:** `{Function}`
   
 - **Details:**
   
-  Called synchronously after `destroy()` function is invoked on component instance. 
+  Called synchronously after `$teardown()` function is invoked on component instance before event listeners and DOM detach
+
+### destroy
+
+- **Type:** `{Function}`
+  
+- **Details:**
+  
+  Called synchronously after `$teardown()` function is invoked on component instance when everything is destroyed.
   
 # DOM API
 
@@ -500,14 +519,13 @@ Element("ul").prepend("<li>Item 1</li>");
 ### off
 
 - **Arguments:**
-  - `{String} event`
-  - `{Function} listener` 
+  - `{...String} events`
   
 - **Details:**
   
-  Remove an event handler
+  Remove an event handler(s)
   
 - **Usage:**
   ```js
-  Element('button').off('click', callback);
+  Element('button').off('click');
   ```
