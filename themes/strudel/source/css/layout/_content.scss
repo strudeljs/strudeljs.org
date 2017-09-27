@@ -3,7 +3,9 @@
   position: relative;
 
   .guide &,
-  .docs & {
+  .api &,
+  .examples &,
+  .community & {
     max-width: 1200px;
   }
 
