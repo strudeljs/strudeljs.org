@@ -297,7 +297,9 @@ blockquote {
   margin: 90px auto 0;
   position: relative; }
   .guide .main-content,
-  .docs .main-content {
+  .api .main-content,
+  .examples .main-content,
+  .community .main-content {
     max-width: 1200px; }
   @media (max-width: 767px) {
     .main-content {
