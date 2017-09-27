@@ -1,7 +1,7 @@
 ---
 title: Styleguide
 type: guide
-order: 10
+order: 9
 ---
 
 # Styleguide

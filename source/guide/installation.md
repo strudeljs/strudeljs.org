@@ -26,6 +26,8 @@ $ cd my-project
 $ npm install
 ```
 
+You can read more about CLI in dedicated [guide](/guide/usage.html).
+
 ## NPM
 If you feel like configuring build on your own you can use npm to install Strudel.
 ```bash

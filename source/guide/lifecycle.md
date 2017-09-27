@@ -16,9 +16,9 @@ For example `init` runs when component is initialized.
 @Component('video')
 class Video {
   init() {
-  	this.player = videojs(this.$data.player);
+    this.player = videojs(this.$data.player);
   	
-  	this.player.ready(() => {
+    this.player.ready(() => {
       this.player.play();
     });
   }	
