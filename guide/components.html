@@ -5,15 +5,15 @@
     
     <title>Components | Strudel.js | Lightweight component framework</title>
 
-    <meta name="description" content="Strudel.js - Lightweight Component Framework">
+    <meta name="description" content="Strudel.js | Lightweight Component Framework">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Components — Strudel.js">
-    <meta property="og:description" content="Strudel.js - Lightweight Component Framework">
+    <meta property="og:description" content="Strudel.js | Lightweight Component Framework">
     <meta property="og:image" content="https://strudeljs.org//images/strudel-twoline.svg">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Components — Strudel.js">
-    <meta name="twitter:description" content="Strudel.js - Lightweight Component Framework">
+    <meta name="twitter:description" content="Strudel.js | Lightweight Component Framework">
     <meta name="twitter:image" content="https://strudeljs.org/images/logo.png">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -48,7 +48,7 @@
             <a class="main-nav__link" href="/community/" >Community</a>
             
         </nav>
-        <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.5.4</a>
+        <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.5.5</a>
     </div>
 </header>
     <section class="main-content"><div class="mobile-nav" onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';">
@@ -400,7 +400,7 @@
 
 <p>If you want to run some code when component is created you can use <code>init</code> hook in your code.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">@Component(<span class="string">'.example'</span>)</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span> </span>&#123;	</div><div class="line">    init() &#123;</div><div class="line">        <span class="keyword">this</span>.$element.text(<span class="string">'Hello'</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="Making-components-interactive"><a href="#Making-components-interactive" class="headerlink" title="Making components interactive"></a>Making components interactive</h2><p>As components are classes you can devine methods and properties inside that will provide custom functionality for them. However what we really care for when building websites is <em>interactivity</em>. Strudel makes responding to DOM events and binding elements to code easier with additional decorators - <code>@El</code> and <code>@Evt</code>.</p>
+<h2 id="Making-components-interactive"><a href="#Making-components-interactive" class="headerlink" title="Making components interactive"></a>Making components interactive</h2><p>As components are classes you can define methods and properties inside that will provide custom functionality for them. However what we really care for when building websites is <em>interactivity</em>. Strudel makes responding to DOM events and binding elements to code easier with additional decorators - <code>@El</code> and <code>@Evt</code>.</p>
 <ul>
 <li><code>@El</code> decorator binds property from class to DOM element matching selector - <a href="http://strudeljs.org/api/#El">see full API</a></li>
 <li><code>@Evt</code> decorator binds method from class to a DOM event that will occur on element or a children element - <a href="http://strudeljs.org/api/#Evt">see full API</a></li>
