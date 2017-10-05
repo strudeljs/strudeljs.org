@@ -46,7 +46,7 @@ class Example {
 
 ## Making components interactive
 
-As components are classes you can devine methods and properties inside that will provide custom functionality for them. However what we really care for when building websites is *interactivity*. Strudel makes responding to DOM events and binding elements to code easier with additional decorators - `@El` and `@Evt`.
+As components are classes you can define methods and properties inside that will provide custom functionality for them. However what we really care for when building websites is *interactivity*. Strudel makes responding to DOM events and binding elements to code easier with additional decorators - `@El` and `@Evt`.
 * `@El` decorator binds property from class to DOM element matching selector - [see full API](http://strudeljs.org/api/#El)
 * `@Evt` decorator binds method from class to a DOM event that will occur on element or a children element - [see full API](http://strudeljs.org/api/#Evt)
 
