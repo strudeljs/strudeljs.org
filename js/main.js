@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	window.addEventListener('hashchange', () => {
 		var target = document.querySelector(window.location.hash);
-		document.body.scrollTop = target.offsetTop - 20;
+		window.scroll(0, target.offsetTop - 20)
 	});
 
 	[].forEach.call($sidebars, function($sidebar) {
