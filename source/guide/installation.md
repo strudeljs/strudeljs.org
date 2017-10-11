@@ -21,7 +21,7 @@ CLI is recommended way of setting up new Strudel project
 
 ```bash
 $ npm install --global strudel-cli
-$ strudel init webpack my-project
+$ strudel new webpack my-project
 $ cd my-project
 $ npm install
 ```
