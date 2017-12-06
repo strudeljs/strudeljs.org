@@ -48,7 +48,7 @@
             <a class="main-nav__link" href="/community/" >Community</a>
             
         </nav>
-        <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.5.6</a>
+        <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.6.2</a>
     </div>
 </header>
     <section class="main-content"><div class="mobile-nav" onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';">
@@ -387,6 +387,8 @@
 </div>
 <div class="content with-sidebar">
     <h1 id="Component-lifecycle"><a href="#Component-lifecycle" class="headerlink" title="Component lifecycle"></a>Component lifecycle</h1><h2 id="Instance-lifecycle-hooks"><a href="#Instance-lifecycle-hooks" class="headerlink" title="Instance lifecycle hooks"></a>Instance lifecycle hooks</h2><p>Each component instantiated goes through a series of steps, for example it needs to bind events and elements from decorators to the DOM. Through the process every component runs functions called <strong>lifecycle hooks</strong>, giving users opportunity to provide code in each step of lifecycle.</p>
+<blockquote class="alert">DOM element correlated with component receives <code>strudel-init</code> class after full component initialization.</blockquote>
+
 <p>For example <code>init</code> runs when component is initialized.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">@Component(<span class="string">'video'</span>)</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Video</span> </span>&#123;</div><div class="line">  init() &#123;</div><div class="line">    <span class="keyword">this</span>.player = videojs(<span class="keyword">this</span>.$data.player);</div><div class="line">  	</div><div class="line">    <span class="keyword">this</span>.player.ready(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">this</span>.player.play();</div><div class="line">    &#125;);</div><div class="line">  &#125;	</div><div class="line">  </div><div class="line">  destroy() &#123;</div><div class="line">    <span class="keyword">this</span>.player.dispose();</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>There are more hooks in different phases of component life as <code>destroy</code>.</p>

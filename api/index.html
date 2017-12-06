@@ -48,7 +48,7 @@
             <a class="main-nav__link" href="/community/" >Community</a>
             
         </nav>
-        <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.5.6</a>
+        <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.6.2</a>
     </div>
 </header>
     <section class="main-content"><div class="mobile-nav" onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';">
@@ -140,6 +140,9 @@
     <a href="#children" class="sidebar-nav__link">children</a>
 </li>
 <li>
+    <a href="#closest" class="sidebar-nav__link">closest</a>
+</li>
+<li>
     <a href="#parent" class="sidebar-nav__link">parent</a>
 </li>
 <li>
@@ -186,6 +189,9 @@
 </li>
 <li>
     <a href="#attr" class="sidebar-nav__link">attr</a>
+</li>
+<li>
+    <a href="#prop" class="sidebar-nav__link">prop</a>
 </li>
 <li>
     <a href="#data" class="sidebar-nav__link">data</a>
@@ -296,6 +302,9 @@
     <a href="#children" class="sidebar-nav__link">children</a>
 </li>
 <li>
+    <a href="#closest" class="sidebar-nav__link">closest</a>
+</li>
+<li>
     <a href="#parent" class="sidebar-nav__link">parent</a>
 </li>
 <li>
@@ -342,6 +351,9 @@
 </li>
 <li>
     <a href="#attr" class="sidebar-nav__link">attr</a>
+</li>
+<li>
+    <a href="#prop" class="sidebar-nav__link">prop</a>
 </li>
 <li>
     <a href="#data" class="sidebar-nav__link">data</a>
@@ -560,6 +572,19 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">'body'</span>).children();</div><div class="line">Element(<span class="string">'body'</span>).children(<span class="string">'&lt;div&gt;'</span>);</div></pre></td></tr></table></figure>
 </li>
 </ul>
+<h3 id="closest"><a href="#closest" class="headerlink" title="closest"></a>closest</h3><ul>
+<li><p><strong>Arguments:</strong></p>
+<ul>
+<li><code>{String} selector</code></li>
+</ul>
+</li>
+<li><p><strong>Details:</strong></p>
+<p>Find first anacestor that matches the selector</p>
+</li>
+<li><p><strong>Usage:</strong></p>
+  <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">'a'</span>).closest();</div></pre></td></tr></table></figure>
+</li>
+</ul>
 <h3 id="parent"><a href="#parent" class="headerlink" title="parent"></a>parent</h3><ul>
 <li><p><strong>Arguments:</strong></p>
 <ul>
@@ -734,6 +759,20 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">"a"</span>).attr(<span class="string">"href"</span>);</div><div class="line">Element(<span class="string">"a"</span>).attr(<span class="string">"href"</span>, <span class="string">"#"</span>);</div><div class="line">Element(<span class="string">"a"</span>).attr(&#123;<span class="string">"href"</span>: <span class="string">"#"</span>, <span class="string">"target"</span>: <span class="string">"_blank"</span>&#125;);</div></pre></td></tr></table></figure>
 </li>
 </ul>
+<h3 id="prop"><a href="#prop" class="headerlink" title="prop"></a>prop</h3><ul>
+<li><p><strong>Arguments:</strong></p>
+<ul>
+<li><code>{string|object} propName</code></li>
+<li><code>{string} value</code></li>
+</ul>
+</li>
+<li><p><strong>Details:</strong></p>
+<p>Gets the value of a property for the each element in the set of matched elements or set one or more properties for every matched element.</p>
+</li>
+<li><p><strong>Usage:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">"input[type='checkbox']"</span>).prop(<span class="string">"checked"</span>);</div><div class="line">Element(<span class="string">"input[type='text']"</span>).prop(<span class="string">"value"</span>, <span class="string">"5"</span>);</div></pre></td></tr></table></figure>
+</li>
+</ul>
 <h3 id="data-1"><a href="#data-1" class="headerlink" title="data"></a>data</h3><ul>
 <li><p><strong>Arguments:</strong></p>
 <ul>
@@ -758,7 +797,7 @@
 <p>Adds the specified class(es) to each element in the set of matched elements.</p>
 </li>
 <li><p><strong>Usage:</strong></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">'.button'</span>).removeClass(<span class="string">'.is-active'</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Element(<span class="string">'.button'</span>).addClass(<span class="string">'.is-active'</span>);</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="removeClass"><a href="#removeClass" class="headerlink" title="removeClass"></a>removeClass</h3><ul>
