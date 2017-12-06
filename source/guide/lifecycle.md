@@ -10,7 +10,10 @@ order: 7
 
 Each component instantiated goes through a series of steps, for example it needs to bind events and elements from decorators to the DOM. Through the process every component runs functions called **lifecycle hooks**, giving users opportunity to provide code in each step of lifecycle.
 
+<blockquote class="alert">DOM element correlated with component receives `strudel-init` class after full component initialization.</blockquote>
+
 For example `init` runs when component is initialized.
+
 
 ```js
 @Component('video')

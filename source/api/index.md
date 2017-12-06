@@ -225,6 +225,20 @@ type: api
   Element('body').children();
   Element('body').children('<div>');
   ```
+
+### closest
+
+- **Arguments:**
+  - `{String} selector`
+  
+- **Details:**
+  
+  Find first anacestor that matches the selector
+   
+- **Usage:**
+    ```js
+    Element('a').closest();
+    ```
   
 ### parent
 
@@ -427,6 +441,22 @@ Element("ul").prepend("<li>Item 1</li>");
   Element("a").attr("href", "#");
   Element("a").attr({"href": "#", "target": "_blank"});
   ```
+  
+### prop
+
+- **Arguments:**
+  - `{string|object} propName`
+  - `{string} value`
+
+- **Details:**
+  
+  Gets the value of a property for the each element in the set of matched elements or set one or more properties for every matched element.
+  
+- **Usage:**
+  ```js
+  Element("input[type='checkbox']").prop("checked");
+  Element("input[type='text']").prop("value", "5");
+  ```
 
 ### data
 
@@ -457,7 +487,7 @@ Element("ul").prepend("<li>Item 1</li>");
   
 - **Usage:**
   ```js
-  Element('.button').removeClass('.is-active');
+  Element('.button').addClass('.is-active');
   ```
 ### removeClass
 - **Arguments:**
