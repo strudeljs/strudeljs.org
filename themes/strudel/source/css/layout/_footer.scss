@@ -1,6 +1,6 @@
 .main-footer {
   background: #7F786C;
-  margin-top: 30px;
+  margin-top: 0;
   padding: 60px 0;
   text-align: center;
   color: #FFFFFF;
@@ -8,5 +8,23 @@
 
   a {
     color: #FFFFFF;
+  }
+
+  .social-icons {
+    margin: 0 0 10px;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      padding: 0 5px;
+    }
+  }
+
+  .social-icon {
+    svg {
+      width: 22px;
+      height: 22px;
+      fill: #FFFFFF;
+    }
   }
 }
