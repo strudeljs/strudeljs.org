@@ -375,13 +375,23 @@ body.api .content h3 {
 
 .main-footer {
   background: #7F786C;
-  margin-top: 30px;
+  margin-top: 0;
   padding: 60px 0;
   text-align: center;
   color: #FFFFFF;
   line-height: 1.5; }
   .main-footer a {
     color: #FFFFFF; }
+  .main-footer .social-icons {
+    margin: 0 0 10px;
+    padding: 0; }
+    .main-footer .social-icons li {
+      display: inline-block;
+      padding: 0 5px; }
+  .main-footer .social-icon svg {
+    width: 22px;
+    height: 22px;
+    fill: #FFFFFF; }
 
 .mobile-nav {
   position: fixed;
@@ -424,6 +434,10 @@ body.api .content h3 {
 .mobile-nav__sidebar.api .sidebar-nav__link {
   padding-left: 10px;
   font-size: 12px; }
+
+.sponsors {
+  margin-top: 30px;
+  background: #ececec; }
 
 .hero {
   height: 450px;
@@ -574,3 +588,18 @@ body.api .content h3 {
       transform: rotate(45deg); }
     .nav-toggle.is-active span:after {
       transform: rotate(-45deg); }
+
+.sponsor {
+  text-align: center;
+  padding: 40px 0; }
+  .sponsor p {
+    display: inline-block;
+    vertical-align: middle;
+    opacity: .7; }
+  .sponsor img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 150px;
+    opacity: .7;
+    margin: 0 5px;
+    padding: 0; }
