@@ -80,3 +80,6 @@ markdown:
 deploy:
   type: git
   repository: git@github.com:strudeljs/strudeljs.org.git
+
+sitemap:
+    path: sitemap.xml
