@@ -43,8 +43,6 @@
             
             <a class="main-nav__link" href="/api/" >API</a>
             
-            <a class="main-nav__link" href="/examples/" >Examples</a>
-            
             <a class="main-nav__link" href="/community/" >Community</a>
             
         </nav>
@@ -60,10 +58,6 @@
     
     <div class="mobile-nav__item">
         <a class="mobile-nav__link" href="/api/" >API</a>
-    </div>
-    
-    <div class="mobile-nav__item">
-        <a class="mobile-nav__link" href="/examples/" >Examples</a>
     </div>
     
     <div class="mobile-nav__item">
@@ -396,7 +390,7 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"example"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">@Component(<span class="string">'.example'</span>)</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span> </span>&#123;	&#125;</div></pre></td></tr></table></figure>
 <h2 id="Initializing-components"><a href="#Initializing-components" class="headerlink" title="Initializing components"></a>Initializing components</h2><p>Components are instantiated when page is fully loaded - on <code>DOMContentLoaded</code> browser event. If you want to run a code when component is instantiated there are certain hooks that can be used.</p>
-<blockquote class="alert">You should never define <code>constructor</code> for a new Component, there are lifecycle hooks that will help achieving what is required - see <a href="http://hooks" target="_blank" rel="external">Lifecycle hooks</a></blockquote>
+<blockquote class="alert">You should never define <code>constructor</code> for a new Component, there are lifecycle hooks that will help achieving what is required - see <a href="http://strudeljs.org/guide/lifecycle.html">Lifecycle hooks</a></blockquote>
 
 <p>If you want to run some code when component is created you can use <code>init</code> hook in your code.</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">@Component(<span class="string">'.example'</span>)</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span> </span>&#123;	</div><div class="line">    init() &#123;</div><div class="line">        <span class="keyword">this</span>.$element.text(<span class="string">'Hello'</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>

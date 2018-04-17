@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://strudeljs.org/guide/components.html</loc>
+    
+    <lastmod>2018-04-17T07:16:49.964Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://strudeljs.org/api/index.html</loc>
     
     <lastmod>2017-12-06T17:44:12.000Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://strudeljs.org/guide/lifecycle.html</loc>
     
     <lastmod>2017-12-06T17:41:42.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://strudeljs.org/guide/components.html</loc>
-    
-    <lastmod>2017-12-06T17:40:53.000Z</lastmod>
     
   </url>
   
@@ -58,23 +58,9 @@
   </url>
   
   <url>
-    <loc>http://strudeljs.org/examples/lifecycle.html</loc>
-    
-    <lastmod>2017-09-26T20:49:03.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://strudeljs.org/guide/initialization.html</loc>
     
     <lastmod>2017-09-26T20:35:17.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://strudeljs.org/guide/templates.html</loc>
-    
-    <lastmod>2017-09-26T17:37:08.000Z</lastmod>
     
   </url>
   
@@ -93,6 +79,13 @@
   </url>
   
   <url>
+    <loc>http://strudeljs.org/guide/templates.html</loc>
+    
+    <lastmod>2017-09-26T17:37:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://strudeljs.org/guide/dom.html</loc>
     
     <lastmod>2017-09-25T09:23:49.000Z</lastmod>
@@ -103,34 +96,6 @@
     <loc>http://strudeljs.org/guide/eventhandling.html</loc>
     
     <lastmod>2017-09-25T08:18:39.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://strudeljs.org/examples/lazy-init.html</loc>
-    
-    <lastmod>2017-09-24T21:09:35.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://strudeljs.org/examples/events.html</loc>
-    
-    <lastmod>2017-09-24T16:47:50.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://strudeljs.org/examples/index.html</loc>
-    
-    <lastmod>2017-09-24T12:49:02.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://strudeljs.org/examples/collapsible.html</loc>
-    
-    <lastmod>2017-09-24T12:48:52.000Z</lastmod>
     
   </url>
   
