@@ -1,7 +1,7 @@
 menu:
   Guide: /guide/
   API: /api/
-  Examples: /examples/
+#  Examples: /examples/
   Community: /community/
 
 node_sass:

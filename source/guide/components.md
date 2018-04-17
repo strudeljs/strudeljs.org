@@ -31,7 +31,7 @@ class Example {	}
 
 Components are instantiated when page is fully loaded - on `DOMContentLoaded` browser event. If you want to run a code when component is instantiated there are certain hooks that can be used.
 
-<blockquote class="alert">You should never define `constructor` for a new Component, there are lifecycle hooks that will help achieving what is required - see [Lifecycle hooks](http://hooks)</blockquote>
+<blockquote class="alert">You should never define `constructor` for a new Component, there are lifecycle hooks that will help achieving what is required - see [Lifecycle hooks](http://strudeljs.org/guide/lifecycle.html)</blockquote>
 
 If you want to run some code when component is created you can use `init` hook in your code.
 
