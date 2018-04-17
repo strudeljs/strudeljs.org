@@ -51,7 +51,7 @@
 .recent-version {
   display: inline-block;
   font-family: Lato;
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: none;
   color: #E6B718;
   padding-left: 15px;
@@ -59,4 +59,18 @@
   @include media('<desktop') {
     display: none;
   }
+}
+
+.main-search {
+  font-family: Lato;
+  padding: 10px 28px;
+  border-radius: 25px;
+  margin: 28px 20px 0 0;
+  border: 1px solid #ececec;
+  outline: none;
+  background: #fff url(/images/search.svg) 8px 9px no-repeat;
+}
+
+.algolia-autocomplete {
+  float: right;
 }
