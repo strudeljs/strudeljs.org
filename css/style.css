@@ -285,13 +285,25 @@ blockquote {
 .recent-version {
   display: inline-block;
   font-family: Lato;
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: none;
   color: #E6B718;
   padding-left: 15px; }
   @media (max-width: 1023px) {
     .recent-version {
       display: none; } }
+
+.main-search {
+  font-family: Lato;
+  padding: 10px 28px;
+  border-radius: 25px;
+  margin: 28px 20px 0 0;
+  border: 1px solid #ececec;
+  outline: none;
+  background: #fff url(/images/search.svg) 8px 9px no-repeat; }
+
+.algolia-autocomplete {
+  float: right; }
 
 .main-content {
   margin: 90px auto 0;
@@ -475,7 +487,7 @@ body.api .content h3 {
 
 .main-nav__link {
   font-family: Lato;
-  font-size: 18px;
+  font-size: 16px;
   color: #6C6C6C;
   text-decoration: none;
   padding: 0 0 3px;
