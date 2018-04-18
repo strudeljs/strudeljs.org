@@ -17,4 +17,12 @@
         margin: 0 5px;
         padding: 0;
     }
+
+    @include media('<tablet') {
+        p {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+    }
 }

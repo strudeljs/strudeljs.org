@@ -3,7 +3,7 @@
   top: 50px;
   left: 0;
   bottom: 0;
-  width: 220px;
+  width: 280px;
   background: #f3f3f3;
   transform: translateX(-100%);
   z-index: 3;
@@ -32,6 +32,42 @@
   h4 {
     font-size: 14px;
     margin-bottom: 5px;
+  }
+
+  .main-search {
+    margin: 0 0 20px 0;
+    width: 100%;
+    box-sizing: border-box;
+    float: none;
+  }
+
+  .algolia-autocomplete {
+    float: none;
+    width: 100%;
+
+    .ds-dropdown-menu {
+      min-width: 240px;
+    }
+
+    .algolia-docsearch-suggestion {
+      font-size: 14px;
+    }
+
+    .ds-suggestion:first-child .algolia-docsearch-suggestion--category-header {
+      margin-top: 0;
+    }
+
+    .algolia-docsearch-suggestion--title {
+      margin-left: 5px;
+    }
+
+    .algolia-docsearch-suggestion--subcategory-column {
+      display: none !important;
+    }
+
+    .algolia-docsearch-suggestion--text {
+      padding: 2px 5px;
+    }
   }
 
   .mobile-nav__link,

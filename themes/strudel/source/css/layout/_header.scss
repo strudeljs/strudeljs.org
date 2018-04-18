@@ -74,3 +74,9 @@
 .algolia-autocomplete {
   float: right;
 }
+
+#search-query-nav {
+  @include media('<desktop') {
+    display: none;
+  }
+}

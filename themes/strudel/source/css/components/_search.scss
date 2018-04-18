@@ -1,0 +1,14 @@
+.algolia-autocomplete {
+  .algolia-docsearch-suggestion {
+    padding: 0;
+  }
+
+  .algolia-docsearch-suggestion--category-header {
+    background: $primary-color;
+    padding: 5px 8px !important;
+  }
+
+  .algolia-docsearch-suggestion--highlight {
+    color: $code-color !important;
+  }
+}
