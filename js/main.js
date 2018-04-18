@@ -9,12 +9,18 @@ document.addEventListener('DOMContentLoaded', function () {
 		event.stopPropagation();
 	});
 
-	document.body.addEventListener('click', function () {
+	document.body.addEventListener('click', function (e) {
 		if ($mobileNav.classList.contains('is-expanded')) {
 			$navToggle.classList.remove('is-active');
 			$mobileNav.classList.remove('is-expanded');
 		}
 	});
+
+	$mobileNav.addEventListener('click', function(e) {
+		event.stopPropagation();
+	});
+
+
 
 	window.addEventListener('hashchange', () => {
 		var target = document.querySelector(window.location.hash);

@@ -50,10 +50,11 @@
         </nav>
         <a href="http://github.com/strudeljs/strudel/releases" target="_blank" class="recent-version">v0.6.5</a>
     </div>
-    <input type="text" class="main-search" placeholder="Search docs">
+    <input type="text" class="main-search" id="search-query-nav" placeholder="Search docs">
 </header>
     <section class="main-content"><div class="mobile-nav" onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';">
-    <nav role="mobile-nav__navigation">
+    <input type="text" class="main-search" id="search-query-mobile" placeholder="Search docs">
+<nav role="mobile-nav__navigation">
     
     <div class="mobile-nav__item">
         <a class="mobile-nav__link current" href="/guide/" >Guide</a>
@@ -406,12 +407,19 @@
 </section>
     <script src="/js/main.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-    <script type="text/javascript"> docsearch({
-        apiKey: '94ab548b028cedb05822656f30e0ac52',
-        indexName: 'strudeljs',
-        inputSelector: '.main-search',
-        debug: false
+    <script>
+    [
+        '#search-query-nav',
+        '#search-query-mobile'
+    ].forEach(function (selector) {
+        if (!document.querySelector(selector)) return
+        docsearch({
+            apiKey: '94ab548b028cedb05822656f30e0ac52',
+            indexName: 'strudeljs',
+            inputSelector: selector,
+            debug: true
+        })
     });
-    </script>
+	</script>
 </body>
 </html>
