@@ -3,28 +3,30 @@ document.addEventListener('DOMContentLoaded', function () {
 	var $navToggle = document.querySelector('.nav-toggle');
 	var $sidebars = document.querySelectorAll('.anchors.api');
 
-	$navToggle.addEventListener('click', function(e) {
+	var scrollTo = function (hash) {
+		var target = document.querySelector(hash);
+		target && window.scrollTo(0, target.offsetTop - 20)
+	}
+
+	$navToggle.addEventListener('click', function() {
 		this.classList.toggle('is-active');
 		$mobileNav.classList.toggle('is-expanded');
 		event.stopPropagation();
 	});
 
-	document.body.addEventListener('click', function (e) {
+	document.body.addEventListener('click', function () {
 		if ($mobileNav.classList.contains('is-expanded')) {
 			$navToggle.classList.remove('is-active');
 			$mobileNav.classList.remove('is-expanded');
 		}
 	});
 
-	$mobileNav.addEventListener('click', function(e) {
+	$mobileNav.addEventListener('click', function() {
 		event.stopPropagation();
 	});
 
-
-
 	window.addEventListener('hashchange', () => {
-		var target = document.querySelector(window.location.hash);
-		window.scroll(0, target.offsetTop - 20)
+		scrollTo(window.location.hash);
 	});
 
 	[].forEach.call($sidebars, function($sidebar) {
@@ -35,4 +37,10 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		});
 	});
+
+	if (window.location.hash) {
+		setTimeout(function() {
+			scrollTo(window.location.hash);
+		}, 500);
+	}
 });
