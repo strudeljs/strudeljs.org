@@ -356,6 +356,17 @@ type: api
 
 ## Manipulation
 
+### clone
+
+- **Details:**
+  
+  Clone element with all it's attributes and descendants
+  
+- **Usage:**
+  ```js
+  Element("ul").clone();
+  ```
+
 ### append
 
 - **Arguments:**
