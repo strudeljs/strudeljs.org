@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://strudeljs.org/guide/components.html</loc>
+    <loc>http://strudeljs.org/api/index.html</loc>
     
-    <lastmod>2018-04-17T07:16:49.964Z</lastmod>
+    <lastmod>2018-05-25T12:25:02.323Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://strudeljs.org/api/index.html</loc>
+    <loc>http://strudeljs.org/guide/components.html</loc>
     
-    <lastmod>2017-12-06T17:44:12.000Z</lastmod>
+    <lastmod>2018-04-17T07:16:49.964Z</lastmod>
     
   </url>
   
@@ -72,14 +72,14 @@
   </url>
   
   <url>
-    <loc>http://strudeljs.org/guide/templates.html</loc>
+    <loc>http://strudeljs.org/guide/extending.html</loc>
     
     <lastmod>2017-09-26T17:37:08.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://strudeljs.org/guide/extending.html</loc>
+    <loc>http://strudeljs.org/guide/templates.html</loc>
     
     <lastmod>2017-09-26T17:37:08.000Z</lastmod>
     
