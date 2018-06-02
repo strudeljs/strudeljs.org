@@ -109,5 +109,5 @@ asset_pipeline:
   html_minifier:
     enable: true
 
- nofollow:
- 	enable: true
+nofollow:
+  enable: true
