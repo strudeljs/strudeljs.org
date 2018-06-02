@@ -108,6 +108,3 @@ asset_pipeline:
     enable: true
   html_minifier:
     enable: true
-
-nofollow:
-  enable: true

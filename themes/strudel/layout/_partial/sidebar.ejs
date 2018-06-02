@@ -1,17 +1,17 @@
-<ul class="sidebar-nav anchors <%- page.type %>" onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';">
+<ul class="sidebar-nav anchors <%- page.type %>" onmouseover="document.body.style.overflow=&quot;hidden&quot;" onmouseout="document.body.style.overflow=&quot;auto&quot;">
     <% if (type === 'api') { %>
         <%- partial('_partial/api-sidebar') %>
     <% } %>
     <% if (type === 'community') { %>
         <li><h3>Community</h3></li>
         <li>
-            <a href="https://twitter.com/strudeljs" class="sidebar-nav__link" target="_blank">Twitter</a>
+            <a href="https://twitter.com/strudeljs" class="sidebar-nav__link" rel="external nofollow" target="_blank">Twitter</a>
         </li>
         <li>
-            <a href="https://gitter.im/strudel-js" class="sidebar-nav__link" target="_blank">Gitter</a>
+            <a href="https://gitter.im/strudel-js" class="sidebar-nav__link" rel="external nofollow" target="_blank">Gitter</a>
         </li>
         <li>
-            <a href="https://medium.com/strudel-js" class="sidebar-nav__link" target="_blank">Blog</a>
+            <a href="https://medium.com/strudel-js" class="sidebar-nav__link" rel="external nofollow" target="_blank">Blog</a>
         </li>
     <% } %>
     <% site.pages.find({type: type}).sort('order').each(function (p) { %>
