@@ -1,5 +1,5 @@
 ---
-title: Examples
+title: Hello world
 type: examples
 order: 1
 ---
