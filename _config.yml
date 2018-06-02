@@ -95,3 +95,16 @@ robotstxt:
     - /package.json
     - /package-lock.json
   sitemap: /sitemap.xml
+
+asset_pipeline:
+  revisioning:
+    enable: true
+    exclude: ['robots.txt', 'sitemap.xml', 'webpack.config.js', '*.json', 'CNAME', '**/*.svg', '**/*.png', '**/*.jpg', '**/*.ico']
+  clean_css:
+    enable: true
+  uglify_js:
+    enable: true
+  imagemin:
+    enable: true
+  html_minifier:
+    enable: true
