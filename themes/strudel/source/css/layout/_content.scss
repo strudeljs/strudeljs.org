@@ -52,6 +52,7 @@
 
   ul {
     list-style: disc;
+    line-height: 1.8;
     padding-left: 20px;
 
     li {
@@ -83,13 +84,14 @@
   @include media('<tablet') {
     h1 {
       font-size: 26px;
+      margin-top: 2em;
     }
 
     h2 {
       font-size: 17px;
     }
 
-    p {
+    p, ul {
       font-size: 13px;
     }
 
