@@ -43,7 +43,8 @@ table {
   background: #f3f3f3;
   font-family: 'Roboto Mono', monospace;
   font-size: 12px;
-  overflow-x: auto; }
+  overflow-x: auto;
+  border-radius: 5px; }
   .highlight table, .highlight tr, .highlight td {
     width: 100%;
     border-collapse: collapse;
@@ -167,7 +168,7 @@ pre {
   opacity: 0.5; }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Tahoma, sans-serif;
   color: #737373; }
 
 h1, h2, h3 {
@@ -199,8 +200,8 @@ strong {
 
 blockquote {
   margin-bottom: 20px;
-  border-left: 5px solid #FFDA5C;
-  padding: 5px 10px;
+  border-left: 5px solid #ececec;
+  padding: 5px 15px;
   line-height: 1.5; }
   blockquote.alert {
     padding: 15px 15px 15px 30px;
@@ -332,7 +333,7 @@ blockquote {
     max-width: 100%; }
   .content h1 {
     font-size: 30px;
-    margin-top: 2em; }
+    margin-top: 1.3em; }
   .content h2 {
     font-size: 20px;
     margin-top: 2.4em; }
@@ -381,7 +382,7 @@ body.api .content h3 {
   top: 90px;
   left: 0;
   bottom: 0;
-  padding: 40px 0 30px 60px;
+  padding: 20px 0 30px 60px;
   margin-right: 20px;
   overflow-x: hidden;
   overflow-y: auto; }
@@ -654,3 +655,27 @@ body.api .content h3 {
 
 .algolia-autocomplete .algolia-docsearch-suggestion--highlight {
   color: #fbb200 !important; }
+
+.tabs {
+  margin-top: 20px; }
+  .tabs [role="tablist"] {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px; }
+  .tabs li {
+    display: inline-block; }
+  .tabs [role="tab"] {
+    color: #737373;
+    font-weight: normal;
+    padding: 10px; }
+  .tabs [aria-selected=true] {
+    border-bottom: 4px solid #FFDA5C; }
+  .tabs br {
+    display: none; }
+
+iframe {
+  border: 1px solid #ececec;
+  margin: 10px 1px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  height: 100px; }

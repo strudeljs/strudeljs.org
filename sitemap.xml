@@ -2,6 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://strudeljs.org/examples/lifecycle.html</loc>
+    
+    <lastmod>2018-06-02T10:39:16.623Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://strudeljs.org/examples/dynamic-init.html</loc>
+    
+    <lastmod>2018-06-02T10:38:24.077Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://strudeljs.org/examples/events.html</loc>
+    
+    <lastmod>2018-06-02T10:25:39.649Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://strudeljs.org/examples/collapsible.html</loc>
+    
+    <lastmod>2018-06-02T10:24:43.280Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://strudeljs.org/examples/index.html</loc>
+    
+    <lastmod>2018-06-01T21:32:12.814Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://strudeljs.org/hello-world/</loc>
+    
+    <lastmod>2018-05-30T18:46:33.114Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://strudeljs.org/api/index.html</loc>
     
     <lastmod>2018-05-25T12:25:02.323Z</lastmod>
@@ -72,14 +114,14 @@
   </url>
   
   <url>
-    <loc>http://strudeljs.org/guide/templates.html</loc>
+    <loc>http://strudeljs.org/guide/scaffolds.html</loc>
     
     <lastmod>2017-09-26T17:37:08.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://strudeljs.org/guide/scaffolds.html</loc>
+    <loc>http://strudeljs.org/guide/templates.html</loc>
     
     <lastmod>2017-09-26T17:37:08.000Z</lastmod>
     
@@ -96,13 +138,6 @@
     <loc>http://strudeljs.org/guide/eventhandling.html</loc>
     
     <lastmod>2017-09-25T08:18:39.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://strudeljs.org/hello-world/</loc>
-    
-    <lastmod>2017-04-10T17:37:35.000Z</lastmod>
     
   </url>
   

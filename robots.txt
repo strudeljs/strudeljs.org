@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /examples/embed/*
+Disallow: /hello-world
+Disallow: /webpack.config.js
+Disallow: /package.json
+Disallow: /package-lock.json
+Sitemap: /sitemap.xml
