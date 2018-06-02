@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <% if (page.layout !== 'embed') { %>
     <%
     var title = page.title;
     %>
@@ -35,4 +36,5 @@
     </script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+    <% } %>
 </head>

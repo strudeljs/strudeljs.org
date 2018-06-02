@@ -1,7 +1,12 @@
 <%- partial('_partial/head') %>
 <body class="<%- page.type %>">
+    <% if (page.layout !== 'embed') { %>
     <%- partial('_partial/header', {path: page.path}) %>
     <section class="main-content"><%- body %></section>
+    <% } else { %>
+    <%- body %>
+    <% } %>
+    <% if (page.layout !== 'embed') { %>
     <%- js('js/main') %>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
@@ -18,5 +23,6 @@
         })
     });
 	</script>
+    <% } %>
 </body>
 </html>

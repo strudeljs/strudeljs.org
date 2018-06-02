@@ -1,0 +1,27 @@
+.tabs {
+  margin-top: 20px;
+
+  [role="tablist"] {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  [role="tab"] {
+    color: $text-color;
+    font-weight: normal;
+    padding: 10px;
+  }
+
+  [aria-selected=true] {
+    border-bottom: 4px solid $primary-color;
+  }
+
+  br {
+    display: none;
+  }
+}

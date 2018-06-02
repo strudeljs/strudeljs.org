@@ -1,5 +1,5 @@
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Tahoma, sans-serif;
   color: #737373;
 }
 
@@ -39,8 +39,8 @@ strong {
 
 blockquote {
   margin-bottom: 20px;
-  border-left: 5px solid $primary-color;
-  padding: 5px 10px;
+  border-left: 5px solid #ececec;
+  padding: 5px 15px;
   line-height: 1.5;
 
   &.alert {
