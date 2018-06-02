@@ -23,6 +23,13 @@
   background: transparent;
   border: 2px solid $secondary-color;
   color: $secondary-color;
+
+  svg {
+    margin-top: -25px;
+    position: relative;
+    top: 4px;
+    margin-left: 5px;
+  }
 }
 
 .button--fixed {

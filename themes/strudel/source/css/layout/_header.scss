@@ -56,6 +56,11 @@
   color: #E6B718;
   padding-left: 15px;
 
+  svg {
+    position: relative;
+    top: 2px;
+  }
+
   @include media('<desktop') {
     display: none;
   }
