@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://strudeljs.org/guide/components.html</loc>
+    
+    <lastmod>2018-06-02T12:02:29.467Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://strudeljs.org/examples/lifecycle.html</loc>
     
     <lastmod>2018-06-02T10:39:16.623Z</lastmod>
@@ -47,13 +54,6 @@
     <loc>http://strudeljs.org/api/index.html</loc>
     
     <lastmod>2018-05-25T12:25:02.323Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://strudeljs.org/guide/components.html</loc>
-    
-    <lastmod>2018-04-17T07:16:49.964Z</lastmod>
     
   </url>
   
