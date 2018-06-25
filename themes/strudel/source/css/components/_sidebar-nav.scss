@@ -31,3 +31,8 @@
     color: $primary-color;
   }
 }
+
+.community .mobile-nav__sidebar li:last-child,
+.community .sidebar-nav li:last-child{
+  display: none;
+}
