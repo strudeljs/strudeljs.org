@@ -1,15 +1,16 @@
 ---
 type: api
+title: API
 ---
 
-# Strudel API
+# API
 
 ## Decorators
 
 ### @Component
 
 - **Arguments:**
-  - `{String} [selector]`
+  - `{String} selector`
 
 - **Details:**
 
@@ -24,11 +25,14 @@ type: api
 ### @Evt
 
 - **Arguments:**
-  - `{String} [event descriptor]`
+  - `{String} event descriptor`
+  - `{boolean} prevent default (optional)`
   
 - **Details:**  
 
-   Add DOM event handler for specific descriptor and make decorated function a callback. Event descriptor need to follow format *eventName [selector]*
+   Add DOM event handler for specific descriptor and make decorated function a callback. Event descriptor need to follow format *eventName [selector]*.
+   
+   Second argument can be passed to enforce `preventDefault` on event.
     
 - **Usage:**
   ```js
@@ -38,7 +42,7 @@ type: api
 ### @El
 
 - **Arguments:**
-  - `{String} [element selector]`
+  - `{String} element selector`
   
 - **Usage:**
   
@@ -48,7 +52,7 @@ type: api
   bar
   ```
 
-## Instance Properties
+## Instance Properties / DOM
 
 <blockquote class="alert">Instance properties are injected into `Component` default constructor, so changing the `constructor` for class is forbidden.</blockquote>
   
@@ -81,24 +85,40 @@ type: api
     console.log(this.$data.attribute);
   }
   ```
- 
-## Instance Methods / Events
-
-### $teardown
   
-- **Details:**  
+## Instance Properties / Composition  
 
-  Triggers destroy of the component - unbinds event listeners and binding to DOM
+### mixins
+
+- **Type:** `Array<Object>`
+
+- **Details:**
+
+  The `mixins` options accepts an array of mixin objects. These mixin objects can contain methods and properties and they will be merged against the component.
+  
+  Mixins can have `init` method specificied which will be called before the component own `init`.
   
 - **Usage:**
   ```js
-  this.$teardown()
+  var mixin = {
+    init() { console.log(1) }
+  }
+  
+  class Component {
+    mixins: [mixin]  
+    init() { console.log(2) }
+  }
+
+  // => 1
+  // => 2
   ```
+ 
+## Instance Methods / Events
   
 ### $emit
 
 - **Arguments:**
-  - `{String} [event descriptor]`
+  - `{String} event descriptor`
   
 - **Details:**  
 
@@ -112,8 +132,8 @@ type: api
 ### $on
 
 - **Arguments:**
-  - `{String} [event descriptor]`
-  - `{Function} [callback]`
+  - `{String} event descriptor`
+  - `{Function} callback`
   
 - **Details:**
   
@@ -129,8 +149,8 @@ type: api
 ### $off
 
 - **Arguments:**
-  - `{String} [event descriptor]`
-  - `{Function} [callback]`
+  - `{String} event descriptor`
+  - `{Function} callback`
   
 - **Details:**  
 
@@ -144,6 +164,17 @@ type: api
 ## Instance Methods / Lifecycle Hooks
 
 <blockquote class="alert">All lifecycle hooks have their `this` context bound to the instance. All of them have  **Instance Properties** available.</blockquote>
+
+### $teardown
+  
+- **Details:**  
+
+  Triggers destroy of the component - unbinds event listeners and binding to DOM
+  
+- **Usage:**
+  ```js
+  this.$teardown()
+  ```
 
 ### beforeInit
 
@@ -184,8 +215,8 @@ type: api
 ### Element
 
 - **Arguments:**
-  - `{String} [selector]`
-  - `{Node} [context]`
+  - `{String} selector`
+  - `{Node} context`
   
 - **Details:**
 
@@ -214,7 +245,7 @@ type: api
   
 ### children
 - **Arguments:**
-  - `{String} selector`
+  - `{String} selector (optional)`
   
 - **Details:**
   
@@ -229,7 +260,7 @@ type: api
 ### closest
 
 - **Arguments:**
-  - `{String} selector`
+  - `{String} selector (optional)`
   
 - **Details:**
   
@@ -243,7 +274,7 @@ type: api
 ### parent
 
 - **Arguments:**
-  - `{String} selector`
+  - `{String} selector (optional)`
   
 - **Details:**
   
@@ -278,11 +309,26 @@ type: api
   ```js
   Element('body').find('.className').first();
   ```
+  
+### get
+
+- **Arguments:**
+  - `{number} index (optional)`
+
+- **Details:**
+  
+  Reduce the set of matched elements to the item at specified index. **Returns native HTML Element.**
+  
+- **Usage:**
+  ```js
+  Element('body').find('.className').get();
+  Element('body').find('.className').get(0); // Same as first
+  ```
 
 ### array
 
 - **Arguments:**
-  - `{Function} callback`
+  - `{Function} callback (optional)`
 
 - **Details:**
   
@@ -374,7 +420,7 @@ type: api
 
 - **Details:**
   
-  Insert content, specified by the parameter, to the end of each element in the set of matched elements. Additional data can be provided, which will be used for populating the html
+  Insert content, specified by the argument, to the end of each element in the set of matched elements. Additional data can be provided, which will be used for populating the html
   
 - **Usage:**
   ```js
@@ -388,7 +434,7 @@ type: api
 
 - **Details:**
 
-Insert content, specified by the parameter, to the beginning of each element in the set of matched elements. Additional data can be provided, which will be used for populating the html
+Insert content, specified by the argument, to the beginning of each element in the set of matched elements. Additional data can be provided, which will be used for populating the html
 
 - **Usage:**
 ```js
@@ -413,7 +459,7 @@ Element("ul").prepend("<li>Item 1</li>");
 
 - **Details:**
   
-   Gets the text contents of the first element in a set. When parameter is provided set the text contents of each element in the set.
+   Gets the text contents of the first element in a set. When argument is provided set the text contents of each element in the set.
   
 - **Usage:**
   ```js
@@ -428,7 +474,7 @@ Element("ul").prepend("<li>Item 1</li>");
 
 - **Details:**
   
-  Gets the HTML contents of the first element in a set. When parameter is provided set the HTML contents of each element in the set.
+  Gets the HTML contents of the first element in a set. When argument is provided set the HTML contents of each element in the set.
   
 - **Usage:**
   ```js
@@ -440,7 +486,7 @@ Element("ul").prepend("<li>Item 1</li>");
 
 - **Arguments:**
   - `{string|object} attrName`
-  - `{string} value`
+  - `{string|null} value`
 
 - **Details:**
   
@@ -451,6 +497,7 @@ Element("ul").prepend("<li>Item 1</li>");
   Element("a").attr("href");
   Element("a").attr("href", "#");
   Element("a").attr({"href": "#", "target": "_blank"});
+  Element("a").attr("href", null); // Remove attribute
   ```
   
 ### prop

@@ -48,17 +48,15 @@ class Publisher {
 
 ## Using EventEmitter
 
-Static classes introduced for handling utility configuration or data requesting can also communicate with components using events. To use events simply include `EventEmitter` class into your static class and suddenly it will be able to communicate with components.
+Static classes introduced for handling utility configuration or data requesting can also communicate with components using events. To use events simply extend `EventEmitter` class in class and suddenly it will be able to communicate with components using same API as components.
 
 ```js
 import { EventEmitter } from 'strudel';
 
-const vent = new EventEmitter();
-
-class DataProvider {
+class DataProvider extends EventEmitter {
     constructor(url) {
         fetch(url).then((resp) => {
-           vent.emit('data:fetched', resp.json());
+           this.$emit('data:fetched', resp.json());
         });
     }
 }

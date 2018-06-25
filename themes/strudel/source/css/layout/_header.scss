@@ -76,8 +76,13 @@
   background: #fff url(/images/search.svg) 8px 9px no-repeat;
 }
 
+.main-search,
 .algolia-autocomplete {
   float: right;
+  display: inline-block;
+  position: relative;
+  display: inline-block;
+  direction: ltr;
 }
 
 #search-query-nav {

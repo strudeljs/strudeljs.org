@@ -6,7 +6,7 @@
     <%
     var title = page.title;
     %>
-    <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+    <title><%- title ? title + ' — ' : '' %>Strudel.js</title>
 
     <meta name="description" content="<%- theme.site_description %>">
     <meta property="og:type" content="article">

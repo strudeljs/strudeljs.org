@@ -1,5 +1,6 @@
 ---
 type: community
+title: Community
 ---
 
 # Where to get support

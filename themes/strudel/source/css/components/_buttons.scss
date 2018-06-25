@@ -15,7 +15,7 @@
   }
 
   @include media('<phone') {
-    padding: 12px 30px;
+    padding: 12px 20px;
   }
 }
 
@@ -23,12 +23,23 @@
   background: transparent;
   border: 2px solid $secondary-color;
   color: $secondary-color;
+  padding-right: 45px;
 
   svg {
     margin-top: -25px;
     position: relative;
     top: 4px;
     margin-left: 5px;
+  }
+
+  @include media('<phone') {
+    padding-right: 15px;
+
+    svg {
+      width: 18px;
+      top: 6px;
+      margin-left: 3px;
+    }
   }
 }
 

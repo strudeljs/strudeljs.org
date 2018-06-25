@@ -23,6 +23,12 @@
       line-height: 1.5;
     }
   }
+
+  @include media("<=phone") {
+    .button {
+      font-size: 13px;
+    }
+  }
 }
 
 .hero__content {

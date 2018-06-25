@@ -4,20 +4,27 @@
   }
 
   h4 {
+    font-size: 13px;
     margin: 1.5em 0 .5em;
+
+    a {
+      color: #5a5a5a;
+      font-weight: normal;
+    }
   }
 }
 
 .sidebar-nav__link {
   text-decoration: none;
-  color: $text-color;
+  color: rgba($text-color, .8);
   line-height: 1.8;
   font-size: 14px;
   font-weight: normal;
 
   .sidebar-nav.api & {
-    font-size: 13px;
+    font-size: 12px;
     padding-left: 10px;
+    line-height: 2;
   }
 
   &.current {
