@@ -1,10 +1,8 @@
 import { Component } from 'strudel';
 
-@Component('.greeter')
-class Greeter {
+@Component('.hello')
+class HelloWorld {
 	init() {
 		this.$element.html(`Hello world!`);
 	}
 }
-
-export default Greeter;
