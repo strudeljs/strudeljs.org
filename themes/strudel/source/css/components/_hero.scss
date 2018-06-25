@@ -1,5 +1,5 @@
 .hero {
-  height: 450px;
+  height: 390px;
   background: url("/images/background.svg") $primary-color no-repeat 50% 50%;
 
   h1 {
@@ -34,7 +34,7 @@
 .hero__content {
   max-width: 630px;
   margin: 0 auto;
-  padding: 120px 0;
+  padding: 100px 0;
   text-align: center;
 
   @include media("<=tablet") {

@@ -1,4 +1,26 @@
 .container {
   max-width: 1160px;
   margin: 0 auto;
+
+  &.bordered {
+    border-top: 1px solid rgba($text-color, .2);
+    padding: 50px 0;
+
+    .flex-grid {
+      max-width: 960px;
+      margin: 50px auto 0;
+    }
+
+    figure {
+      margin: 0 15px;
+    }
+
+    @include media("<=tablet") {
+      padding: 30px 0;
+
+      .flex-grid {
+        margin: 30px auto 0;
+      }
+    }
+  }
 }

@@ -1,0 +1,71 @@
+.container.example {
+  .code {
+    font-size: 13px;
+  }
+}
+
+.greeter {
+  margin: 40px auto 0;
+  width: 100%;
+  max-width: 630px;
+}
+
+.greeter__button {
+  border-radius: 0 30px 30px 0 !important;
+  float: left;
+  padding: 15px 30px 15px 20px !important;
+  position: relative;
+  left: -5px;
+}
+
+.greeter__input {
+  border-radius: 30px 0 0 30px !important;
+  border: 1px solid $text-color;
+  padding: 15px 15px 15px 25px;
+  float: left;
+  font-family: Lato;
+  font-weight: bold;
+  font-size: 16px;
+  outline: none;
+}
+
+.greeter__output {
+  border-bottom: 3px solid #7f786c;
+  display: inline-block;
+  width: 280px;
+  height: 40px;
+  margin-left: 20px;
+  line-height: 40px;
+}
+
+@include media("<=tablet") {
+  .second {
+    margin-top: 20px;
+  }
+
+  .container.example {
+    .code {
+      font-size: 11px;
+    }
+  }
+
+  .greeter {
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+
+  .greeter__button {
+    width: 40%;
+    box-sizing: border-box;
+  }
+
+  .greeter__input {
+    width: 60%;
+    box-sizing: border-box;
+  }
+
+  .greeter__output {
+    margin-left: 0;
+    width: 100%;
+  }
+}

@@ -3,7 +3,7 @@
 </div>
 <section class="hero">
     <div class="hero__content">
-        <h1>Javascript component framework with a twist</h1>
+        <h1>A front-end framework for the back-end powered web.</h1>
         <a href="/guide" class="button button--fixed" role="button">Get started</a></li>
         <a href="http://github.com/strudeljs" rel="external nofollow" target="_blank" class="button button--secondary button--fixed" role="button">
             Github
@@ -20,18 +20,42 @@
 <div class="container">
     <section class="promos flex-grid">
         <div class="col promo">
-            <h2>Simple</h2>
-            <p>Build rich, interactive  websites with ease. You are worried that your only front-end experience is basic jQuery? Worry not, it's enough to get you started with Strudel. </p>
+            <h2>Modern</h2>
+            <p>Build rich, interactive interactions with modern technologies and tools. You are worried that your only front-end experience is jQuery? It's enough to get you started. </p>
         </div>
         <div class="col promo">
             <h2>Declarative</h2>
-            <p>Tired of all the boilerplate your front-end inventory requires? Thanks to Strudel decorators reduce it to minimum and have fun coding with ES2015 and beyond. </p>
+            <p>Tired of all the boilerplate your front-end requires? Thanks to Strudel decorators reduce it to minimum and have fun coding with ECMAScript 2015 and beyond. </p>
         </div>
         <div class="col promo">
             <h2>Lightweight</h2>
-            <p>Don't worry about your website payload. Strudel makes sure users' browsers are not overwhelmed with amount of Javascript to parse as it's only ~4kb gzipped.</p>
+            <p>Don't worry about your website payload. With only ~4kb gzipped Strudel makes sure your users bandwidths are not overwhelmed with amount of Javascript to load.</p>
         </div>
     </section>
+</div>
+<div class="container bordered example">
+    <h2 class="centered">Example</h2>
+    <div class="flex-grid">
+        <div class="col">
+            <figure class="highlight html">
+                <table><tbody><tr><td class="code">
+                <%- partial('_index/example-html') %>
+                </td></tr></tbody></table>
+            </figure>
+        </div>
+        <div class="col second">
+            <figure class="highlight js">
+                <table><tbody><tr><td class="code">
+                            <%- partial('_index/example-js') %>
+                        </td></tr></tbody></table>
+            </figure>
+        </div>
+    </div>
+    <div class="greeter">
+        <input class="greeter__input" type="text" placeholder="enter name">
+        <button class="greeter__button button">Greet</button>
+        <span class="greeter__output"></span>
+    </div>
 </div>
 <div class="sponsors">
     <div class="container sponsor">
@@ -40,3 +64,4 @@
     </div>
 </div>
 <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+<%- js('js/examples') %>
