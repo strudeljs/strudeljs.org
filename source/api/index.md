@@ -1,6 +1,7 @@
 ---
 type: api
 title: API
+hideInSidebar: true
 ---
 
 # API

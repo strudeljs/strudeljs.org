@@ -43,9 +43,13 @@ strong {
 
 blockquote {
   margin-bottom: 20px;
-  border-left: 5px solid #ececec;
-  padding: 5px 15px;
+  padding: 5px 0;
   line-height: 1.5;
+
+  p {
+    font-size: 18px !important;
+    color: rgba($text-color, .8) !important;
+  }
 
   &.alert {
     padding: 15px 15px 15px 30px;

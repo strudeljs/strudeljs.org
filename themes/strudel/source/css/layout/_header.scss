@@ -68,12 +68,16 @@
 
 .main-search {
   font-family: Lato;
-  padding: 10px 28px;
+  padding: 10px 35px;
   border-radius: 25px;
   margin: 28px 20px 0 0;
   border: 1px solid #ececec;
   outline: none;
   background: #fff url(/images/search.svg) 8px 9px no-repeat;
+
+  &::placeholder {
+    color: #b2b2b2;
+  }
 }
 
 .main-search,

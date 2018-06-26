@@ -13,8 +13,14 @@
         <li>
             <a href="https://medium.com/strudel-js" class="sidebar-nav__link" rel="external nofollow" target="_blank">Blog</a>
         </li>
+        <li>
+            <a href="https://github.com/strudeljs/roadmap" class="sidebar-nav__link" rel="external nofollow" target="_blank">Roadmap</a>
+        </li>
     <% } %>
     <% site.pages.find({type: type}).sort('order').each(function (p) { %>
+        <% if (p.hideInSidebar) { %>
+            <% return false; %>
+        <% } %>
         <% var fileName = p.path.replace(/^.+?\/([\w-]+)\.html/, '$1') %>
         <% if (type === 'guide') { %>
             <% if (fileName === 'installation') { %>
