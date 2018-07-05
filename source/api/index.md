@@ -16,25 +16,25 @@ hideInSidebar: true
 - **Details:**
 
   Register new component that will be instantiated for all occurrences of selector
-  
+
 - **Usage:**
   ```js
   @Component('.foo')
   class Foo { }
   ```
-  
+
 ### @Evt
 
 - **Arguments:**
   - `{String} event descriptor`
   - `{boolean} prevent default (optional)`
-  
-- **Details:**  
+
+- **Details:**
 
    Add DOM event handler for specific descriptor and make decorated function a callback. Event descriptor need to follow format *eventName [selector]*.
-   
+
    Second argument can be passed to enforce `preventDefault` on event.
-    
+
 - **Usage:**
   ```js
   @Evt('click .bar')
@@ -44,10 +44,10 @@ hideInSidebar: true
 
 - **Arguments:**
   - `{String} element selector`
-  
+
 - **Usage:**
-  
-  Find element by selector on component initialisation and substitute for variable.
+
+  Find element by selector on component initialisation and substitute for variable. Searched for within component DOM tree.
   ```js
   @El('.bar')
   bar
@@ -56,7 +56,7 @@ hideInSidebar: true
 ## Instance Properties / DOM
 
 <blockquote class="alert">Instance properties are injected into `Component` default constructor, so changing the `constructor` for class is forbidden.</blockquote>
-  
+
 ### $element
 
 - **Type:** `{Element}`
@@ -64,30 +64,30 @@ hideInSidebar: true
 - **Details:**
 
   Gets the DOM element correlated with the component instance.
-  
+
 - **Usage:**
   ```js
   init() {
     this.$element.text('Hello world')
   }
   ```
-  
+
 ### $data
 
 - **Type:** `{object}`
 
 - **Details:**
-  
+
   Reference to the `data` attributes map for DOM element correlated with component instance.
-  
+
 - **Usage:**
   ```js
   init() {
     console.log(this.$data.attribute);
   }
   ```
-  
-## Instance Properties / Composition  
+
+## Instance Properties / Composition
 
 ### mixins
 
@@ -96,35 +96,35 @@ hideInSidebar: true
 - **Details:**
 
   The `mixins` options accepts an array of mixin objects. These mixin objects can contain methods and properties and they will be merged against the component.
-  
+
   Mixins can have `init` method specificied which will be called before the component own `init`.
-  
+
 - **Usage:**
   ```js
   var mixin = {
     init() { console.log(1) }
   }
-  
+
   class Component {
-    mixins: [mixin]  
+    mixins: [mixin]
     init() { console.log(2) }
   }
 
   // => 1
   // => 2
   ```
- 
+
 ## Instance Methods / Events
-  
+
 ### $emit
 
 - **Arguments:**
   - `{String} event descriptor`
-  
-- **Details:**  
 
-  Emits application event with provided descriptor and invokes all the handlers registered under that descriptor  
-  
+- **Details:**
+
+  Emits application event with provided descriptor and invokes all the handlers registered under that descriptor
+
 - **Usage:**
   ```js
   this.$emit('eventName');
@@ -135,11 +135,11 @@ hideInSidebar: true
 - **Arguments:**
   - `{String} event descriptor`
   - `{Function} callback`
-  
+
 - **Details:**
-  
+
   Registers `callback` which will fire when event with matching `event descriptor` is emitted
-  
+
 - **Usage:**
   ```js
   this.$on('eventName', function (data) {
@@ -152,26 +152,26 @@ hideInSidebar: true
 - **Arguments:**
   - `{String} event descriptor`
   - `{Function} callback`
-  
-- **Details:**  
+
+- **Details:**
 
   Unregisters `callback` registered for provided `event descriptor`
-  
+
 - **Usage:**
   ```js
   this.$off('eventName', callback);
   ```
-  
+
 ## Instance Methods / Lifecycle Hooks
 
 <blockquote class="alert">All lifecycle hooks have their `this` context bound to the instance. All of them have  **Instance Properties** available.</blockquote>
 
 ### $teardown
-  
-- **Details:**  
+
+- **Details:**
 
   Triggers destroy of the component - unbinds event listeners and binding to DOM
-  
+
 - **Usage:**
   ```js
   this.$teardown()
@@ -180,35 +180,35 @@ hideInSidebar: true
 ### beforeInit
 
 - **Type:** `{Function}`
-  
+
 - **Details:**
-  
+
   Called synchronously after `DOMContentLoaded` event, before the `init` and binding of events and elements. This can be used to fetch the data or manipulate the dom.
 
 ### init
 
 - **Type:** `{Function}`
-  
+
 - **Details:**
-  
+
   Called synchronously after `DOMContentLoaded` event.
 
 ### beforeDestroy
 
 - **Type:** `{Function}`
-  
+
 - **Details:**
-  
+
   Called synchronously after `$teardown()` function is invoked on component instance before event listeners and DOM detach
 
 ### destroy
 
 - **Type:** `{Function}`
-  
+
 - **Details:**
-  
+
   Called synchronously after `$teardown()` function is invoked on component instance when everything is destroyed.
-  
+
 # DOM API
 
 <blockquote class="alert">Note: Element is internal class for handling DOM manipulation that simulates jQuery but is 800% lighter, below is a reference of available methods. Other methods need to be accessed through DOM API. `this.$element` and all elements found using `@El` decorator are Element instances.</blockquote>
@@ -218,11 +218,11 @@ hideInSidebar: true
 - **Arguments:**
   - `{String} selector`
   - `{Node} context`
-  
+
 - **Details:**
 
     Creates instance of `Element` class for the `selector`, can also have context being provided to find elements within Node.
-  
+
 - **Usage:**
   ```js
     Element('div');
@@ -234,24 +234,24 @@ hideInSidebar: true
 ### find
 - **Arguments:**
   - `{String} selector`
-  
+
 - **Details:**
-  
+
   Finds element specified by selector in the element context
-  
+
 - **Usage:**
   ```js
   Element('body').find('.className');
   ```
-  
+
 ### children
 - **Arguments:**
   - `{String} selector (optional)`
-  
+
 - **Details:**
-  
+
   Get the direct children of all of the nodes with an optional filter
-  
+
 - **Usage:**
   ```js
   Element('body').children();
@@ -262,64 +262,64 @@ hideInSidebar: true
 
 - **Arguments:**
   - `{String} selector (optional)`
-  
+
 - **Details:**
-  
+
   Find first anacestor that matches the selector
-   
+
 - **Usage:**
     ```js
     Element('a').closest();
     ```
-  
+
 ### parent
 
 - **Arguments:**
   - `{String} selector (optional)`
-  
+
 - **Details:**
-  
+
   Travel the matched elements one node up.
-   
+
 - **Usage:**
   ```js
   Element('a').parent();
   ```
-  
+
 ### eq
 
 - **Arguments:**
   - `{number} index`
-  
+
 - **Details:**
-  
+
   Reduce the set of matched elements to the one at the specified index.
-  
+
 - **Usage:**
   ```js
   Element('.list-items').eq(3);
   ```
-  
+
 ### first
 
 - **Details:**
-  
+
   Reduce the set of matched elements to the first in the set. **Returns native HTML Element.**
-  
+
 - **Usage:**
   ```js
   Element('body').find('.className').first();
   ```
-  
+
 ### get
 
 - **Arguments:**
   - `{number} index (optional)`
 
 - **Details:**
-  
+
   Reduce the set of matched elements to the item at specified index. **Returns native HTML Element.**
-  
+
 - **Usage:**
   ```js
   Element('body').find('.className').get();
@@ -332,15 +332,15 @@ hideInSidebar: true
   - `{Function} callback (optional)`
 
 - **Details:**
-  
+
   Extracts structured data from the DOM. Can have callback passed to return different format of data.
-  
+
 - **Usage:**
   ```js
   Element('ul li').array();
   // ['Item 1', 'Item 2', 'Item 3']
   ```
-  
+
 ## Filtering
 
 ### filter
@@ -349,9 +349,9 @@ hideInSidebar: true
   - `{string|Element|Function} filter`
 
 - **Details:**
-  
+
   Remove all the nodes that doesn't match the criteria.
-  
+
 - **Usage:**
   ```js
   Element('ul').filter('li')
@@ -365,9 +365,9 @@ hideInSidebar: true
   - `{Function} callback`
 
 - **Details:**
-  
+
   Change the content of the current instance by looping each element
-  
+
 - **Usage:**
   ```js
   Element('ul li').map((node, i) => '<a>' + Element(node).text() + '</a>');
@@ -379,9 +379,9 @@ hideInSidebar: true
   - `{Function} callback`
 
 - **Details:**
-  
+
   Loop through all of the nodes and execute a callback for each
-  
+
 - **Usage:**
   ```js
   Element('ul li').each((node, i) => Element(node).attr('href', '#'));
@@ -393,9 +393,9 @@ hideInSidebar: true
   - `{string|Element|Function} filter`
 
 - **Details:**
-  
+
   Check whether any of the nodes matches the selector
-  
+
 - **Usage:**
   ```js
   Element('nav').is('.is-active');
@@ -406,9 +406,9 @@ hideInSidebar: true
 ### clone
 
 - **Details:**
-  
+
   Clone element with all it's attributes and descendants
-  
+
 - **Usage:**
   ```js
   Element("ul").clone();
@@ -420,14 +420,14 @@ hideInSidebar: true
   - `{string|Element} html`
 
 - **Details:**
-  
+
   Insert content, specified by the argument, to the end of each element in the set of matched elements. Additional data can be provided, which will be used for populating the html
-  
+
 - **Usage:**
   ```js
   Element("ul").append("<li>Item 1</li>");
   ```
-  
+
 ### prepend
 
 - **Arguments:**
@@ -445,9 +445,9 @@ Element("ul").prepend("<li>Item 1</li>");
 ### remove
 
 - **Details:**
-  
+
   Remove the set of matched elements from the DOM.
-  
+
 - **Usage:**
   ```js
   Element("ul").remove();
@@ -459,9 +459,9 @@ Element("ul").prepend("<li>Item 1</li>");
   - `{string} text (optional)`
 
 - **Details:**
-  
+
    Gets the text contents of the first element in a set. When argument is provided set the text contents of each element in the set.
-  
+
 - **Usage:**
   ```js
   Element("span").text();
@@ -474,9 +474,9 @@ Element("ul").prepend("<li>Item 1</li>");
   - `{string} htmlString (optional)`
 
 - **Details:**
-  
+
   Gets the HTML contents of the first element in a set. When argument is provided set the HTML contents of each element in the set.
-  
+
 - **Usage:**
   ```js
   Element("div").html();
@@ -490,9 +490,9 @@ Element("ul").prepend("<li>Item 1</li>");
   - `{string|null} value`
 
 - **Details:**
-  
+
   Gets the value of an attribute for the each element in the set of matched elements or set one or more attributes for every matched element.
-  
+
 - **Usage:**
   ```js
   Element("a").attr("href");
@@ -500,7 +500,7 @@ Element("ul").prepend("<li>Item 1</li>");
   Element("a").attr({"href": "#", "target": "_blank"});
   Element("a").attr("href", null); // Remove attribute
   ```
-  
+
 ### prop
 
 - **Arguments:**
@@ -508,9 +508,9 @@ Element("ul").prepend("<li>Item 1</li>");
   - `{string} value`
 
 - **Details:**
-  
+
   Gets the value of a property for the each element in the set of matched elements or set one or more properties for every matched element.
-  
+
 - **Usage:**
   ```js
   Element("input[type='checkbox']").prop("checked");
@@ -524,9 +524,9 @@ Element("ul").prepend("<li>Item 1</li>");
   - `{string} value`
 
 - **Details:**
-  
+
   Gets the value of an data attribute for the each element in the set of matched elements or set one or more attributes for every matched element.
-  
+
 - **Usage:**
   ```js
   Element("div").data().msg;
@@ -541,9 +541,9 @@ Element("ul").prepend("<li>Item 1</li>");
   - `{...String} class(es)
   `
 - **Details:**
-  
+
   Adds the specified class(es) to each element in the set of matched elements.
-  
+
 - **Usage:**
   ```js
   Element('.button').addClass('.is-active');
@@ -553,9 +553,9 @@ Element("ul").prepend("<li>Item 1</li>");
 
   - `{...String} class(es)`
 - **Details:**
-  
+
   Remove the specified class(es) to each element in the set of matched elements.
-  
+
 - **Usage:**
   ```js
   Element('.modal').removeClass('.is-visible');
@@ -564,9 +564,9 @@ Element("ul").prepend("<li>Item 1</li>");
 - **Arguments:**
   - `{...String} class(es)`
 - **Details:**
-  
+
   Toggles the specified class(es) to each element in the set of matched elements.
-  
+
 - **Usage:**
   ```js
   Element('.main-nav').toggleClass('.is-expanded');
@@ -577,11 +577,11 @@ Element("ul").prepend("<li>Item 1</li>");
 
 - **Arguments:**
   - `{String} events`
-  
+
 - **Details:**
-  
+
   Execute all handlers attached to the event type.
-  
+
 - **Usage:**
   ```js
   Element('button').trigger('click');
@@ -593,12 +593,12 @@ Element("ul").prepend("<li>Item 1</li>");
 - **Arguments:**
   - `{String} event`
   - `{string|Function} selector or listener`
-  - `{Function} listener (only when selector provided)` 
-  
+  - `{Function} listener (only when selector provided)`
+
 - **Details:**
-  
+
   Attach event handlers to element or element descendants
-  
+
 - **Usage:**
   ```js
   Element('button').on('click', callback);
@@ -609,11 +609,11 @@ Element("ul").prepend("<li>Item 1</li>");
 
 - **Arguments:**
   - `{...String} events`
-  
+
 - **Details:**
-  
+
   Remove an event handler(s)
-  
+
 - **Usage:**
   ```js
   Element('button').off('click');
