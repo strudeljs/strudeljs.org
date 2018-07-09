@@ -15,7 +15,7 @@ hideInSidebar: true
 
 - **Details:**
 
-  Register new component that will be instantiated for all occurrences of selector
+  Registers new component that will be instantiated for all occurrences of selector
 
 - **Usage:**
   ```js
@@ -31,7 +31,7 @@ hideInSidebar: true
 
 - **Details:**
 
-   Add DOM event handler for specific descriptor and make decorated function a callback. Event descriptor need to follow format *eventName [selector]*.
+   Adds DOM event handler (like [.on()](#on-1) from DOM API) for specific descriptor and make decorated function a callback. Event descriptor need to follow format *eventName [selector]* - making selector for delegate optional.
 
    Second argument can be passed to enforce `preventDefault` on event.
 
@@ -47,7 +47,7 @@ hideInSidebar: true
 
 - **Usage:**
 
-  Find element by selector on component initialisation and substitute for variable. Searched for within component DOM tree.
+  Finds element by selector (like [.find()](#find) from DOM API) on component initialisation and substitute for variable. Searched for within component DOM tree.
   ```js
   @El('.bar')
   bar
@@ -116,6 +116,8 @@ hideInSidebar: true
 
 ## Instance Methods / Events
 
+<blockquote class="alert">Instance events are handled by `EventEmitter` custom event implementation not using DOM events. `EventEmitter` class is available to be imported and used in other modules.</blockquote>
+
 ### $emit
 
 - **Arguments:**
@@ -123,7 +125,7 @@ hideInSidebar: true
 
 - **Details:**
 
-  Emits application event with provided descriptor and invokes all the handlers registered under that descriptor
+  Emits event with provided descriptor and invokes all the handlers registered under that descriptor.
 
 - **Usage:**
   ```js
@@ -138,7 +140,7 @@ hideInSidebar: true
 
 - **Details:**
 
-  Registers `callback` which will fire when event with matching `event descriptor` is emitted
+  Registers `callback` which will fire when event with matching `event descriptor` is emitted.
 
 - **Usage:**
   ```js
@@ -155,7 +157,7 @@ hideInSidebar: true
 
 - **Details:**
 
-  Unregisters `callback` registered for provided `event descriptor`
+  Unregisters `callback` registered for provided `event descriptor`.
 
 - **Usage:**
   ```js
@@ -491,7 +493,7 @@ Element("ul").prepend("<li>Item 1</li>");
 
 - **Details:**
 
-  Gets the value of an attribute for the each element in the set of matched elements or set one or more attributes for every matched element.
+  Gets the value of an attribute of the first element in the set. When second argument is provided sets the attributes contents of each element in the set.
 
 - **Usage:**
   ```js
@@ -597,7 +599,7 @@ Element("ul").prepend("<li>Item 1</li>");
 
 - **Details:**
 
-  Attach event handlers to element or element descendants
+  Attach DOM event handlers to element or element descendants.
 
 - **Usage:**
   ```js
@@ -612,7 +614,7 @@ Element("ul").prepend("<li>Item 1</li>");
 
 - **Details:**
 
-  Remove an event handler(s)
+  Remove DOM event handler(s) from element.
 
 - **Usage:**
   ```js
