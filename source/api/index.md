@@ -548,7 +548,7 @@ Element("ul").prepend("<li>Item 1</li>");
 
 - **Usage:**
   ```js
-  Element('.button').addClass('.is-active');
+  Element('.button').addClass('is-active');
   ```
 ### removeClass
 - **Arguments:**
@@ -560,7 +560,7 @@ Element("ul").prepend("<li>Item 1</li>");
 
 - **Usage:**
   ```js
-  Element('.modal').removeClass('.is-visible');
+  Element('.modal').removeClass('is-visible');
   ```
 ### toggleClass
 - **Arguments:**
@@ -571,7 +571,7 @@ Element("ul").prepend("<li>Item 1</li>");
 
 - **Usage:**
   ```js
-  Element('.main-nav').toggleClass('.is-expanded');
+  Element('.main-nav').toggleClass('is-expanded');
   ```
 ## Events
 
