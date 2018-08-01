@@ -4,7 +4,7 @@
   <url>
     <loc>http://strudeljs.org/api/index.html</loc>
     
-    <lastmod>2018-07-09T14:24:26.987Z</lastmod>
+    <lastmod>2018-08-01T11:30:10.764Z</lastmod>
     
   </url>
   
@@ -114,6 +114,13 @@
   </url>
   
   <url>
+    <loc>http://strudeljs.org/guide/extending.html</loc>
+    
+    <lastmod>2017-09-26T17:37:08.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://strudeljs.org/guide/scaffolds.html</loc>
     
     <lastmod>2017-09-26T17:37:08.000Z</lastmod>
@@ -122,13 +129,6 @@
   
   <url>
     <loc>http://strudeljs.org/guide/templates.html</loc>
-    
-    <lastmod>2017-09-26T17:37:08.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://strudeljs.org/guide/extending.html</loc>
     
     <lastmod>2017-09-26T17:37:08.000Z</lastmod>
     
