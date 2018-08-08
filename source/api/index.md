@@ -15,12 +15,24 @@ hideInSidebar: true
 
 - **Details:**
 
-  Registers new component that will be instantiated for all occurrences of selector
+  Registers new component that will be instantiated for all occurrences of selector on a page.
 
 - **Usage:**
   ```js
   @Component('.foo')
   class Foo { }
+  ```
+  
+### @OnInit
+
+- **Details:**
+
+  Runs decorated class method on Component [init](#init) lifecycle hook 
+  
+- **Usage:**
+  ```js
+  @OnInit
+  render() { }
   ```
 
 ### @Evt
@@ -31,7 +43,7 @@ hideInSidebar: true
 
 - **Details:**
 
-   Adds DOM event handler (like [.on()](#on-1) from DOM API) for specific descriptor and make decorated function a callback. Event descriptor need to follow format *eventName [selector]* - making selector for delegate optional.
+   Adds DOM event handler (like [.on()](#on-1) from DOM API) for specific descriptor and makes decorated class method a callback. Event descriptor need to follow format *eventName [selector]* - making selector for delegate optional.
 
    Second argument can be passed to enforce `preventDefault` on event.
 
@@ -40,18 +52,21 @@ hideInSidebar: true
   @Evt('click .bar')
   onClick() { }
   ```
+  
 ### @El
 
 - **Arguments:**
   - `{String} element selector`
 
-- **Usage:**
+- **Details:**
 
   Finds element by selector (like [.find()](#find) from DOM API) on component initialisation and substitute for variable. Searched for within component DOM tree.
+
+- **Usage:**
+
   ```js
   @El('.bar')
-  bar
-  ```
+  bar  
 
 ## Instance Properties / DOM
 
@@ -185,7 +200,7 @@ hideInSidebar: true
 
 - **Details:**
 
-  Called synchronously after `DOMContentLoaded` event, before the `init` and binding of events and elements. This can be used to fetch the data or manipulate the dom.
+  Called synchronously before the `init` and binding of events and elements. This can be used to fetch the data or manipulate the dom.
 
 ### init
 
@@ -193,7 +208,7 @@ hideInSidebar: true
 
 - **Details:**
 
-  Called synchronously after `DOMContentLoaded` event.
+  Called synchronously after `DOMContentLoaded` event or when new component is discovered.
 
 ### beforeDestroy
 
@@ -201,7 +216,7 @@ hideInSidebar: true
 
 - **Details:**
 
-  Called synchronously after `$teardown()` function is invoked on component instance before event listeners and DOM detach
+  Called synchronously after `$teardown()` function is invoked on component instance before event listeners and DOM detach.
 
 ### destroy
 

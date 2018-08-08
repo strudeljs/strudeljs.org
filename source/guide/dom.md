@@ -6,13 +6,26 @@ order: 4
 
 # Manipulating DOM
 
-## Fundamentals
+## Introduction
 
 Strudel uses DOM manipulation in similar manner as jQuery library. All DOM manipulation is done from Javascript in unobtrusive manner. This means all the traversing, manipulation and event handling is done in Javascript code, not in HTML.
 
-<blockquote class="alert">Strudel uses DOM API v4, so no support for IE8 and IE9</blockquote>
+<blockquote class="alert">Strudel uses DOM API v4, so no support for anything below IE11 without polyfills</blockquote>
 
-If you are familiar with jQuery you should be familiar with the DOM API that Strudel provides, however Strudel API is much lighter.
+If you are familiar with jQuery you should be familiar with the DOM API that Strudel provides in `Element` module.
+
+## Using Element
+
+Similar to jQuery `Element` can be imported into module as `$`:
+
+```js
+import { $ } from 'Strudel' // Or import { element } from 'Strudel';
+
+$('body').addClass('has-overlay-opened');
+
+```
+
+All elements used in Components (`this.$element`) or found by the `@El` are `Element` instances
 
 ## Traversing
 
@@ -46,3 +59,6 @@ class Example {
 }
 
 ```
+
+
+

@@ -8,15 +8,11 @@ order: 6
 
 ## Linking to DOM
 
-Although components can be defined in any moment of the website runtime - you can attach them in `<head>`, middle of the `<body>` or before the `<body>` end. What's important is when these components are **initialized** and **linked to DOM**. In Strudel linking and initialization happend when document has stopped loading - when browser triggers `DOMContentLoaded` event. It's best to have all the markup inplace before that event occurs.
+Although components can be defined in any moment of the website runtime - you can attach them in `<head>`, middle of the `<body>` or before the `<body>` end. What's important is when these components are **initialized** and **linked to DOM**. In Strudel linking and initialization happens when when browser triggers `DOMContentLoaded` event. It's best to have all the markup in-place before that event occurs.
 
-## Lazy initialization
-There is a way of initializing components that were added to the DOM after that moment in time. Strudel parses the DOM in search of components. To trigger that search after the DOM ready event `CustomEvent` named `content:loaded` needs to be triggered.
+## Dynamic initialization
 
-Framework will receive event, start search for components in scope of element triggering the event and finally initialize components. 
-
-<blockquote class="alert">`Element.trigger` can be used for easier triggering of the `content:loaded` event </blockquote>
-
+However if you would like to dynamically generate HTML that will components, Strudel is also capable of handling such situations. Strudel observes any DOM Changes and every update search for elements that match registered Component selectors. This way all dynamically components will be instantiated same way as the ones' loaded from server.
 
 ```js
 const ERROR = `<div data-msg="Unexpected error" class="error"></div>`;
@@ -25,7 +21,6 @@ const ERROR = `<div data-msg="Unexpected error" class="error"></div>`;
 class Loader() {
   init() {
      this.$element.append(ERROR);
-     this.$element.trigger('content:loaded');
   }	
 }
 
@@ -35,7 +30,9 @@ class Error {
     this.$element.html(this.$data.msg);
   }
 }
-
-
-
 ```
+
+If somehow automatic DOM observations fails to instantiate the dynamic components you can manually trigger `content:loaded` event.
+
+
+<blockquote class="alert">`Element.trigger` can be used for easier triggering of the `content:loaded` event </blockquote>

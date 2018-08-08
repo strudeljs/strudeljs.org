@@ -1,9 +1,9 @@
 {
   "name": "strudeljs.org",
-  "version": "0.0.0",
+  "version": "0.7.0",
   "private": true,
   "hexo": {
-    "version": "3.3.1"
+    "version": "3.7.1"
   },
   "scripts": {
     "postinstall": "cd themes/strudel/source && npm install",
