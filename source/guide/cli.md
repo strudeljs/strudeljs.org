@@ -1,5 +1,5 @@
 ---
-title: Usage
+title: CLI
 type: guide
 order: 10
 ---
