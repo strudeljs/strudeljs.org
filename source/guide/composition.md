@@ -15,7 +15,7 @@ const greeter = {
   message: 'Hello World!',
   
   greet() {
-    this.$element.html(`${this.message()}`);
+    this.$element.html(`${this.message}`);
   }
 };
 
