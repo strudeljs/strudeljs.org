@@ -7,8 +7,9 @@
   },
   "scripts": {
     "postinstall": "cd themes/strudel/source && npm install",
-    "dev": "hexo server",
-    "deploy": "hexo clean && hexo generate && hexo deploy"
+    "start": "hexo server",
+    "build": "node pre-deploy && hexo clean && hexo generate",
+    "deploy": "npm run build && hexo deploy"
   },
   "dependencies": {
     "hexo": "^3.3.1",
@@ -20,7 +21,6 @@
     "hexo-generator-robotstxt": "^0.2.0",
     "hexo-generator-sitemap": "^1.2.0",
     "hexo-generator-tag": "^0.2.0",
-    "hexo-include-markdown": "^1.0.2",
     "hexo-renderer-ejs": "^0.2.0",
     "hexo-renderer-marked": "^0.2.10",
     "hexo-renderer-sass": "^0.3.1",
