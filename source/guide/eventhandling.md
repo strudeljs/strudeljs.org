@@ -18,7 +18,7 @@ Key methods responsible for handling communication are:
 * `$emit` - activates all the listeners attached to the event with provided name
 * `$on`/`$off` - attaches/detaches listener to particular event
 
-Full Event specification can be found in the [API](http://strudeljs.org/api/#emit)
+Full Event specification can be found in the [API](http://strudeljs.org/api/#emit).
 
 Example below shows cross-component event communication.
 
