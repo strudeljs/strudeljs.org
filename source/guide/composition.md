@@ -21,7 +21,7 @@ const greeter = {
 
 @Component('.welcome')
 class Welcome {
-  mixins: [greeter],
+  mixins = [greeter],
 
   init() {
     this.greet();
