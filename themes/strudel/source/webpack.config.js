@@ -2,7 +2,7 @@ const webpack = require('webpack');
 
 module.exports = {
 	entry: [
-		'themes/strudel/source/js/examples.js'
+		'themes/strudel/source/js/example.js'
 	],
 	module: {
 		rules: [

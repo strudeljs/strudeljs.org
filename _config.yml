@@ -25,7 +25,6 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render: source/examples/embed
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -89,7 +88,6 @@ webpack_config: themes/strudel/source/webpack.config.js
 robotstxt:
   useragent: "*"
   disallow:
-    - /examples/embed/*
     - /hello-world
     - /webpack.config.js
     - /package.json
