@@ -88,11 +88,10 @@ webpack_config: themes/strudel/source/webpack.config.js
 robotstxt:
   useragent: "*"
   disallow:
-    - /hello-world
     - /webpack.config.js
     - /package.json
     - /package-lock.json
-  sitemap: /sitemap.xml
+  sitemap: https://strudeljs.org/sitemap.xml
 
 asset_pipeline:
   revisioning:

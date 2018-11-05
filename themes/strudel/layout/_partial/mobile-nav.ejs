@@ -40,7 +40,7 @@
     <li><h3>Examples</h3></li>
     <% } %>
     <% } %>
-    <% if (p.layout !== 'embed') { %>
+    <% if (p.layout !== 'index') { %>
     <li>
         <div class="mobile-nav__item">
             <a href="<%- url_for(p.path) %>" class="mobile-nav__sidebar-link<%- page.title === p.title ? ' current' : '' %>"><%- p.title %></a>
