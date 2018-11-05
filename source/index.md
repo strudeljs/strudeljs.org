@@ -1,2 +1,3 @@
+layout: index
 index: true
 ---
