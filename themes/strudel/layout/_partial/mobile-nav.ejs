@@ -1,5 +1,5 @@
 <input type="text" class="main-search" id="search-query-mobile" placeholder="Search docs">
-<nav role="mobile-nav__navigation">
+<nav class="mobile-nav__navigation" role="navigation">
     <% for (var i in theme.menu){ %>
     <div class="mobile-nav__item">
         <a class="mobile-nav__link<%- path.match(theme.menu[i].substring(1)) ? ' current' : '' %>" href="<%- url_for(theme.menu[i]) %>" ><%= i %></a>
