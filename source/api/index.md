@@ -66,7 +66,8 @@ hideInSidebar: true
 
   ```js
   @El('.bar')
-  bar  
+  bar
+  ```
 
 ## Instance Properties / DOM
 
