@@ -636,3 +636,19 @@ Element("ul").prepend("<li>Item 1</li>");
   ```js
   Element('button').off('click');
   ```
+## Miscellaneous
+
+### index
+
+- **Arguments:**
+  - `{Element|HTML Element} node`
+
+- **Details:**
+
+  Get an integer indicating the position of the passed element relative to parent.
+
+- **Usage:**
+  ```js
+  Element('nav').index(Element('a.is-active'));
+  Element('ul').index(Element('li.is-hidden').first());
+  ```
