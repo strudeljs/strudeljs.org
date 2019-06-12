@@ -19,7 +19,7 @@ If you are familiar with jQuery you should be familiar with the DOM API that Str
 Similar to jQuery `Element` can be imported into module as `$`:
 
 ```js
-import { $ } from 'Strudel' // Or import { element } from 'Strudel';
+import { $ } from 'strudel' // Or import { element } from 'strudel';
 
 $('body').addClass('has-overlay-opened');
 
