@@ -4,74 +4,32 @@ title: API
 hideInSidebar: true
 ---
 
-# API
+# Global API
 
-## Decorators
+## Class Decorators
 
 ### @Component
+
+- **Type**: `Decorator`
 
 - **Arguments:**
   - `{String} selector`
 
 - **Details:**
 
-  Registers new component that will be instantiated for all occurrences of selector on a page.
+  Registers new component that will be instantiated for all occurrences of selector on a page. When a new HTML is added to a page new occurences will be found.
 
 - **Usage:**
   ```js
   @Component('.foo')
   class Foo { }
   ```
-  
-### @OnInit
 
-- **Details:**
+## Utilities
 
-  Runs decorated class method on Component [init](#init) lifecycle hook 
-  
-- **Usage:**
-  ```js
-  @OnInit
-  render() { }
-  ```
+### createDecorator
 
-### @Evt
-
-- **Arguments:**
-  - `{String} event descriptor`
-  - `{boolean} prevent default (optional)`
-
-- **Details:**
-
-   Adds DOM event handler (like [.on()](#on-1) from DOM API) for specific descriptor and makes decorated class method a callback. Event descriptor need to follow format *eventName [selector]* - making selector for delegate optional.
-
-   Second argument can be passed to enforce `preventDefault` on event.
-
-- **Usage:**
-  ```js
-  @Evt('click .bar')
-  onClick() { }
-  ```
-  
-### @El
-
-- **Arguments:**
-  - `{String} element selector`
-
-- **Details:**
-
-  Finds element by selector (like [.find()](#find) from DOM API) on component initialisation and substitute for variable. Searched for within component DOM tree.
-
-- **Usage:**
-
-  ```js
-  @El('.bar')
-  bar
-  ```
-
-## Utilities ##
-
-### createDecorator ###
+- **Type:** `Function`
 
 - **Arguments:**
   - `{*} any (optional)`
@@ -79,6 +37,9 @@ hideInSidebar: true
 - **Details:**
 
   Creates a custom decorator that can be used for both classes and properties.
+
+
+  Custom decorators are run during component initialisation so they can extend the component capability.
 
 - **Usage:**
 
@@ -99,14 +60,38 @@ hideInSidebar: true
   @Evt('click .example-2')
   onClick2() {}
   ```
-  
+
+### EventEmitter
+
+- **Type:** `Object`
+
+- **Details:**
+
+  Utility class that extending allows to communicate any module with Strudel event system.
+
+- **Usage:**
+
+  ```js
+  import { EventEmitter } from 'strudel';
+
+  class Notifier extends EventEmitter {
+      constructor() {
+          this.$emit('notify');
+      }
+  }
+  ```
+
 ## Constants
 
 ### INIT_CLASS
 
+- **Type**: `String`
+
+- **Default**: `strudel-init`
+
 - **Details:**
 
-  Constant equal to the value of class that is added to an element when Strudel initializes.
+  Provides the value of class that is added to an element when Strudel initializes.
 
 - **Usage:**
   ```js
@@ -114,22 +99,101 @@ hideInSidebar: true
   ```
 ### INIT_SELECTOR
 
+- **Type**: `String`
+
+- **Default**: `.strudel-init`
+
 - **Details:**
 
-  Constant equal to the value of a selector that can be used to select elements that have been initialized.
+  Provides the value of a selector that can be used to select elements that have been initialized.
 
 - **Usage:**
   ```js
   import { INIT_SELECTOR } from strudel;
   ```
 
-## Instance Properties / DOM
+### VERSION
 
-<blockquote class="alert">Instance properties are injected into `Component` default constructor, so changing the `constructor` for class is forbidden.</blockquote>
+- **Type**: `String`
+
+- **Details:**
+
+  Provides the used version of Strudel as string.
+
+- **Usage:**
+  ```js
+  import { VERSION } from strudel;
+
+  const version = Number(VERSION.split('.')[0]);
+  
+  if (version === 1) {
+    // Version v1.x.x
+  } else {
+    // Version v0.x.x
+  }
+  ```
+
+# Component API
+
+## Property Decorators
+  
+### @OnInit
+
+- **Type**: `Decorator`
+
+- **Details:**
+
+  Runs decorated class method on Component [init](#init) lifecycle hook 
+  
+- **Usage:**
+  ```js
+  @OnInit
+  render() { }
+  ```
+
+### @Evt
+
+- **Type**: `Decorator`
+
+- **Arguments:**
+  - `{String} event descriptor`
+  - `{boolean} prevent default (optional)`
+
+- **Details:**
+
+   Adds DOM event handler (like [.on()](#on-1) from DOM API) for specific descriptor and makes decorated class method a callback. Event descriptor need to follow format *eventName [selector]* - making selector for delegate optional.
+
+   Second argument can be passed to enforce `preventDefault` on event.
+
+- **Usage:**
+  ```js
+  @Evt('click .bar')
+  onClick() { }
+  ```
+  
+### @El
+
+- **Type**: `Decorator`
+
+- **Arguments:**
+  - `{String} element selector`
+
+- **Details:**
+
+  Finds element by selector (like [.find()](#find) from DOM API) on component initialisation and substitute for variable. Searched for within component DOM tree.
+
+- **Usage:**
+
+  ```js
+  @El('.bar')
+  bar
+  ```
+
+## Properties / DOM
 
 ### $element
 
-- **Type:** `{Element}`
+- **Type:** `Element`
 
 - **Details:**
 
@@ -144,7 +208,7 @@ hideInSidebar: true
 
 ### $data
 
-- **Type:** `{object}`
+- **Type:** `Object`
 
 - **Details:**
 
@@ -157,7 +221,7 @@ hideInSidebar: true
   }
   ```
 
-## Instance Properties / Composition
+## Properties / Composition
 
 ### mixins
 
@@ -183,12 +247,28 @@ hideInSidebar: true
   // => 1
   // => 2
   ```
+## Methods / Lifecycle
 
-## Instance Methods / Events
+### $teardown
 
-<blockquote class="alert">Instance events are handled by `EventEmitter` custom event implementation not using DOM events. `EventEmitter` class is available to be imported and used in other modules.</blockquote>
+- **Type**: `Function`
+
+- **Details:**
+
+  Triggers destroy of the component - unbinds event listeners and binding to DOM
+
+- **Usage:**
+  ```js
+  this.$teardown()
+  ```
+
+## Methods / Events
+
+<blockquote class="alert">Instance events are handled by `EventEmitter` custom event implementation not using DOM events.</blockquote>
 
 ### $emit
+
+- **Type**: `Function`
 
 - **Arguments:**
   - `{String} event descriptor`
@@ -203,6 +283,8 @@ hideInSidebar: true
   ```
 
 ### $on
+
+- **Type**: `Function`
 
 - **Arguments:**
   - `{String} event descriptor`
@@ -221,6 +303,8 @@ hideInSidebar: true
 
 ### $off
 
+- **Type**: `Function`
+
 - **Arguments:**
   - `{String} event descriptor`
   - `{Function} callback`
@@ -234,24 +318,11 @@ hideInSidebar: true
   this.$off('eventName', callback);
   ```
 
-## Instance Methods / Lifecycle Hooks
-
-<blockquote class="alert">All lifecycle hooks have their `this` context bound to the instance. All of them have  **Instance Properties** available.</blockquote>
-
-### $teardown
-
-- **Details:**
-
-  Triggers destroy of the component - unbinds event listeners and binding to DOM
-
-- **Usage:**
-  ```js
-  this.$teardown()
-  ```
+## Lifecycle Hooks
 
 ### beforeInit
 
-- **Type:** `{Function}`
+- **Type:** `Function`
 
 - **Details:**
 
@@ -259,7 +330,7 @@ hideInSidebar: true
 
 ### init
 
-- **Type:** `{Function}`
+- **Type:** `Function`
 
 - **Details:**
 
@@ -267,7 +338,7 @@ hideInSidebar: true
 
 ### beforeDestroy
 
-- **Type:** `{Function}`
+- **Type:** `Function`
 
 - **Details:**
 
@@ -275,7 +346,7 @@ hideInSidebar: true
 
 ### destroy
 
-- **Type:** `{Function}`
+- **Type:** `Function`
 
 - **Details:**
 
@@ -283,9 +354,11 @@ hideInSidebar: true
 
 # DOM API
 
-<blockquote class="alert">Note: Element is internal class for handling DOM manipulation that simulates jQuery but is 800% lighter, below is a reference of available methods. Other methods need to be accessed through DOM API. `this.$element` and all elements found using `@El` decorator are Element instances.</blockquote>
+<blockquote class="alert">Note: Element is internal class for handling DOM manipulation that reimplements jQuery API. In components `this.$element` and all elements found using `@El` property decorator are Element instances.</blockquote>
 
 ### Element
+
+- **Type:** `Object`
 
 - **Arguments:**
   - `{String} selector`
@@ -304,6 +377,8 @@ hideInSidebar: true
 ## Traversing
 
 ### find
+- **Type:** `Function`
+
 - **Arguments:**
   - `{String} selector`
 
@@ -317,6 +392,8 @@ hideInSidebar: true
   ```
 
 ### children
+- **Type:** `Function`
+
 - **Arguments:**
   - `{String} selector (optional)`
 
@@ -331,6 +408,7 @@ hideInSidebar: true
   ```
 
 ### closest
+- **Type:** `Function`
 
 - **Arguments:**
   - `{String} selector (optional)`
@@ -345,6 +423,7 @@ hideInSidebar: true
     ```
 
 ### parent
+- **Type:** `Function`
 
 - **Arguments:**
   - `{String} selector (optional)`
@@ -359,6 +438,7 @@ hideInSidebar: true
   ```
 
 ### eq
+- **Type:** `Function`
 
 - **Arguments:**
   - `{number} index`
@@ -373,6 +453,7 @@ hideInSidebar: true
   ```
 
 ### first
+- **Type:** `Function`
 
 - **Details:**
 
@@ -384,6 +465,7 @@ hideInSidebar: true
   ```
 
 ### get
+- **Type:** `Function`
 
 - **Arguments:**
   - `{number} index (optional)`
@@ -399,6 +481,7 @@ hideInSidebar: true
   ```
 
 ### array
+- **Type:** `Function`
 
 - **Arguments:**
   - `{Function} callback (optional)`
@@ -416,6 +499,7 @@ hideInSidebar: true
 ## Filtering
 
 ### filter
+- **Type:** `Function`
 
 - **Arguments:**
   - `{string|Element|Function} filter`
@@ -432,6 +516,7 @@ hideInSidebar: true
   ```
 
 ### map
+- **Type:** `Function`
 
 - **Arguments:**
   - `{Function} callback`
@@ -446,6 +531,7 @@ hideInSidebar: true
   ```
 
 ### each
+- **Type:** `Function`
 
 - **Arguments:**
   - `{Function} callback`
@@ -460,6 +546,7 @@ hideInSidebar: true
   ```
 
 ### is
+- **Type:** `Function`
 
 - **Arguments:**
   - `{string|Element|Function} filter`
@@ -476,6 +563,7 @@ hideInSidebar: true
 ## Manipulation
 
 ### clone
+- **Type:** `Function`
 
 - **Details:**
 
@@ -487,6 +575,7 @@ hideInSidebar: true
   ```
 
 ### append
+- **Type:** `Function`
 
 - **Arguments:**
   - `{string|Element} html`
@@ -501,6 +590,7 @@ hideInSidebar: true
   ```
 
 ### prepend
+- **Type:** `Function`
 
 - **Arguments:**
     - `{string|Element} html`
@@ -515,6 +605,7 @@ Element("ul").prepend("<li>Item 1</li>");
 ```
 
 ### remove
+- **Type:** `Function`
 
 - **Details:**
 
@@ -526,6 +617,7 @@ Element("ul").prepend("<li>Item 1</li>");
   ```
 
 ### text
+- **Type:** `Function`
 
 - **Arguments:**
   - `{string} text (optional)`
@@ -541,6 +633,7 @@ Element("ul").prepend("<li>Item 1</li>");
   ```
 
 ### html
+- **Type:** `Function`
 
 - **Arguments:**
   - `{string} htmlString (optional)`
@@ -556,6 +649,7 @@ Element("ul").prepend("<li>Item 1</li>");
   ```
 
 ### attr
+- **Type:** `Function`
 
 - **Arguments:**
   - `{string|object} attrName`
@@ -574,6 +668,7 @@ Element("ul").prepend("<li>Item 1</li>");
   ```
 
 ### prop
+- **Type:** `Function`
 
 - **Arguments:**
   - `{string|object} propName`
@@ -590,6 +685,7 @@ Element("ul").prepend("<li>Item 1</li>");
   ```
 
 ### data
+- **Type:** `Function`
 
 - **Arguments:**
   - `{string|object} attrName`
@@ -608,6 +704,8 @@ Element("ul").prepend("<li>Item 1</li>");
   ```
 
 ### addClass
+- **Type:** `Function`
+
 - **Arguments:**
 
   - `{...String} class(es)
@@ -621,6 +719,8 @@ Element("ul").prepend("<li>Item 1</li>");
   Element('.button').addClass('is-active');
   ```
 ### removeClass
+- **Type:** `Function`
+
 - **Arguments:**
 
   - `{...String} class(es)`
@@ -633,6 +733,8 @@ Element("ul").prepend("<li>Item 1</li>");
   Element('.modal').removeClass('is-visible');
   ```
 ### toggleClass
+- **Type:** `Function`
+
 - **Arguments:**
   - `{...String} class(es)`
 - **Details:**
@@ -646,6 +748,7 @@ Element("ul").prepend("<li>Item 1</li>");
 ## Events
 
 ### trigger
+- **Type:** `Function`
 
 - **Arguments:**
   - `{String} events`
@@ -659,8 +762,8 @@ Element("ul").prepend("<li>Item 1</li>");
   Element('button').trigger('click');
   ```
 
-
 ### on
+- **Type:** `Function`
 
 - **Arguments:**
   - `{String} event`
@@ -678,6 +781,7 @@ Element("ul").prepend("<li>Item 1</li>");
   ```
 
 ### off
+- **Type:** `Function`
 
 - **Arguments:**
   - `{...String} events`
@@ -693,6 +797,7 @@ Element("ul").prepend("<li>Item 1</li>");
 ## Miscellaneous
 
 ### index
+- **Type:** `Function`
 
 - **Arguments:**
   - `{Element|HTML Element} node`

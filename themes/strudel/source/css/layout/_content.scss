@@ -49,6 +49,7 @@
       margin-top: 15px;
     }
   }
+  
 
   strong {
     font-weight: bold;
@@ -110,6 +111,32 @@ body.api {
   .content {
     h3 {
       margin: 1.5em 0 1em;
+      position: relative;
+      cursor: pointer;
+
+      &:hover:before {
+        content: '#';
+        color: $primary-color;
+        font-size: 120%;
+        left: -18px;
+        position: absolute;
+      }
+    }
+
+    p + p {
+      margin-top: 5px;
+    }
+
+    ul {
+      margin-left: 15px;
+
+      ul {
+        margin-left: 0;
+      }
+    }
+
+    strong {
+      color: #000;
     }
   }
 }
