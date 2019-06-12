@@ -69,6 +69,37 @@ hideInSidebar: true
   bar
   ```
 
+## Utilities ##
+
+### createDecorator ###
+
+- **Arguments:**
+  - `{*} any (optional)`
+
+- **Details:**
+
+  Creates a custom decorator that can be used for both classes and properties.
+
+- **Usage:**
+
+  ```js
+  const Decorator = createDecorator((component, property) => {
+    /* Decorator logic */
+  });
+
+  const DecoratorWithNoParams = createDecorator((component, property) =>  { 
+    /* Decorator logic */
+  })();
+
+  @Decorator('argument')
+  @Evt('click .example')
+  onClick() {}
+
+  @DecoratorWithNoParams
+  @Evt('click .example-2')
+  onClick2() {}
+  ```
+  
 ## Constants
 
 ### INIT_CLASS
