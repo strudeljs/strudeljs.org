@@ -99,6 +99,29 @@ hideInSidebar: true
   @Evt('click .example-2')
   onClick2() {}
   ```
+  
+## Constants
+
+### INIT_CLASS
+
+- **Details:**
+
+  Constant equal to the value of class that is added to an element when Strudel initializes.
+
+- **Usage:**
+  ```js
+  import { INIT_CLASS } from strudel;
+  ```
+### INIT_SELECTOR
+
+- **Details:**
+
+  Constant equal to the value of a selector that can be used to select elements that have been initialized.
+
+- **Usage:**
+  ```js
+  import { INIT_SELECTOR } from strudel;
+  ```
 
 ## Instance Properties / DOM
 
@@ -666,4 +689,20 @@ Element("ul").prepend("<li>Item 1</li>");
 - **Usage:**
   ```js
   Element('button').off('click');
+  ```
+## Miscellaneous
+
+### index
+
+- **Arguments:**
+  - `{Element|HTML Element} node`
+
+- **Details:**
+
+  Get an integer indicating the position of the passed element relative to parent.
+
+- **Usage:**
+  ```js
+  Element('nav').index(Element('a.is-active'));
+  Element('ul').index(Element('li.is-hidden').first());
   ```

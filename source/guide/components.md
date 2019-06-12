@@ -12,10 +12,10 @@ Components are centerpiece of modern web development. Dividing websites into com
 
 ## Defining components
 
-To declare new component there needs are two things required:
+To declare new component there are two things required:
 
 * element in DOM so functionality can be attached
-* Javascript class that will contain the functionality
+* JavaScript class that will contain the functionality
 
 The class is attached to the DOM by using `@Component` decorator, which ties classes to elements found by selector. Full specification can be found in the [API](http://strudeljs.org/api/#Component).
 

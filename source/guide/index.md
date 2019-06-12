@@ -34,7 +34,7 @@ As there was mentioned in the **Getting started** Strudel goal is not to compete
 However if you need a library for taking care of DOM and Event handling in ECMAScript 2015 flavoured sauce that will help you organise your front-end code in your back-end rendered website then you should definitely take a look at Strudel.
 
 ## Why not Typescript?
-Typescript is a great superset of the Javascript language which support decorators out of the box. Adding types however feels a little bit too much for Strudel, as biggest target audience should are developers switching directly from jQuery, so adding Typescript on top of Webpack and Babel would be too much.
+Typescript is a great superset of the JavaScript language which support decorators out of the box. Adding types however feels a little bit too much for Strudel, as biggest target audience should are developers switching directly from jQuery, so adding Typescript on top of Webpack and Babel would be too much.
 
 ## Next steps
 Strudel is still currently under heavy development so if you have a great idea for the missing API I would like to contribute into the development of the framework, feel free to navigate to [Community](http://strudeljs.org/community/) subpage. Before version 1.0 expect much more new features. 
