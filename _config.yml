@@ -96,7 +96,7 @@ robotstxt:
 asset_pipeline:
   revisioning:
     enable: true
-    exclude: ['robots.txt', 'sitemap.xml', 'webpack.config.js', '*.json', 'CNAME', '**/*.svg', '**/*.png', '**/*.jpg', '**/*.ico']
+    exclude: ['robots.txt', 'sitemap.xml', 'webpack.config.js', '*.json', 'CNAME', '**/*.svg', '**/*.png', '**/*.jpg', '**/*.ico', '**/*.woff', '**/*.woff2']
   clean_css:
     enable: true
   uglify_js:
