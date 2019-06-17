@@ -1,10 +1,10 @@
 ---
-title: Deployment
+title: Debugging
 type: guide
-order: 13
+order: 14
 ---
 
-# Deployment
+# Debugging
 
 ## Turn on Production Mode
 During development, Strudel provides a lot of warnings to help you with common errors and pitfalls. However, these warning strings become useless in production and bloat your app’s payload size.

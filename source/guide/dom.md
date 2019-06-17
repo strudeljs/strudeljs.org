@@ -1,7 +1,7 @@
 ---
 title: Manipulating DOM
 type: guide
-order: 4
+order: 5
 ---
 
 # Manipulating DOM

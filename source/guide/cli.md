@@ -1,7 +1,7 @@
 ---
-title: CLI
+title: Using CLI
 type: guide
-order: 10
+order: 12
 ---
 
 # Usage of CLI

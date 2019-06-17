@@ -1,7 +1,7 @@
 ---
 title: Event Handling
 type: guide
-order: 5
+order: 6
 ---
 
 # Event Handling

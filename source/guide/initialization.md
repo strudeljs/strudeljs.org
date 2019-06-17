@@ -1,7 +1,7 @@
 ---
-title: Initialization
+title: Initialization Process
 type: guide
-order: 6
+order: 10
 ---
 
 # Component Initialization
