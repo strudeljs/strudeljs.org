@@ -609,7 +609,7 @@ Element("ul").prepend("<li>Item 1</li>");
 ### on
 
 - **Arguments:**
-  - `{String} event`
+  - `{String|[String]} event`
   - `{string|Function} selector or listener`
   - `{Function} listener (only when selector provided)`
 
@@ -626,13 +626,14 @@ Element("ul").prepend("<li>Item 1</li>");
 ### off
 
 - **Arguments:**
-  - `{...String} events`
+  - `{String|[String]} events`
+  - `{Function} callback`
 
 - **Details:**
 
   Remove DOM event handler(s) from element.
 
 - **Usage:**
-  ```js
-  Element('button').off('click');
-  ```
+    `Element('button').off();` - removes all handlers from element
+    `Element('button').off('click');` - removes all handlers from element click event
+    `Element('button').off('click', callback);` - removes callback from element click event (this won't work if handler was attached via `@Evt` decorator)
