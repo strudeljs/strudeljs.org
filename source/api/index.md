@@ -635,5 +635,5 @@ Element("ul").prepend("<li>Item 1</li>");
 
 - **Usage:**
     `Element('button').off();` - removes all handlers from element
-    `Element('button').off('click');` - removes all handlers from element click event
-    `Element('button').off('click', callback);` - removes callback from element click event (this won't work if handler was attached via `@Evt` decorator)
+    `Element('button').off('click');` - removes all handlers from element's click event
+    `Element('button').off('click', callback);` - removes callback from element's click event (this won't work if handler was attached via `@Evt` decorator)
