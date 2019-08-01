@@ -783,7 +783,8 @@ Element("ul").prepend("<li>Item 1</li>");
 - **Type:** `Function`
 
 - **Arguments:**
-  - `{...String} events`
+  - `{String|[String]} events`
+  - `{Function} callback`
 
 - **Details:**
 
@@ -791,7 +792,9 @@ Element("ul").prepend("<li>Item 1</li>");
 
 - **Usage:**
   ```js
-  Element('button').off('click');
+  Element('button').off(); // Removes all handlers from element
+  Element('button').off('click'); // Removes all handlers from element's click event
+  Element('button').off('click', callback); // Removes callback from element's click event
   ```
 ## Miscellaneous
 
