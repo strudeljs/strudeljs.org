@@ -5,7 +5,7 @@ export default class Greeter {
 	
   @El('.greeter__input') input
 	
-  @Evt('click .greeter__button')
+  @Evt('click', '.greeter__button')
   greet() {
     this.output.html(`
         Hello, ${this.input.prop('value')}!`)
