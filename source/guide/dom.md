@@ -1,37 +1,36 @@
 ---
 title: Manipulating DOM
 type: guide
-order: 4
+order: 5
 ---
 
 # Manipulating DOM
 
-## Introduction
+## How to manipulate DOM?
 
-Strudel uses DOM manipulation in similar manner as jQuery library. All DOM manipulation is done from Javascript in unobtrusive manner. This means all the traversing, manipulation and event handling is done in Javascript code, not in HTML.
+Strudel allows DOM manipulation in similar manner to *jQuery* library. So there is a full API provided for working exclusively with DOM. The upside of using embedded API is it's small footprint compared to *jQuery*. In this chapter we will walk through some basic scenarios with the DOM API. See full reference under [DOM API reference](http://localhost:4000/api/#DOM-API) for more information.
 
-<blockquote class="alert">Strudel uses DOM API v4, so no support for anything below IE11 without polyfills</blockquote>
+## Using DOM API
 
-If you are familiar with jQuery you should be familiar with the DOM API that Strudel provides in `Element` module.
-
-## Using Element
-
-Similar to jQuery `Element` can be imported into module as `$`:
+Similar to _jQuery_ the DOM API can be imported into any module as a dollar sign - `$` or simply as `element`. All internal references to DOM in components (either `this.$element` or DOM elements found with `@El`) are using this API.
 
 ```js
-import { $ } from 'strudel' // Or import { element } from 'strudel';
-
-$('body').addClass('has-overlay-opened');
-
+import { $ } from 'strudel'; // OR import { element } from 'strudel'
 ```
 
-All elements used in Components (`this.$element`) or found by the `@El` are `Element` instances
+Similar to _jQuery_ `$` is a function which can be used with a parameter of CSS selector as a string or an HTML element, which becomes decorated and enabled for full usage of API. In example below `body` element is decorated enabling usage of `addClass` method from the API..
 
-## Traversing
+```js
+const body = $('body');
+body.addClass('has-overlay-opened');
+// body._nodes[0].classList.append('has-overlay-opened')
+```
 
-Most of DOM traversing could be achieved with usage of `@El` decorator, however DOM API exposes also suitable methods for finding elements, extracting children, parents, silbings and others. See full reference in [DOM API reference](http://strudeljs.org/api/#find)
+**Note:** If a method is missing in the Strudel DOM API, you can use native DOM API, by accessing Strudel elements with `_nodes` property.
 
-<blockquote class="alert">Always prefer `@El` decorator over `.find` if possible</blockquote>
+## Traversing DOM
+
+Most of DOM traversing could be achieved with usage of `@El` decorator, however DOM API exposes also suitable methods for finding elements, extracting children, parents, silbings etc.
 
 ```js
 class Example {
@@ -43,9 +42,9 @@ class Example {
 
 ```
 
-## Manipulating
+## Manipulating DOM
 
-Similar to traversing manipulation is done from Javascript. DOM API handles DOM modifications as efficient as possible, so you could use corresponding methods to modify DOM as referenced in [DOM API reference](http://strudeljs.org/api/#html).
+Similar to traversing, manipulation methods iareprovided, with most common use cases like toggling classes, appending html, accessing data attributes etc.
 
 ```js
 class Example {
@@ -60,5 +59,21 @@ class Example {
 
 ```
 
+## Handling custom DOM Events
 
+Strudel DOM API also introduces the wrapper for handling DOM events in more pleasant way, so implementing custom events is easier.
 
+```js
+class Example {
+    init() {
+        this.on('custom-event', () =>  {
+            alert('Hello world!');
+        });
+    }
+
+    @Evt('click')
+    click() {
+        this.trigger('custom-event');
+    }
+}
+```

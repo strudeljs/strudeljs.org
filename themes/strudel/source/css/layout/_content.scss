@@ -37,6 +37,19 @@
     margin-top: 2.4em;
   }
 
+  h3 {
+    margin-top: 2.4em;
+    position: relative;
+
+    &:before {
+      content: '#';
+      color: $primary-color;
+      font-size: 120%;
+      left: -18px;
+      position: absolute;
+    }
+  }
+
   h4 {
     margin-top: 1em;
   }
@@ -109,7 +122,24 @@
 body.api {
   .content {
     h3 {
-      margin: 1.5em 0 1em;
+      margin: 3em 0 1em;
+      cursor: pointer;
+    }
+
+    p + p {
+      margin-top: 5px;
+    }
+
+    ul {
+      margin-left: 15px;
+
+      ul {
+        margin-left: 0;
+      }
+    }
+
+    strong {
+      color: #000;
     }
   }
 }

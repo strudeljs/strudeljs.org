@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	var $navToggle = document.querySelector('.nav-toggle');
 	var $sidebars = document.querySelectorAll('.anchors.api');
 	var $tabs = document.querySelectorAll('.tabs');
+	var $headings = document.querySelectorAll('.api .content h3');
 
 	var each = function(collection, callback) {
 		return [].forEach.call(collection, callback);
@@ -71,5 +72,16 @@ document.addEventListener('DOMContentLoaded', function () {
 				e.preventDefault();
 			});
 		});
+	});
+
+	each($headings, function($heading) {
+		$heading.addEventListener('click', function (e) {
+			var $target = e.target;
+			var $link = $target.querySelector('a');
+
+			window.location.hash = $link.getAttribute('href');
+
+			e.preventDefault;
+		})
 	});
 });

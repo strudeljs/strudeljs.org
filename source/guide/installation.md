@@ -6,19 +6,22 @@ order: 1
 
 # Installation
 
-## Compatibility
+## Dependency on decorators
+Strudel API depends heavily on decorators which are experimental ECMAScript API (not standard part of ECMAScript spec yet - (decorators spec is a [TC39 proposal in stage 2](https://github.com/tc39/proposal-decorators)). ) so they are not natively supported by browser vendors 
 
-**Strudel** declarative syntax depends heavily on decorators which are not part of ECMAScript spec, so they are not natively supported by browser vendors (decorators spec is a [TC39 proposal in stage 2](https://github.com/tc39/proposal-decorators)). Transpiler like Babel is required and ``transform-decorators-legacy`` plugin. For optional components syntax also ``transform-class-properties`` is recommended.
+To be able to use Strudel you need a transpiler like _Babel_ configured to use plugins that allows the usage of decorators and also class properties:
+* `@babel/plugin-proposal-decorators` (with `legacy` set to `true`)
+* `@babel/plugin-proposal-class-properties`
+<br>
 
-<blockquote class="alert">Strudel could be used without the decorators, but such an approach is not recommended as it loses one of core principles.</blockquote>
-
-For streamlined Babel setup take a look at [babel-preset-strudel](https://www.npmjs.com/package/babel-preset-strudel).
+<blockquote class="upgrade">It's recommended to use dedicated *Babel* preset for streamlined setup - take a look at [babel-preset-strudel](https://www.npmjs.com/package/babel-preset-strudel).
+</blockquote>
 
 ## Browser support
-Without polyfills Strudel supports IE11, as it using DOM 4 spec. If lower browser support is required please use great tools like [polyfills.io](http://polyfills.io).
+Without polyfills Strudel supports all the modern browsers, but also Internet Explorer 11. It's DOM API relies on DOM 4 spec. If lower browser support is required please use great tools like [polyfills.io](http://polyfills.io) or other source of polyfills.
 
-## CLI
-CLI is recommended way of setting up new Strudel project
+## Starting project using CLI
+CLI is recommended way of setting up a new Strudel project. It's a dedicated tool that can quickly scaffold a project structure provisioning required *Babel* and *Webpack* configurations. New project can be created with few simple steps:
 
 ```bash
 $ npm install --global strudel-cli
@@ -27,11 +30,11 @@ $ cd my-project
 $ npm install
 ```
 
-You can read more about CLI in dedicated [guide](/guide/usage.html).
+You can read more about CLI in dedicated [guide](/guide/cli.html).
 
-## NPM
-If you feel like configuring build on your own you can use npm to install Strudel.
+## Starting from scratch
+If none of the templates available for the CLI fits your purpose or you would simply like to start from scratch you can just use npm (or yarn) to install Strudel.
 ```bash
 $ npm install strudel --save
 ```
-Then however you need to take care about Babel and Webpack configuration.
+Please mind though that after this step you are on your own and you will need to take care about *Babel* (you can use the official preset) and *Webpack* configuration.
