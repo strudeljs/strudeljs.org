@@ -37,6 +37,19 @@
     margin-top: 2.4em;
   }
 
+  h3 {
+    margin-top: 2.4em;
+    position: relative;
+
+    &:before {
+      content: '#';
+      color: $primary-color;
+      font-size: 120%;
+      left: -18px;
+      position: absolute;
+    }
+  }
+
   h4 {
     margin-top: 1em;
   }
@@ -49,7 +62,6 @@
       margin-top: 15px;
     }
   }
-  
 
   strong {
     font-weight: 600;
@@ -110,17 +122,8 @@
 body.api {
   .content {
     h3 {
-      margin: 1.5em 0 1em;
-      position: relative;
+      margin: 3em 0 1em;
       cursor: pointer;
-
-      &:hover:before {
-        content: '#';
-        color: $primary-color;
-        font-size: 120%;
-        left: -18px;
-        position: absolute;
-      }
     }
 
     p + p {

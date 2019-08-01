@@ -1,40 +1,35 @@
 ---
 title: Debugging
 type: guide
-order: 14
+order: 12
 ---
 
 # Debugging
 
-## Turn on Production Mode
-During development, Strudel provides a lot of warnings to help you with common errors and pitfalls. However, these warning strings become useless in production and bloat your app’s payload size.
+## Development mode
 
-## With Build Tools
-When using a build tool like Webpack, the production mode will be determined by `process.env.NODE_ENV` inside source code, and it will be in `development` mode by default. Webpack provide a way to overwrite this variable to enable production mode, and warnings will be stripped by minifiers during the build. It can be done following way:
+To help during development of application, Strudel introduces internal error handling that in development mode will result in messages being logged to a browser console. These messages will warn you when doing unsupported operations to reduce reduntant code.
 
-#### Webpack 4
+![Debug mode](/images/guide/debug.png)
 
-```js
-module.exports = {
-  mode: 'production'
-}
-```
+All the errors that would break the execution of a code are catched and reported, so the application will continue to work. Development mode can be disabled with configuration of the build tool - this is covered in the [Deployment](/guide/deployment.html) guide.
 
-#### Webpack 3 and earlier
+## Official developer tools
 
-```js
-const webpack = require('webpack');
+To understand better the connection between JavaScript logic and DOM, Strudel provides official developer tools for Google Chrome. Check out the [official GitHub page](https://github.com/strudeljs/strudel-devtools).
 
-module.exports = {
-  // ...
-  plugins: [
-    // ...
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production')
-    })
-  ]
-}
-```
+![Chrome Devtools](/images/guide/devtools.png)
 
-## Without Build Tools
-If you are somehow using the full build, i.e. directly including Strudel via a script tag without a build tool, make sure to use the minified version (strudel.min.js) for production.
+Full features of Strudel Developer Tools:
+
+* Component tree
+* DOM inspector
+* Component property inspector - elements, properties
+* Event debugger
+
+## Download Strudel Dev Tools
+
+If you are interested in using the developer tools, please download and install the extension from Chrome Web Store:
+<div style="text-align:center">
+[![Chrome Web Store](https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png)](https://chrome.google.com/webstore/detail/strudel-devtools/akafkoceecgepokmamadojdimijcpnkl)
+</div>

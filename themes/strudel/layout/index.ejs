@@ -1,6 +1,15 @@
 <div class="mobile-nav">
     <%- partial('_partial/mobile-nav', {path: page.path, type: page.type, index: page.index}) %>
 </div>
+<section class="flash-message">
+    <p class="flash-message__text">🎉🎉🎉 Version 1.0 has been released! <a target="_blank" href="https://medium.com/strudel-js/announcing-strudel-1-0-258d7a7aac7c">Check out the announcement blog <svg x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="
+        M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,
+        0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z
+      "></path><polygon fill="currentColor" points="
+        45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,
+        14.9 62.8,22.9 71.5,22.9
+        "></polygon></svg></a></p>
+</section>
 <section class="hero">
     <div class="hero__content">
         <h1>A front-end framework for the back-end powered web.</h1>
@@ -20,16 +29,17 @@
 <div class="container">
     <section class="promos flex-grid">
         <div class="col promo">
-            <h2>Modern</h2>
-            <p>Build rich, interactive websites with modern technologies and tools. You are worried that your only front-end experience is jQuery? It's enough to get you started. </p>
+            <h2>Declarative</h2>
+            <p>Tired of all the boilerplate your front-end requires? With API based on decorators you can reduce the boilerplate to minimum and have fun coding with modern JavaScript. </p>
         </div>
         <div class="col promo">
-            <h2>Declarative</h2>
-            <p>Tired of all the boilerplate your front-end requires? Thanks to Strudel decorators reduce it to minimum and have fun coding with ECMAScript 2015 and beyond. </p>
+            <h2>Unobtrusive</h2>
+            <p>Provide interactivity in JavaScript code without the need of modifying the HTML. Easily integrate Strudel with any CMS or back-end framework that you use.</p>
         </div>
+
         <div class="col promo">
             <h2>Lightweight</h2>
-            <p>Don't worry about your website payload. With only ~4kb gzipped Strudel makes sure your users bandwidth is not overwhelmed with amount of JavaScript to load.</p>
+            <p>Stop worrying much about your bundle size. In only ~4.5kb gzipped bundle Strudel provides you component architecture and jQuery-like DOM API. It's almost free. </p>
         </div>
     </section>
 </div>
@@ -52,7 +62,7 @@
         </div>
     </div>
     <div class="greeter">
-        <input class="greeter__input" type="text" placeholder="enter name">
+        <input class="greeter__input" type="text" placeholder="Enter name">
         <button class="greeter__button button">Greet</button>
         <span class="greeter__output"></span>
     </div>

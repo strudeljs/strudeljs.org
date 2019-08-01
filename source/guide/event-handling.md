@@ -1,24 +1,25 @@
 ---
 title: Event Handling
 type: guide
-order: 6
+order: 8
 ---
 
 # Event Handling
 
 ## Cross-component communication
 
-Components should never directly depend on each others. Component A should never include component B and fire it's methods directly. All the communication and synchronisation between components should be done using Events. Strudel implements a simple class responsible for controlling event communication - `EventEmitter`.
+As components are not aware of each other, they can be used in various combinations in various context. One of the ways of achieving the communication is by using Events. Strudel implements a simple class responsible for controlling event communication - `EventEmitter`.
 
-## Events
+## Using EventEmitter in components
 
-`EventEmitter` is automatically included as a mixin for every component, which means by default every component is able to use event communication.
+`EventEmitter` is available to be imported from Strudel API. It's automatically included as a mixin for every component, which means by default every component is able to use event communication. 
 
 Key methods responsible for handling communication are:
-* `$emit` - activates all the listeners attached to the event with provided name
-* `$on`/`$off` - attaches/detaches listener to particular event
+* `$emit()` - activates all the listeners attached to the event with provided name
+* `$on()` - attaches listener to particular event
+* `$off()` - detaches listener to particular event
 
-Full Event specification can be found in the [API](http://strudeljs.org/api/#emit).
+Full specification can be found in the [API](http://strudeljs.org/api/#emit).
 
 Example below shows cross-component event communication.
 
@@ -36,7 +37,8 @@ class Subscriber {
     });
   }
 }
-
+```
+```js
 @Component('.publisher')
 class Publisher {
   @Evt('click')
@@ -46,9 +48,9 @@ class Publisher {
 }
 ```
 
-## Using EventEmitter
+## Using EventEmitter outside of components
 
-Static classes introduced for handling utility configuration or data requesting can also communicate with components using events. To use events simply extend `EventEmitter` class in class and suddenly it will be able to communicate with components using same API as components.
+By extending the `EventEmitter` you can provide the same publish-subscribe communication mechanism to any JavaScript class. The API is the same as in components.
 
 ```js
 import { EventEmitter } from 'strudel';

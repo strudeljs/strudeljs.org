@@ -4,7 +4,7 @@ title: API
 hideInSidebar: true
 ---
 
-# Global API
+# Core API
 
 ## Class Decorators
 
@@ -13,7 +13,7 @@ hideInSidebar: true
 - **Type**: `Decorator`
 
 - **Arguments:**
-  - `{String} selector`
+  - `{String} CSS selector`
 
 - **Details:**
 
@@ -53,12 +53,10 @@ hideInSidebar: true
   })();
 
   @Decorator('argument')
-  @Evt('click .example')
-  onClick() {}
+  method() {}
 
   @DecoratorWithNoParams
-  @Evt('click .example-2')
-  onClick2() {}
+  otherMethod() {}
   ```
 
 ### EventEmitter
@@ -95,7 +93,7 @@ hideInSidebar: true
 
 - **Usage:**
   ```js
-  import { INIT_CLASS } from strudel;
+  import { INIT_CLASS } from 'strudel';
   ```
 ### INIT_SELECTOR
 
@@ -109,7 +107,7 @@ hideInSidebar: true
 
 - **Usage:**
   ```js
-  import { INIT_SELECTOR } from strudel;
+  import { INIT_SELECTOR } from 'strudel';
   ```
 
 ### VERSION
@@ -122,7 +120,7 @@ hideInSidebar: true
 
 - **Usage:**
   ```js
-  import { VERSION } from strudel;
+  import { VERSION } from 'strudel';
 
   const version = Number(VERSION.split('.')[0]);
   
@@ -157,18 +155,19 @@ hideInSidebar: true
 
 - **Arguments:**
   - `{String} event descriptor`
-  - `{boolean} prevent default (optional)`
+  - `{String} CSS selector (optional)`
 
 - **Details:**
 
-   Adds DOM event handler (like [.on()](#on-1) from DOM API) for specific descriptor and makes decorated class method a callback. Event descriptor need to follow format *eventName [selector]* - making selector for delegate optional.
-
-   Second argument can be passed to enforce `preventDefault` on event.
+   Adds DOM event handler (using [.on()](#on-1) from DOM API) for specific descriptor and makes decorated class method a callback. Second parameter can be provided to delegate the event to a descendant element by selector.
 
 - **Usage:**
   ```js
-  @Evt('click .bar')
-  onClick() { }
+  @Evt('click')
+  onElementClick() { }
+
+  @Evt('click', '.bar')
+  onChildClick() { }
   ```
   
 ### @El
@@ -176,7 +175,7 @@ hideInSidebar: true
 - **Type**: `Decorator`
 
 - **Arguments:**
-  - `{String} element selector`
+  - `{String} CSS selector`
 
 - **Details:**
 
@@ -235,7 +234,7 @@ hideInSidebar: true
 
 - **Usage:**
   ```js
-  var mixin = {
+  const mixin = {
     init() { console.log(1) }
   }
 
@@ -361,7 +360,7 @@ hideInSidebar: true
 - **Type:** `Object`
 
 - **Arguments:**
-  - `{String} selector`
+  - `{String} CSS selector`
   - `{Node} context`
 
 - **Details:**
@@ -380,7 +379,7 @@ hideInSidebar: true
 - **Type:** `Function`
 
 - **Arguments:**
-  - `{String} selector`
+  - `{String} CSS selector`
 
 - **Details:**
 
@@ -395,7 +394,7 @@ hideInSidebar: true
 - **Type:** `Function`
 
 - **Arguments:**
-  - `{String} selector (optional)`
+  - `{String} CSS selector (optional)`
 
 - **Details:**
 
@@ -411,7 +410,7 @@ hideInSidebar: true
 - **Type:** `Function`
 
 - **Arguments:**
-  - `{String} selector (optional)`
+  - `{String} CSS selector (optional)`
 
 - **Details:**
 
@@ -426,7 +425,7 @@ hideInSidebar: true
 - **Type:** `Function`
 
 - **Arguments:**
-  - `{String} selector (optional)`
+  - `{String} CSS selector (optional)`
 
 - **Details:**
 
@@ -767,7 +766,7 @@ Element("ul").prepend("<li>Item 1</li>");
 
 - **Arguments:**
   - `{String} event`
-  - `{string|Function} selector or listener`
+  - `{string|Function} CSS selector or listener`
   - `{Function} listener (only when selector provided)`
 
 - **Details:**

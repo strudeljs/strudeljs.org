@@ -1,0 +1,19 @@
+.flash-message {
+    background: #534227;
+    z-index: 1000;
+    box-sizing: border-box;
+    vertical-align: middle;
+    height: 56px;
+    overflow: hidden;
+    transition: height 1s;
+}
+
+.flash-message__text {
+    text-align: center;
+    color: #fff;
+    margin-top: 19px;
+
+    a {
+        color: #fff;
+    }
+}
