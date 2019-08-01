@@ -33,7 +33,7 @@ class Greeter {
 
 ## Lifecycle 
 
-In Strude components have lifecycle hooks that allows running logic when they are initialised or destroyed. To run code when the page has been loaded we need to implement `init` hook. We can also make use of Strudel's DOM API to write code similar to *jQuery* so displaying "Hello world" message is pretty simple using `.html()` method:
+In Strudel components have lifecycle hooks that allows running logic when they are initialised or destroyed. To run code when the page has been loaded we need to implement `init` hook. We can also make use of Strudel's DOM API to write code similar to *jQuery* so displaying "Hello world" message is pretty simple using `.html()` method:
 
 ```js
 @Component('.greeter')
