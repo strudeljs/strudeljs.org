@@ -12,7 +12,7 @@ Strudel (yup, exactly like a delicious 🇦🇹 layered pastry) is a lightweight
 ## So... yet another framework?
 Kinda. The goal of Strudel is to not compete with *React*, *Vue* or *Angular*, but to provide a much modern approach to writing things like tabs, accordions on carousels than *jQuery* offers. So if you are looking for virtual DOM powered, reactive powerhouse you rather won't find anything what you look for in Strudel. 
 
-However if you need a library for taking care of DOM nicer than the native API and that will help you organise your front-end code in your CMS-powered site or blog then you might find Strudel useful..
+However if you need a library for taking care of DOM nicer than the native API and that will help you organise your front-end code in your CMS-powered site or blog then you might find Strudel useful.
 
 ## Getting started
 Strudel is meant to be a component framework so to start let's create a first component. As it was stated above, Strudel relies on markup being provided by the server - it can be hand coded, provided from a static site generator, or even CMS like Wordpress. Let's start with a piece of HTML like this one:
