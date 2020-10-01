@@ -1,6 +1,6 @@
 # strudeljs.org
 
-This site is built with [hexo](http://hexo.io/).
+This site is built with [Hexo](http://hexo.io/).
 
 ## Developing
 
