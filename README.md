@@ -2,7 +2,7 @@
 
 This site is built with [hexo](http://hexo.io/).
 
-## Developing
+## Developing Website
 
 Start a dev server at `localhost:4000`:
 
