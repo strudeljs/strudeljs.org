@@ -414,7 +414,7 @@ hideInSidebar: true
 
 - **Details:**
 
-  Find first anacestor that matches the selector
+  Find first ancestor that matches the selector
 
 - **Usage:**
     ```js
