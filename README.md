@@ -1,10 +1,10 @@
-# strudeljs.org
+__strudeljs.organisation
 
 This site is built with [hexo](http://hexo.io/).
 
 ## Developing
 
-Start a dev server at `localhost:4000`:
+Start a dev server at `localhost:8000`:
 
 ```
 $ npm install
