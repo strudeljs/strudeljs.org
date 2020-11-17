@@ -1,8 +1,9 @@
 # strudeljs.org
 
-This site is built with [hexo](http://hexo.io/).
+This website is build with [hexo](http://hexo.io/)Framework.
 
-## Developing
+
+### Developing
 
 Start a dev server at `localhost:4000`:
 
