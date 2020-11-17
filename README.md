@@ -1,3 +1,4 @@
+# website
 # strudeljs.org
 
 This site is built with [hexo](http://hexo.io/).
