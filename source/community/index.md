@@ -6,7 +6,7 @@ hideInSidebar: true
 
 # Community
 
-Strudel is worked on part-time by Cognifide's engineering team. They're often around and available for questions. Strudel is in it's current shape thanks to the core team and all contributors around.
+Strudel is worked on part-time by Wunderman Thompson Technology engineering team. They're often around and available for questions. Strudel is in it's current shape thanks to the core team and all contributors around.
 
 ## Contributors
 
